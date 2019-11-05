@@ -1,10 +1,17 @@
 .product-container{
   display: flex;
-  width: 100%;
+  width: 90%;
   margin: 0 auto;
 }
 .product-cards{
   flex: 1;
+}
+
+.form_oferta{
+  display: contents;
+  div > {
+    border: 2px solid white;
+  }
 }
 
 .card{

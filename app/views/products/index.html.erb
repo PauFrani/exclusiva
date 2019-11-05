@@ -1,11 +1,21 @@
-<div class="navbar-filters d-flex justify-content-between">
-  <form action="">
+<div class="navbar-filters d-flex justify-content-between align-items-center m-3 border-bottom border-white">
+  <form action="" class="form_oferta">
     <%= form_for :@bidding do |f| %>
-    Presupuesto: <%= f.text_field :amount, disabled: true %>
-    Categoria: <%= f.text_field :category, disabled: true %>
-    Marcas: <%= f.select :brands, ["Clifftone", "Mango", "Vitamina"] %>
-    Ubicacion  : <%= f.text_field :address, disabled: true%>
-    <%= f.submit "Buscar Oferta", class: "btn btn-info" %>
+      <div>
+        Presupuesto: <%= f.text_field :amount, disabled: true %>
+      </div>
+      <div>
+        Categoria: <%= f.text_field :category, disabled: true %>
+      </div>
+      <div>
+        Marcas: <%= f.select :brands, ["Clifftone", "Mango", "Vitamina"] %>
+      </div>
+      <div>
+        Ubicacion  : <%= f.text_field :address, disabled: true%>
+      </div>
+      <div>
+        <%= f.submit "Buscar Oferta", class: "btn btn-primary" %>
+      </div>
     <% end %>
   </form>
 </div>
