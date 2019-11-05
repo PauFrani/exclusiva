@@ -1,0 +1,104 @@
+.cards-bidding {
+  margin: 0 auto;
+}
+
+.card-bidding-category {
+  width:250px;
+  height: 430px;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 10px;
+  border-color: #596681;
+  padding:10px;
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 0 5px 3px rgba(0, 0, 0, 0.2);
+  .photo {
+    width:100%;
+    height:215px;
+    border-radius: 10px;
+    object-fit:cover;
+    object-position:top;
+  }
+
+  p {
+    margin: 35px auto;
+    font-size: 5vh;
+  }
+  span {
+    font-size: 5vh;
+    border: 2px solid #596681;
+    margin:0px;
+    padding:5px;
+    border-radius: 50%;
+  }
+  .circle {
+    width: 60px;
+  }
+
+}
+
+.step-by-step {
+  text-align:center;
+  margin-top: 15px;
+  .number {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin:0 auto;
+    width:50px;
+    height:50px;
+    background-image: url('https://i.imgur.com/Q6Gs8Eb.png');
+    background-size: 50px;
+    color: #596681;
+  }
+}
+
+
+.cards-brand-ranking {
+  width: 70%;
+  margin:0 auto;
+  // background-color:white;
+  // border-bottom: 2px solid black;
+
+}
+.card-brand-ranking {
+  display:flex;
+  justify-content:center;
+  height:160px;
+  width:100%;
+  align-items:center;
+  padding:10px;
+  border-top: 1px solid lightgray;
+
+  .number{
+    align-self:left;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin:0 20px;
+    width:40px;
+    height:40px;
+    color: #fff;
+    background-color:#596681;
+    border-radius:50%;
+  }
+  .logo{
+    width:60%;
+    border: 2px solid #596681;
+    height:100%;
+    padding:20px;
+    border-radius:10px;
+    text-align:center;
+    align-self:center;
+    // background-color:#E71D2B;
+  }
+  img {
+    height:100%;
+    width:100%;
+    object-fit:cover;
+    object-position:center;
+    border-radius:5px;
+  }
+}
+// @media
