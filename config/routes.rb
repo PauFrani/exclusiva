@@ -9,4 +9,6 @@ Rails.application.routes.draw do
         get 'location'
       end
     end
+  get '/cards', to: 'pages#cards'
+
 end
