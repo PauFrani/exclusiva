@@ -5,4 +5,7 @@ class PagesController < ApplicationController
     @bidding = Bidding.new
 
   end
+
+  def cards
+  end
 end
