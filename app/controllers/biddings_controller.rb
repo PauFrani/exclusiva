@@ -55,5 +55,4 @@ class BiddingsController < ApplicationController
   def set_bidding
     @bidding = Bidding.find(params[:id])
   end
-
 end
