@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_05_163936) do
+ActiveRecord::Schema.define(version: 2019_11_05_210902) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(version: 2019_11_05_163936) do
   end
 
   create_table "brand_ranks", force: :cascade do |t|
-    t.string "order"
+    t.integer "order"
     t.bigint "brand_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -58,7 +58,7 @@ ActiveRecord::Schema.define(version: 2019_11_05_163936) do
 
   create_table "showrooms", force: :cascade do |t|
     t.string "name"
-    t.string "phone_mumber"
+    t.string "phone_number"
     t.string "email"
     t.bigint "brand_id"
     t.datetime "created_at", null: false
@@ -95,6 +95,7 @@ ActiveRecord::Schema.define(version: 2019_11_05_163936) do
   end
 
   add_foreign_key "biddings", "users"
+  add_foreign_key "brand_ranks", "biddings"
   add_foreign_key "brand_ranks", "brands"
   add_foreign_key "products", "showrooms"
   add_foreign_key "showrooms", "brands"
