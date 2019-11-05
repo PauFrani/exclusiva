@@ -92,12 +92,9 @@ ActiveRecord::Schema.define(version: 2019_11_05_163936) do
     t.index ["product_id"], name: "index_variants_on_product_id"
   end
 
-
   add_foreign_key "biddings", "users"
   add_foreign_key "brand_ranks", "brands"
   add_foreign_key "products", "showrooms"
   add_foreign_key "showrooms", "brands"
-
   add_foreign_key "variants", "products"
-
 end

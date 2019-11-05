@@ -7,7 +7,7 @@ class BiddingsController < ApplicationController
 
   def create
     @bidding = Bidding.new(biddings_params)
-    @bidding.user = current_user if user_sign_in?
+    @bidding.user = current_user if user_signed_in?
     if @bidding.save
       redirect_to category_biddings_path
     else
@@ -35,7 +35,7 @@ class BiddingsController < ApplicationController
   private
 
   def biddings_params
-    requiere(:biddings).permit(:category, :amount)
+    params.require(:bidding).permit(:category, :amount)
   end
   def set_bidding
     @bidding = Bidding.find(params[:id])
