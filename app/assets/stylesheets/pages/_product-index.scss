@@ -1,0 +1,33 @@
+.product-container{
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+}
+.product-cards{
+  flex: 1;
+}
+
+.card{
+  background-color: blue;
+  padding: 10px;
+  width: 100%;
+  height: 300px;
+  border: 2px solid white;
+  border-radius: 3px;
+}
+
+.map{
+  flex: 2;
+  padding: 10px;
+  background-color: green;
+  width: 100%;
+  height: 90vh;
+  top: 0;
+  position: sticky !important;
+}
+
+@media(max-width: 500px){
+  .product-container{
+  display: block;
+  }
+}
