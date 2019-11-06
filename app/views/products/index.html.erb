@@ -14,19 +14,29 @@
         Ubicacion  : <%= f.text_field :address, disabled: true%>
       </div>
       <div>
-        <%= f.submit "Buscar Oferta", class: "btn btn-primary" %>
+        <%= f.submit "Buscar Oferta", class: "button-general" %>
       </div>
     <% end %>
   </form>
 </div>
-<div class="product-container">
-  <div class="product-cards">
-    <%20.times do%>
-    <div class="card">
 
-    </div>
+<div class="cards-results-container">
+  <div class="cards-results-list">
+    <%20.times do%>
+    <div class="card-results-individual">
+      <img src="https://conocedores.com/wp-content/uploads/2019/02/zara-new-logo-06022019in2.png" alt="logo">
+      <div class="paragraph">
+        <h2>title of the product</h1>
+          <p>brand</p>
+          <div class="location">
+            <i class="fas fa-map-marker-alt"></i>
+            <p>2.5 km</p>
+          </div>
+        </div>
+      </div>
     <% end %>
   </div>
+
   <div class="map">
   </div>
 </div>
