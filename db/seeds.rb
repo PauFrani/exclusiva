@@ -9,8 +9,8 @@ Product.destroy_all
 Photo.destroy_all
 Brand.destroy_all
 Showroom.destroy_all
-# Payment.destroy_all
-# Purchase.destroy_all
+Payment.destroy_all
+Purchase.destroy_all
 Bidding.destroy_all
 BrandRank.destroy_all
 
@@ -39,7 +39,6 @@ puts "creating brands"
     )
   3.times do
     address = Address.new(street: ADDRESSES.sample)
-    puts "create associated showroom"
     showroom = Showroom.new(
       brand: brand,
       name: Faker::Name.first_name,
@@ -48,7 +47,6 @@ puts "creating brands"
     )
     showroom.address = address
     showroom.save!
-    puts "create associated products"
     10.times do
       product = Product.create!(
         name: Faker::Name.first_name,
@@ -60,6 +58,7 @@ puts "creating brands"
         published: false
         )
       product_item = ProductItem.new(product: product, showroom: showroom, stock: rand(0..5))
+      product_item.save!
     end
   end
 end
@@ -76,10 +75,6 @@ Product.all.each do |product|
     )
   end
 end
-
-
-
-
 
 5.times do
   Bidding.create(
@@ -98,7 +93,20 @@ Bidding.all.each do |bidding|
       brand: brand).save!
   end
   if rand(0..50) > 40
-    # Purchase.create!()
+    product = Product.where(category: bidding.category).sample
+    purchase = Purchase.create!(
+      product_item: ProductItem.where(product: product).sample,
+      bidding: bidding,
+      qr: "link",
+      payment_method: ["efectivo", "tarjeta"].sample,
+      status: "activo"
+    )
+    if rand(0..50) > 40
+      Payment.create!(
+        purchase: purchase,
+        status: "pago"
+      )
+    end
   end
 end
 
