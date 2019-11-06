@@ -9,7 +9,8 @@ class Product < ApplicationRecord
   validates :published, presence: true
 
   def self.search(bidding)
-    sql_query = "select * from "
+    sql_query = "SELECT * FROM products as pr JOIN product_items AS pi ON pr.id = pi.product_id \
+                JOIN showrooms AS sh ON pi.showroom_id = "
     #where(sql_query, query: "%#{query}%")
   end
 end
