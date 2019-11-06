@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_05_210902) do
+ActiveRecord::Schema.define(version: 2019_11_06_201433) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -40,6 +40,24 @@ ActiveRecord::Schema.define(version: 2019_11_05_210902) do
     t.boolean "status"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "photos", force: :cascade do |t|
+    t.string "url_photo"
+    t.bigint "product_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["product_id"], name: "index_photos_on_product_id"
+  end
+
+  create_table "product_items", force: :cascade do |t|
+    t.integer "stock"
+    t.bigint "showroom_id"
+    t.bigint "product_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["product_id"], name: "index_product_items_on_product_id"
+    t.index ["showroom_id"], name: "index_product_items_on_showroom_id"
   end
 
   create_table "products", force: :cascade do |t|
@@ -85,7 +103,6 @@ ActiveRecord::Schema.define(version: 2019_11_05_210902) do
   end
 
   create_table "variants", force: :cascade do |t|
-    t.integer "stock"
     t.string "color"
     t.string "size"
     t.bigint "product_id"
@@ -97,6 +114,9 @@ ActiveRecord::Schema.define(version: 2019_11_05_210902) do
   add_foreign_key "biddings", "users"
   add_foreign_key "brand_ranks", "biddings"
   add_foreign_key "brand_ranks", "brands"
+  add_foreign_key "photos", "products"
+  add_foreign_key "product_items", "products"
+  add_foreign_key "product_items", "showrooms"
   add_foreign_key "products", "showrooms"
   add_foreign_key "showrooms", "brands"
   add_foreign_key "variants", "products"
