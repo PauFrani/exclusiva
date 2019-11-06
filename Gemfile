@@ -20,6 +20,8 @@ gem 'geocoder'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
+  gem 'binding_of_caller'
+  gem 'better_errors'
 end
 
 group :development, :test do

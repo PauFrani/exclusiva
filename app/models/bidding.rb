@@ -4,8 +4,8 @@ class Bidding < ApplicationRecord
   has_many :brand_ranks, dependent: :destroy
 
   accepts_nested_attributes_for :brand_ranks
+  has_one :address, as: :addressable
+  accepts_nested_attributes_for :address
 
   validates :amount, presence: true
-
-  has_one :address, as: :addressable
 end
