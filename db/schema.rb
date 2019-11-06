@@ -41,6 +41,7 @@ ActiveRecord::Schema.define(version: 2019_11_06_141559) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "bidding_id"
+    t.integer "order"
     t.index ["bidding_id"], name: "index_brand_ranks_on_bidding_id"
     t.index ["brand_id"], name: "index_brand_ranks_on_brand_id"
   end
