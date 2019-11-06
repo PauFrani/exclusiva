@@ -1,11 +1,12 @@
+ADDRESSES = ["San martin de tours 2908, Capital Federal, Buenos Aires", "Santa Fe 3336, Capital Federal, Buenos Aires, Argentina", "Niceto Vega 4388, Capital Federal, Buenos Aires, Argentina", "Niceto Vega 4366, Capital Federal, Buenos Aires, Argentina"]
 require 'faker'
 
 puts 'Cleaning DB...'
 
 ProductItem.destroy_all
+Variant.destroy_all
 Product.destroy_all
 Photo.destroy_all
-Variant.destroy_all
 Brand.destroy_all
 Showroom.destroy_all
 Payment.destroy_all
@@ -37,6 +38,7 @@ puts "creating brands"
     status: true
     )
   3.times do
+    address = Address.new(street: ADDRESSES.sample)
     puts "create associated showroom"
     showroom = Showroom.new(
       brand: brand,
@@ -44,6 +46,7 @@ puts "creating brands"
       phone_number: Faker::PhoneNumber.phone_number,
       email: Faker::Internet.email
     )
+    showroom.address = address
     showroom.save!
     puts "create associated products"
     10.times do
@@ -93,6 +96,9 @@ Bidding.all.each do |bidding|
     bidding.brand_ranks.build(
       order: sorting.pop,
       brand: brand).save!
+  end
+  if rand(0..50) > 40
+    # Purchase.create!()
   end
 end
 
