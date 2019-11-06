@@ -7,4 +7,9 @@ class Product < ApplicationRecord
   validates :description, presence: true
   validates :sku_ext, presence: true
   validates :published, presence: true
+
+  def self.search(bidding)
+    sql_query = "select * from "
+    #where(sql_query, query: "%#{query}%")
+  end
 end
