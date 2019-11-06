@@ -6,5 +6,5 @@ class Showroom < ApplicationRecord
   validates :email, presence: true
 
   has_one :address, as: :addressable
-  validates :address, presence: true
+  # validates :address, presence: true
 end
