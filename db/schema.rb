@@ -10,10 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_05_222104) do
+ActiveRecord::Schema.define(version: 2019_11_06_221702) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "addresses", force: :cascade do |t|
+    t.string "addressable_type"
+    t.bigint "addressable_id"
+    t.string "street"
+    t.float "latitude"
+    t.float "longitude"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["addressable_type", "addressable_id"], name: "index_addresses_on_addressable_type_and_addressable_id"
+  end
 
   create_table "biddings", force: :cascade do |t|
     t.integer "amount"
@@ -21,6 +32,9 @@ ActiveRecord::Schema.define(version: 2019_11_05_222104) do
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "addressable_type"
+    t.bigint "addressable_id"
+    t.index ["addressable_type", "addressable_id"], name: "index_biddings_on_addressable_type_and_addressable_id"
     t.index ["user_id"], name: "index_biddings_on_user_id"
   end
 
@@ -40,6 +54,24 @@ ActiveRecord::Schema.define(version: 2019_11_05_222104) do
     t.boolean "status"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "photos", force: :cascade do |t|
+    t.string "url_photo"
+    t.bigint "product_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["product_id"], name: "index_photos_on_product_id"
+  end
+
+  create_table "product_items", force: :cascade do |t|
+    t.integer "stock"
+    t.bigint "showroom_id"
+    t.bigint "product_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["product_id"], name: "index_product_items_on_product_id"
+    t.index ["showroom_id"], name: "index_product_items_on_showroom_id"
   end
 
   create_table "products", force: :cascade do |t|
@@ -63,6 +95,9 @@ ActiveRecord::Schema.define(version: 2019_11_05_222104) do
     t.bigint "brand_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "addressable_type"
+    t.bigint "addressable_id"
+    t.index ["addressable_type", "addressable_id"], name: "index_showrooms_on_addressable_type_and_addressable_id"
     t.index ["brand_id"], name: "index_showrooms_on_brand_id"
   end
 
@@ -80,12 +115,14 @@ ActiveRecord::Schema.define(version: 2019_11_05_222104) do
     t.date "birth_date"
     t.string "photo"
     t.boolean "status"
+    t.string "addressable_type"
+    t.bigint "addressable_id"
+    t.index ["addressable_type", "addressable_id"], name: "index_users_on_addressable_type_and_addressable_id"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
   create_table "variants", force: :cascade do |t|
-    t.integer "stock"
     t.string "color"
     t.string "size"
     t.bigint "product_id"
@@ -97,6 +134,9 @@ ActiveRecord::Schema.define(version: 2019_11_05_222104) do
   add_foreign_key "biddings", "users"
   add_foreign_key "brand_ranks", "biddings"
   add_foreign_key "brand_ranks", "brands"
+  add_foreign_key "photos", "products"
+  add_foreign_key "product_items", "products"
+  add_foreign_key "product_items", "showrooms"
   add_foreign_key "products", "showrooms"
   add_foreign_key "showrooms", "brands"
   add_foreign_key "variants", "products"
