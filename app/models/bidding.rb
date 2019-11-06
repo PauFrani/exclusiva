@@ -3,7 +3,6 @@ class Bidding < ApplicationRecord
   has_many :brand_ranks
   accepts_nested_attributes_for :brand_ranks
   validates :amount, presence: true
-  validates :category, presence: true
 
   has_one :address, as: :addressable
 end
