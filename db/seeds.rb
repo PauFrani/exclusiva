@@ -8,8 +8,8 @@ Photo.destroy_all
 Variant.destroy_all
 Brand.destroy_all
 Showroom.destroy_all
-# Payment.destroy_all
-# Purchase.destroy_all
+Payment.destroy_all
+Purchase.destroy_all
 Bidding.destroy_all
 BrandRank.destroy_all
 
