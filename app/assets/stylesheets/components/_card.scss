@@ -103,10 +103,21 @@
 }
 
 .cards-results-container {
-  width: 40%;
-  margin:20px 0px;
+  width: 90%;
+  margin:0 auto;
   height:auto;
+  display: flex;
+}
 
+.cards-results-list{
+  flex: 1;
+}
+
+.form_oferta{
+  display: contents;
+  div > {
+    border: 2px solid white;
+  }
 }
 
 .card-results-individual {
@@ -126,6 +137,22 @@
 
   }
 
+}
+
+.map{
+  flex: 2;
+  padding: 10px;
+  background-color: green;
+  width: 100%;
+  height: 90vh;
+  top: 0;
+  position: sticky !important;
+}
+
+@media(max-width: 500px){
+  .cards-results-container{
+  display: block;
+  }
 }
 
 .paragraph {
