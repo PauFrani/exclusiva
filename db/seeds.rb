@@ -15,6 +15,14 @@ BrandRank.destroy_all
 Bidding.destroy_all
 User.destroy_all
 Product.destroy_all
+Variant.destroy_all
+
+
+users = User.all.sample
+biddings = Bidding.all.sample
+brands = Brand.all.sample
+showrooms = Showroom.all.sample
+products = Product.all.sample
 
 
 10.times do
@@ -31,7 +39,6 @@ Product.destroy_all
 end
 
 
-users = User.all.sample
 
 5.times do
   Bidding.create(
@@ -49,8 +56,6 @@ end
     )
 end
 
-biddings = Bidding.all.sample
-brands = Brand.all.sample
 
 5.times do
   BrandRank.create(
@@ -64,22 +69,32 @@ end
   Showroom.create(
     name: Faker::Name.first_name,
     phone_number: Faker::PhoneNumber.phone_number,
-    brand: Brand.all.sample,
+    brand: brands,
     email: Faker::Internet.email
     )
 end
 
-# 10.times do
-#   Product.create(
-#     name: ,
-#     min_price: ,
-#     max_price: ,
-#     category: ,
-#     description: ,
-#     sku_ext: Faker::Number.number(digits: 15),
-#     showroom: ,
-#     published: false
-#     )
-# end
+10.times do
+  Product.create(
+    name: ["jean","pants","shirt"].sample,
+    min_price: Faker::Number.between(from: 100, to: 4999),
+    max_price: Faker::Number.between(from: 5000, to: 9999),
+    category: "NADA",
+    description: "Long description of a product. Length aprox 1000 char? " ,
+    sku_ext: Faker::Number.number(digits: 15),
+    showroom_id: showrooms ,
+    published: false
+    )
+end
+
+5.times do
+  Variant.create(
+    stock: Faker::Number.between(from: 0, to: 10),
+    color: ["red", "blue", "yellow"].sample,
+    size: ["medium","small", "large"].sample,
+    product: products
+    )
+end
+
 
 puts "finished db"
