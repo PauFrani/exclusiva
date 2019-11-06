@@ -1,12 +1,18 @@
-.navbar-light .navbar-toggler {
-    color: rgba(0, 0, 0, 0.5);
-    border: none;
+.btn-ghost {
+  color: white;
+  border: 1px solid white;
+  padding: 8px 24px;
+  border-radius: 2px;
+  font-weight: lighter;
+  transition: opacity 0.6s ease;
 }
 
-.btn-outline-success {
-  border: white;
+.navbar-title {
+  font-size: 28px;
 }
 
-.center {
-  text-align: center;
+.navbar {
+  i {
+    font-size: 22px;
+  }
 }

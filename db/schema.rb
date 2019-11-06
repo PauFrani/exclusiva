@@ -25,7 +25,6 @@ ActiveRecord::Schema.define(version: 2019_11_05_222104) do
   end
 
   create_table "brand_ranks", force: :cascade do |t|
-    t.integer "order"
     t.bigint "brand_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
