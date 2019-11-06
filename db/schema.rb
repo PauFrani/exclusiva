@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 2019_11_05_222104) do
   end
 
   create_table "brand_ranks", force: :cascade do |t|
+    t.integer "order"
     t.bigint "brand_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -58,7 +59,7 @@ ActiveRecord::Schema.define(version: 2019_11_05_222104) do
 
   create_table "showrooms", force: :cascade do |t|
     t.string "name"
-    t.string "phone_mumber"
+    t.string "phone_number"
     t.string "email"
     t.bigint "brand_id"
     t.datetime "created_at", null: false
