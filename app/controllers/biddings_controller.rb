@@ -22,9 +22,9 @@ class BiddingsController < ApplicationController
     if request.referrer.include? 'category'
       redirect_to brands_biddings_path
     elsif request.referrer.include? 'brands'
-      redirect_to new_bidding_path # location_bidding_path
+      redirect_to location_biddings_path # location_bidding_path
     elsif request.referrer.include? 'location'
-      redirect_to new_bidding_path # pagina de resultados
+      redirect_to products_path # pagina de resultados
     end
 
   end
@@ -43,13 +43,14 @@ class BiddingsController < ApplicationController
   end
 
   def location
-    @bidding = Bidding.new
+    @bidding = Bidding.find(session[:bidding_id])
+
   end
 
   private
 
   def biddings_params
-    params.require(:bidding).permit(:category, :amount, brand_ranks_attributes: [:order, :brand_id])
+    params.require(:bidding).permit(:category, :amount, brand_ranks_attributes: [:order, :brand_id], address_attributes: [:street])
   end
 
   def set_bidding
