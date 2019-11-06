@@ -8,7 +8,7 @@ class BiddingsController < ApplicationController
   def create
     @bidding = Bidding.new(biddings_params)
     @bidding.user = current_user if user_signed_in?
-    if @bidding.save
+    if @bidding.save!
       session[:bidding_id] = @bidding.id
       redirect_to category_biddings_path
     else
