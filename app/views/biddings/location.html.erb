@@ -1,8 +1,8 @@
 <h2>Location</h2>
+
 <%= simple_form_for @bidding do |form| %>
-  <%= form.simple_fields_for :address do |ff| %>
-    <%= ff.input :street %>
-    <%= ff.hidden_field :addressable_id %>
-  <% end %>
-  <%= form.submit  %>
+	<%= form.simple_fields_for Address.new do |ff| %>
+		<%= ff.input :street %>
+	<% end %>
+	<%= form.submit  %>
 <% end %>

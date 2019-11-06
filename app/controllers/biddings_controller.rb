@@ -18,12 +18,15 @@ class BiddingsController < ApplicationController
 
   def update
     @bidding = Bidding.find(params[:id])
-    @bidding.update(biddings_params)
     if request.referrer.include? 'category'
+      @bidding.update(biddings_params)
       redirect_to brands_biddings_path
     elsif request.referrer.include? 'brands'
+      @bidding.update(biddings_params)
       redirect_to location_biddings_path # location_bidding_path
     elsif request.referrer.include? 'location'
+      @bidding.address = Address.new(address_params)
+      @bidding.save
       redirect_to products_path # pagina de resultados
     end
 
@@ -37,20 +40,22 @@ class BiddingsController < ApplicationController
     @bidding = Bidding.find(session[:bidding_id])
     @brands = Brand.all
     @brands.each do |brand|
-      @bidding.brand_ranks.build(brand: brand)
+      @bidding.brand_ranks. build(brand: brand)
     end
-
   end
 
   def location
     @bidding = Bidding.find(session[:bidding_id])
-
   end
 
   private
 
   def biddings_params
     params.require(:bidding).permit(:category, :amount, brand_ranks_attributes: [:order, :brand_id], address_attributes: [:street])
+  end
+
+  def address_params
+    params[:bidding][:address].permit(:street)
   end
 
   def set_bidding
