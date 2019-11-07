@@ -1,4 +1,8 @@
 import "bootstrap";
+import 'mapbox-gl/dist/mapbox-gl.css';
+import { initMapbox } from '../plugins/init_mapbox';
+
+initMapbox();
 
 const brand_ranks_form = document.getElementById("brand_ranks_form");
 

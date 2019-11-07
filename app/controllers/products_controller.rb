@@ -1,10 +1,4 @@
 class ProductsController < ApplicationController
-  def index
-    @bidding = Bidding.new(params[:id])
-    @products = Product.all
-  end
+  skip_before_action :authenticate_user!
 
-  def show
-    @product = Product.find(params[:id])
-  end
 end

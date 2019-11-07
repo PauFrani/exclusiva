@@ -9,7 +9,8 @@ Rails.application.routes.draw do
         get 'location'
       end
     end
-    resources :products, only: [:index, :show]
+    resources :product_items, only: [:index]
+    resources :products, only: :show
 
   get '/cards', to: 'pages#cards'
 
