@@ -30,17 +30,13 @@ puts "creating users"
     )
 end
 
-nombres_marcas = ["ADIDAS","NIKE","PUMA", "ZARA","ONA SAEZ","TOMMY"]
+nombres_marcas = ["Akiabara","Rapsodia","Vitamina", "Zara"]
 logos = [
-  "https://cdn2.bigcommerce.com/server1500/ac84d/products/1203/images/2686/Adidas_Logo_Stack__93206.1337144792.380.380.jpg?c=2",
-  "https://cdn2.bigcommerce.com/server1500/ac84d/products/1269/images/2876/Nike_Logo__97043.1340418202.380.380.jpg?c=2",
-  "https://lifestyle.fit/app/uploads/2018/01/logotipo-puma-750x400.jpg",
-  "https://www.lavanguardia.com/r/GODO/LV/p5/WebSite/2019/01/29/Recortada/img_sarbat_20190129-173725_imagenes_lv_otras_fuentes_zara_logo_2-kPiD--656x287@LaVanguardia-Web.jpg",
-  "https://i.pinimg.com/originals/08/a6/72/08a672fea24ece38768f5909be400a84.jpg",
-  "https://i.ebayimg.com/images/g/OJkAAOSw3xJVdiA-/s-l300.jpg"
+  "https://i.imgur.com/cDxvUy7.png",
+  "https://i.imgur.com/IXje2Gc.png",
+  "https://i.imgur.com/EJ8pgGJ.png",
+  "https://i.imgur.com/TYPRRUv.png",
 ]
-
-
 
 
 puts "creating brands"
