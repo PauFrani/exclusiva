@@ -36,7 +36,7 @@ puts "creating brands"
     name: ["GAP","AKB","NIKE"].sample,
     logo: "NADA",
     status: true
-    )
+  )
   3.times do
     address = Address.new(street: ADDRESSES.sample)
     showroom = Showroom.new(
