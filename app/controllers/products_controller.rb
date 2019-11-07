@@ -1,7 +1,9 @@
 class ProductsController < ApplicationController
+  skip_before_action :authenticate_user!
   def index
-    @bidding = Bidding.new(params[:id])
-    @products = Product.all
+    @bidding = Bidding.find(session[:bidding_id])
+    @products = Product.search(@bidding)
+    #@products = Product.all
   end
 
   def show

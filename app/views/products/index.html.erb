@@ -22,11 +22,12 @@
 
 <div class="cards-results-container">
   <div class="cards-results-list">
+    <% @products.each do |product| %>
     <%20.times do%>
     <div class="card-results-individual">
       <img src="https://conocedores.com/wp-content/uploads/2019/02/zara-new-logo-06022019in2.png" alt="logo">
       <div class="paragraph">
-        <h2>title of the product</h1>
+        <h2><%= product.name %> </h1>
           <p>brand</p>
           <div class="location">
             <i class="fas fa-map-marker-alt"></i>
@@ -34,6 +35,7 @@
           </div>
         </div>
       </div>
+    <% end %>
     <% end %>
   </div>
 
