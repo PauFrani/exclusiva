@@ -1,4 +1,10 @@
 import "bootstrap";
+import 'mapbox-gl/dist/mapbox-gl.css';
+import { initMapbox } from '../plugins/init_mapbox';
+import { initSlick } from '../plugins/init_slick';
+
+
+initMapbox();
 
 const brand_ranks_form = document.getElementById("brand_ranks_form");
 
@@ -85,3 +91,8 @@ function addDnDHandlers(elem) {
 }
 var cols = document.querySelectorAll('#columns .column');
 [].forEach.call(cols, addDnDHandlers);
+
+
+
+
+
