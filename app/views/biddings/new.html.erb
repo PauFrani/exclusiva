@@ -9,10 +9,10 @@
     <div>
       <%= simple_form_for(@bidding) do |f| %>
         <%= f.input :amount, label_html: { class: "title-text"}, label: 'Buscá por precio' %>
+      <%= f.submit %>
       <% end %>
     </div>
     <div>
-      <%= link_to 'Search', '#', class: 'button-general'  %>
     </div>
   </div>
 </div>
