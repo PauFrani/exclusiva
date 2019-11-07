@@ -11,21 +11,6 @@ class Product < ApplicationRecord
   validates :sku_ext, presence: true
   validates :published, presence: true
 
-  # price, category, brands, location
-
-  def self.search(bidding)
-    # sql_query = "SELECT * FROM products "
-
-    # search products by bidding.category
-    # filter products between min and max price
-    # get brand ranks for bidding
-    ProductItem.joins(:product).where(products: { category: bidding.category }).where("products.min_price < ?", bidding.amount).where("products.max_price > ?", bidding.amount).where("product_items.stock > ?", 0)
-    # .near(bidding.address.street, 10)
-    # order products by brands
-    # filter by near
-
-    # Product.find_by_sql(sql_query)
-  end
 
 end
 
@@ -34,3 +19,16 @@ end
  #                JOIN brands AS b ON b.id = sr.brand_id \
  #                JOIN brand_ranks AS br ON b.id = br.brand_id \
  #                where p.category = bidding.category and bidding.amount between p.min_price and p.max_price"
+
+  # price, category, brands, location
+
+    # sql_query = "SELECT * FROM products "
+
+    # search products by bidding.category
+    # filter products between min and max price
+    # get brand ranks for bidding
+    # .near(bidding.address.street, 10)
+    # order products by brands
+    # filter by near
+
+    # Product.find_by_sql(sql_query)
