@@ -30,7 +30,6 @@ class BiddingsController < ApplicationController
       @bidding.save
       redirect_to products_path # pagina de resultados
     end
-
   end
 
   def category
