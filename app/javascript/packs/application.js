@@ -1,6 +1,8 @@
 import "bootstrap";
 import 'mapbox-gl/dist/mapbox-gl.css';
 import { initMapbox } from '../plugins/init_mapbox';
+import { initSlick } from '../plugins/init_slick';
+
 
 initMapbox();
 
@@ -89,3 +91,8 @@ function addDnDHandlers(elem) {
 }
 var cols = document.querySelectorAll('#columns .column');
 [].forEach.call(cols, addDnDHandlers);
+
+
+
+
+
