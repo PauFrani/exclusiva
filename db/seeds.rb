@@ -3,6 +3,7 @@ require 'faker'
 
 puts 'Cleaning DB...'
 
+
 ProductItem.destroy_all
 Variant.destroy_all
 Product.destroy_all
