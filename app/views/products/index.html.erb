@@ -22,12 +22,13 @@
 
 <div class="cards-results-container">
   <div class="cards-results-list">
-    <%20.times do%>
+    <% @products.each do |product|%>
     <div class="card-results-individual">
       <img src="https://conocedores.com/wp-content/uploads/2019/02/zara-new-logo-06022019in2.png" alt="logo">
-      <div class="paragraph">
-        <h2>title of the product</h1>
-          <p>brand</p>
+        <div class="paragraph">
+          <h2><%= product.name %></h1>
+          <p><%= product.category %></p>
+          <p><%= product.showroom.address %></p>
           <div class="location">
             <i class="fas fa-map-marker-alt"></i>
             <p>2.5 km</p>
@@ -37,6 +38,11 @@
     <% end %>
   </div>
 
-  <div class="map">
-  </div>
+  <div
+    id="map"
+    style="width: 100%;
+    height: 600px;"
+    data-markers="<%= @markers.to_json %>"
+    data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+  ></div>
 </div>
