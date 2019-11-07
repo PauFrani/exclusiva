@@ -22,13 +22,13 @@
 
 <div class="cards-results-container">
   <div class="cards-results-list">
-    <% @products.each do |product|%>
+    <% @product_items.each do |product|%>
     <div class="card-results-individual">
       <img src="https://conocedores.com/wp-content/uploads/2019/02/zara-new-logo-06022019in2.png" alt="logo">
         <div class="paragraph">
           <h2><%= product.name %></h1>
           <p><%= product.category %></p>
-          <p><%= product.showroom.address %></p>
+          <p><%= product.address %></p>
           <div class="location">
             <i class="fas fa-map-marker-alt"></i>
             <p>2.5 km</p>

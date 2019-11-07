@@ -28,7 +28,7 @@ class BiddingsController < ApplicationController
     elsif request.referrer.include? 'location'
       @bidding.address = Address.new(address_params)
       @bidding.save
-      redirect_to products_path # pagina de resultados
+      redirect_to product_items_path # pagina de resultados
     end
   end
 
