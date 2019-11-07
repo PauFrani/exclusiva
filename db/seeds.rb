@@ -1,4 +1,4 @@
-ADDRESSES = ["San martin de tours 2908, Capital Federal, Buenos Aires", "Santa Fe 3336, Capital Federal, Buenos Aires, Argentina", "Niceto Vega 4388, Capital Federal, Buenos Aires, Argentina", "Niceto Vega 4366, Capital Federal, Buenos Aires, Argentina"]
+ADDRESSES = ["San martin de tours 2908, Capital Federal, Buenos Aires", "Santa Fe 3336, Capital Federal, Buenos Aires, Argentina", "Santa Fe 1300, Capital Federal, Buenos Aires, Argentina", "Niceto Vega 4866, Capital Federal, Buenos Aires, Argentina"]
 require 'faker'
 
 puts 'Cleaning DB...'
