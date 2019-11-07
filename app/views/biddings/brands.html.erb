@@ -1,16 +1,25 @@
 <div class="container">
   <ul id="columns">
-  <div class="draggable-zone">
+    <div class="draggable-zone">
       <% @brands.each_with_index do |brand, index| %>
-        <li id="draggable" class="column brand_order" draggable="true" value="<%= brand.id %>"><%= brand.name %></span></li>
+
+      <li id="draggable" class="column brand_order " draggable="true" value="<%= brand.id %>">
+        <div class="card-brand-ranking ">-
+        <div class="number"><%= index + 1 %></div>
+          <div class="logo">
+            <img src="<%= brand.logo %>" alt="">
+          </div>
+
+        </div>
+      </li>
       <% end %>
-  </div>
+    </div>
   </ul>
   <%= simple_form_for @bidding, html: { id: "brand_ranks_form" }  do |form| %>
-      <%= form.simple_fields_for :brand_ranks do |ff| %>
-        <%= ff.hidden_field :order, class:"brand_input" %>
-        <%= ff.hidden_field :brand_id, class:"card-brand-ranking"  %>
-      <% end %>
-    <%= form.submit id: "brand_ranks_submit" %>
-    <% end %>
+  <%= form.simple_fields_for :brand_ranks do |ff| %>
+  <%= ff.hidden_field :order, class:"brand_input" %>
+  <%= ff.hidden_field :brand_id  %>
+  <% end %>
+  <%= form.submit id: "brand_ranks_submit" %>
+  <% end %>
 </div>

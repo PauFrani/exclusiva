@@ -30,13 +30,29 @@ puts "creating users"
     )
 end
 
+nombres_marcas = ["ADIDAS","NIKE","PUMA", "ZARA","ONA SAEZ","TOMMY"]
+logos = [
+  "https://cdn2.bigcommerce.com/server1500/ac84d/products/1203/images/2686/Adidas_Logo_Stack__93206.1337144792.380.380.jpg?c=2",
+  "https://cdn2.bigcommerce.com/server1500/ac84d/products/1269/images/2876/Nike_Logo__97043.1340418202.380.380.jpg?c=2",
+  "https://lifestyle.fit/app/uploads/2018/01/logotipo-puma-750x400.jpg",
+  "https://www.lavanguardia.com/r/GODO/LV/p5/WebSite/2019/01/29/Recortada/img_sarbat_20190129-173725_imagenes_lv_otras_fuentes_zara_logo_2-kPiD--656x287@LaVanguardia-Web.jpg",
+  "https://i.pinimg.com/originals/08/a6/72/08a672fea24ece38768f5909be400a84.jpg",
+  "https://i.ebayimg.com/images/g/OJkAAOSw3xJVdiA-/s-l300.jpg"
+]
+
+
+
+
 puts "creating brands"
-5.times do
+
+nombres_marcas.each_with_index do |name, index|
   brand = Brand.create!(
-    name: ["GAP","AKB","NIKE"].sample,
-    logo: "NADA",
-    status: true
-  )
+    name: name,
+    logo: logos[index],
+    status: true,
+    )
+
+
   3.times do
     address = Address.new(street: ADDRESSES.sample)
     showroom = Showroom.new(
@@ -44,7 +60,7 @@ puts "creating brands"
       name: Faker::Name.first_name,
       phone_number: Faker::PhoneNumber.phone_number,
       email: Faker::Internet.email
-    )
+      )
     showroom.address = address
     showroom.save!
     10.times do
@@ -67,12 +83,12 @@ end
 
 puts "creating products variants"
 Product.all.each do |product|
-5.times do
-  Variant.create(
-    color: ["red", "blue", "yellow"].sample,
-    size: ["medium","small", "large"].sample,
-    product: product
-    )
+  5.times do
+    Variant.create(
+      color: ["red", "blue", "yellow"].sample,
+      size: ["medium","small", "large"].sample,
+      product: product
+      )
   end
 end
 
@@ -100,12 +116,12 @@ Bidding.all.each do |bidding|
       qr: "link",
       payment_method: ["efectivo", "tarjeta"].sample,
       status: "activo"
-    )
+      )
     if rand(0..50) > 40
       Payment.create!(
         purchase: purchase,
         status: "pago"
-      )
+        )
     end
   end
 end
