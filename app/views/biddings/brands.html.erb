@@ -1,16 +1,38 @@
 <div class="container">
-  <ul id="columns">
-  <div class="draggable-zone">
-      <% @brands.each_with_index do |brand, index| %>
-        <li id="draggable" class="column brand_order" draggable="true" value="<%= brand.id %>"><%= brand.name %></span></li>
-      <% end %>
+  <div class="step-by-step">
+  <div class="number">
+    <span>2</span>
   </div>
-  </ul>
-  <%= simple_form_for @bidding, html: { id: "brand_ranks_form" }  do |form| %>
-      <%= form.simple_fields_for :brand_ranks do |ff| %>
-        <%= ff.hidden_field :order, class:"brand_input" %>
-        <%= ff.hidden_field :brand_id  %>
-      <% end %>
-    <%= form.submit id: "brand_ranks_submit" %>
-    <% end %>
+  <h2>Ordena las marcas</h2>
+  <p>Ordena tus preferidas para que te las mostremos primero</p>
 </div>
+  <ul id="columns" style="list-style-type:none; padding: 0;">
+    <div class="draggable-zone">
+      <% @brands.each_with_index do |brand, index| %>
+
+      <li id="draggable" class="column brand_order " draggable="true" value="<%= brand.id %>">
+        <div class="card-brand-ranking ">
+
+          <div class="logo">
+            <div class="number"><span class="rank"><%= index + 1 %></span></div>
+            <img src="<%= brand.logo %>" alt="">
+          </div>
+
+        </div>
+      </li>
+      <% end %>
+    </div>
+  </ul>
+<br>
+<br>
+  <%= simple_form_for @bidding, html: { id: "brand_ranks_form" }  do |form| %>
+  <%= form.simple_fields_for :brand_ranks do |ff| %>
+  <%= ff.hidden_field :order, class:"brand_input" %>
+  <%= ff.hidden_field :brand_id  %>
+  <% end %>
+  <div class="d-flex justify-content-center"><%= form.submit "Continuar", id: "brand_ranks_submit", class:"button-general" %></div>
+  <% end %>
+</div>
+<br>
+<br>
+<br>
