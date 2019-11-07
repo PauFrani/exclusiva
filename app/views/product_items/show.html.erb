@@ -1,0 +1,13 @@
+<h2><%= @product.name %></h2>
+<p><%= @product.category %></p>
+<p><%= @product.description %></p>
+
+<h2>Colores disponibles</h2>
+<% @product.variants.each do |variant|  %>
+ <li><%= variant.color %></li>
+<% end %>
+<h2>Talles disponibles</h2>
+<% @product.variants.each do |variant|  %>
+ <li><%= variant.size %></li>
+<% end %>
+<% console %>
