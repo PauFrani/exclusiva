@@ -56,6 +56,17 @@ ActiveRecord::Schema.define(version: 2019_11_06_221702) do
     t.datetime "updated_at", null: false
   end
 
+<<<<<<< HEAD
+=======
+  create_table "payments", force: :cascade do |t|
+    t.string "status"
+    t.bigint "purchase_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["purchase_id"], name: "index_payments_on_purchase_id"
+  end
+
+>>>>>>> master
   create_table "photos", force: :cascade do |t|
     t.string "url_photo"
     t.bigint "product_id"
@@ -86,6 +97,18 @@ ActiveRecord::Schema.define(version: 2019_11_06_221702) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["showroom_id"], name: "index_products_on_showroom_id"
+  end
+
+  create_table "purchases", force: :cascade do |t|
+    t.string "qr"
+    t.string "payment_method"
+    t.bigint "product_item_id"
+    t.bigint "bidding_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "status"
+    t.index ["bidding_id"], name: "index_purchases_on_bidding_id"
+    t.index ["product_item_id"], name: "index_purchases_on_product_item_id"
   end
 
   create_table "showrooms", force: :cascade do |t|
@@ -134,10 +157,16 @@ ActiveRecord::Schema.define(version: 2019_11_06_221702) do
   add_foreign_key "biddings", "users"
   add_foreign_key "brand_ranks", "biddings"
   add_foreign_key "brand_ranks", "brands"
+<<<<<<< HEAD
+=======
+  add_foreign_key "payments", "purchases"
+>>>>>>> master
   add_foreign_key "photos", "products"
   add_foreign_key "product_items", "products"
   add_foreign_key "product_items", "showrooms"
   add_foreign_key "products", "showrooms"
+  add_foreign_key "purchases", "biddings"
+  add_foreign_key "purchases", "product_items"
   add_foreign_key "showrooms", "brands"
   add_foreign_key "variants", "products"
 end
