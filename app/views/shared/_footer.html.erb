@@ -1,35 +1,54 @@
-<!-- Footer -->
-<footer class="page-footer font-small cyan darken-3 text-center border-top border-bottom">
-  <div class="row">
-    <div class="col-md-12">
-      <div class=" py-5 d-flex justify-content-center">
-
+<footer class="page-footer font-small cyan darken-3 text-center border-top border-bottom mt-5 d-none d-sm-block">
+  <div class="container">
+    <div class="row py-5">
+      <div class="col-sm-6 col-md-3">
         <div class="unit_size text-left">
           <h3>Nosotros</h3>
-          <p>Empleo</p>
-          <p>Noticias</p>
-          <p>Politicas</p>
+          <p><%= link_to "Empleo","#" %></p>
+          <p><%= link_to "Noticias","#" %></p>
+          <p><%= link_to "Politica","#" %></p>
         </div>
+      </div>
+      <div class="col-sm-6 col-md-3">
         <div class="unit_size text-left">
           <h3>Descubrí</h3>
-          <p>Vestidos</p>
-          <p> Camisas</p>
-          <p>Jeans</p>
+          <p><%= link_to "Vestidos", "#" %></p>
+          <p><%= link_to "Camisas","#" %></p>
+          <p><%= link_to "Jeans","#" %></p>
         </div>
+      </div>
+      <div class="col-sm-6 col-md-3">
         <div class="unit_size text-left">
           <h3>Información</h3>
-          <p>Condicines</p>
-          <p>Privacidad</p>
-          <p>Uso del sitio</p>
+         <p><%= link_to "Condiciones","#" %></p>
+          <p><%= link_to "Privacidad","#" %></p>
+          <p><%= link_to "Uso del sitio","#" %></p>
         </div>
+      </div>
+      <div class="col-sm-6 col-md-3">
         <div class="unit_size text-left">
           <h3>Seguinos</h3>
-          <p>Instagram</p>
-          <p>Facebook</p>
-          <p>Twiter</p>
+          <p><%= link_to "Instagram","#" %></p>
+          <p><%= link_to "Facebook","#" %></p>
+          <p><%= link_to "Twiter","#" %></p>
         </div>
       </div>
     </div>
   </div>
 </footer>
 
+<footer class="page-footer font-small cyan darken-3 text-center border-top border-bottom mt-5  d-lg-none ">
+  <div class="container">
+    <div class="row py-5">
+      <div class="col 12">
+        <div>
+          <p><%= link_to "Nosotros", "#" %></p>
+          <p><%= link_to "Descubrí", "#"%></p>
+          <p><%= link_to "Informacion","#" %></p>
+          <p><%= link_to "Seguinos", "#" %></p>
+        </div>
+
+      </div>
+      </div>
+      </div>
+      </footer>

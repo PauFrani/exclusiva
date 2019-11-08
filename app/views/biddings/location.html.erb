@@ -1,8 +1,23 @@
-<h2>Location</h2>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-12 col-md-6">
 
-<%= simple_form_for @bidding do |form| %>
-	<%= form.simple_fields_for Address.new do |ff| %>
-		<%= ff.input :street %>
-	<% end %>
-	<%= form.submit  %>
-<% end %>
+
+      <div class="step-by-step">
+        <div class="number">
+          <span>3</span>
+        </div>
+        <h2>Elegí una Ubicación</h2>
+        <p>Pódes filtrar por zona o shoppings de tu interes</p>
+      </div>
+
+      <%= simple_form_for @bidding do |form| %>
+      <%= form.simple_fields_for Address.new do |ff| %>
+      <div class="my-5"><%= ff.input :street, input_html: { class: "cta-location-input"}, label: false, placeholder: "Av. Santa Fe 3425, Palermo, CABA" %></div>
+      <% end %>
+      <div class="d-flex justify-content-center"><%= form.submit "Continuar", id: "location_submit", class:"button-general" %></div>
+      <% end %>
+    </div>
+  </div>
+</div>
+
