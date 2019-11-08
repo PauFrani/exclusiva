@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_06_221702) do
+ActiveRecord::Schema.define(version: 2019_11_06_215026) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,9 +32,6 @@ ActiveRecord::Schema.define(version: 2019_11_06_221702) do
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "addressable_type"
-    t.bigint "addressable_id"
-    t.index ["addressable_type", "addressable_id"], name: "index_biddings_on_addressable_type_and_addressable_id"
     t.index ["user_id"], name: "index_biddings_on_user_id"
   end
 
@@ -72,16 +69,6 @@ ActiveRecord::Schema.define(version: 2019_11_06_221702) do
     t.index ["product_id"], name: "index_photos_on_product_id"
   end
 
-  create_table "product_items", force: :cascade do |t|
-    t.integer "stock"
-    t.bigint "showroom_id"
-    t.bigint "product_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["product_id"], name: "index_product_items_on_product_id"
-    t.index ["showroom_id"], name: "index_product_items_on_showroom_id"
-  end
-
   create_table "products", force: :cascade do |t|
     t.string "name"
     t.float "min_price"
@@ -99,13 +86,23 @@ ActiveRecord::Schema.define(version: 2019_11_06_221702) do
   create_table "purchases", force: :cascade do |t|
     t.string "qr"
     t.string "payment_method"
-    t.bigint "product_item_id"
+    t.bigint "showroom_variant_stock_id"
     t.bigint "bidding_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "status"
     t.index ["bidding_id"], name: "index_purchases_on_bidding_id"
-    t.index ["product_item_id"], name: "index_purchases_on_product_item_id"
+    t.index ["showroom_variant_stock_id"], name: "index_purchases_on_showroom_variant_stock_id"
+  end
+
+  create_table "showroom_variant_stocks", force: :cascade do |t|
+    t.integer "stock"
+    t.bigint "showroom_id"
+    t.bigint "variant_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["showroom_id"], name: "index_showroom_variant_stocks_on_showroom_id"
+    t.index ["variant_id"], name: "index_showroom_variant_stocks_on_variant_id"
   end
 
   create_table "showrooms", force: :cascade do |t|
@@ -115,9 +112,6 @@ ActiveRecord::Schema.define(version: 2019_11_06_221702) do
     t.bigint "brand_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "addressable_type"
-    t.bigint "addressable_id"
-    t.index ["addressable_type", "addressable_id"], name: "index_showrooms_on_addressable_type_and_addressable_id"
     t.index ["brand_id"], name: "index_showrooms_on_brand_id"
   end
 
@@ -135,9 +129,6 @@ ActiveRecord::Schema.define(version: 2019_11_06_221702) do
     t.date "birth_date"
     t.string "photo"
     t.boolean "status"
-    t.string "addressable_type"
-    t.bigint "addressable_id"
-    t.index ["addressable_type", "addressable_id"], name: "index_users_on_addressable_type_and_addressable_id"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
@@ -156,11 +147,11 @@ ActiveRecord::Schema.define(version: 2019_11_06_221702) do
   add_foreign_key "brand_ranks", "brands"
   add_foreign_key "payments", "purchases"
   add_foreign_key "photos", "products"
-  add_foreign_key "product_items", "products"
-  add_foreign_key "product_items", "showrooms"
   add_foreign_key "products", "showrooms"
   add_foreign_key "purchases", "biddings"
-  add_foreign_key "purchases", "product_items"
+  add_foreign_key "purchases", "showroom_variant_stocks"
+  add_foreign_key "showroom_variant_stocks", "showrooms"
+  add_foreign_key "showroom_variant_stocks", "variants"
   add_foreign_key "showrooms", "brands"
   add_foreign_key "variants", "products"
 end

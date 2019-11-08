@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-xs navbar-light bg-transparent border-bottom border-white fixed-top">
   <div class="dropdown">
-    <i class="fas fa-bars d-block d-sm-none text-white" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
+    <i class="fas fa-bars d-block text-white" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
     <% if user_signed_in? %>
       <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
         <%= link_to "Home", root_path, class:"dropdown-item"  %>
@@ -16,8 +16,8 @@
   <h1 class="title-text" href="#"> <%= link_to "Exclusiva", root_path, class:"text-decoration-none text-white navbar-title"  %> </h1>
   <div>
     <% if user_signed_in? %>
-      <div>
-        <i class="fas fa-tshirt"></i>
+      <div class="upper-right-box">
+        <i class="fas fa-tshirt text-white"></i>
       </div>
     <% else %>
       <div class="d-none d-sm-block">
@@ -28,3 +28,4 @@
     <% end %>
   </div>
 </nav>
+

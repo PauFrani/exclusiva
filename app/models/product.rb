@@ -1,10 +1,10 @@
 class Product < ApplicationRecord
   CATEGORIES = ["jean","pants","shirt"]
 
-  has_many :products_items
 
   has_many :photos, dependent: :destroy
-  has_many :variants
+  has_many :variants, dependent: :destroy
+  has_many :showroom_variant_stocks, through: :variants
   validates :name, presence: true
   validates :min_price, presence: true
   validates :max_price, presence: true
@@ -16,7 +16,7 @@ class Product < ApplicationRecord
 
 end
 
- # sql_query = "SELECT * FROM products as pr JOIN product_items AS pi ON pr.id = pi.product_id \
+ # sql_query = "SELECT * FROM products as pr JOIN showroom_variant_stocks AS pi ON pr.id = pi.product_id \
  #                JOIN showrooms AS sr ON pi.showroom_id = sr.id \
  #                JOIN brands AS b ON b.id = sr.brand_id \
  #                JOIN brand_ranks AS br ON b.id = br.brand_id \

@@ -1,8 +1,14 @@
 import "bootstrap";
 import 'mapbox-gl/dist/mapbox-gl.css';
 import { initMapbox } from '../plugins/init_mapbox';
+import '@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder.css';
+import { initSlick } from '../plugins/init_slick';
+import { initAutocomplete } from '../plugins/init_autocomplete';
+import { initAutocomplete1 } from '../plugins/init_autocomplete';
 
 initMapbox();
+initAutocomplete();
+initAutocomplete1();
 
 const brand_ranks_form = document.getElementById("brand_ranks_form");
 
@@ -89,3 +95,8 @@ function addDnDHandlers(elem) {
 }
 var cols = document.querySelectorAll('#columns .column');
 [].forEach.call(cols, addDnDHandlers);
+
+
+
+
+
