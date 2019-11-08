@@ -1,0 +1,15 @@
+<h2><%= @product_item.product.name %></h2>
+<%= @product_item.product.photos.each do |photo| %>
+<li><%= photo.url_photo %></li>
+<% end %>
+<p><%= @product_item.product.category %></p>
+<p> Color: Red </p>
+<p> Talle: Medium </p>
+
+<%= @bidding.amount %>
+
+<h2>Elegí un método de pago</h2>
+
+<%# simple_form_for [@product_item, @purchase] do |f| %>
+  <%#= f.input :payment_method, collection: ["Efectivo", "Tarjeta"] %>
+<% #end %>

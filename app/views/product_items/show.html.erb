@@ -1,13 +1,54 @@
-<h2><%= @product.name %></h2>
-<p><%= @product.category %></p>
-<p><%= @product.description %></p>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-12 col-lg-1">
+     <img src="https://d26lpennugtm8s.cloudfront.net/stores/246/391/products/dsc_54751-4f2499aa13a426007a15700604112508-1024-1024.jpg" alt="..." class="img-thumbnail">
+     <img src="https://d26lpennugtm8s.cloudfront.net/stores/246/391/products/dsc_54751-4f2499aa13a426007a15700604112508-1024-1024.jpg" alt="..." class="img-thumbnail">
+     <img src="https://d26lpennugtm8s.cloudfront.net/stores/246/391/products/dsc_54751-4f2499aa13a426007a15700604112508-1024-1024.jpg" alt="..." class="img-thumbnail">
+     <img src="https://d26lpennugtm8s.cloudfront.net/stores/246/391/products/dsc_54751-4f2499aa13a426007a15700604112508-1024-1024.jpg" alt="..." class="img-thumbnail">
+   </div>
+    <div class="col-12 col-lg-5">
+     <img src="https://d26lpennugtm8s.cloudfront.net/stores/246/391/products/dsc_54751-4f2499aa13a426007a15700604112508-1024-1024.jpg" alt="..." class="img-fluid rounded-sm-lg">
+  </div>
+  <div class="col-12 col-lg-6">
+    <div class="pl-md-5">
+      <h2><%= @product_item.product.name %></h2>
+      <p><%= @product_item.product.category %></p>
+      <p><%= @product_item.product.description %></p>
+      <%= simple_form_for(@product_item.product, as: :product, method: :get, url: new_product_item_purchase_path(@product_item)) do |f|%>
 
-<h2>Colores disponibles</h2>
-<% @product.variants.each do |variant|  %>
- <li><%= variant.color %></li>
-<% end %>
-<h2>Talles disponibles</h2>
-<% @product.variants.each do |variant|  %>
- <li><%= variant.size %></li>
-<% end %>
-<% console %>
+        <div class="d-flex justify-content-between">
+          <div>
+            Color:
+            <input type="button" name="color" class="select-color select-color-red">
+            <input type="button" name="color" class="select-color select-color-blue">
+          </div>
+          <div>
+            Talle:
+            <span>
+              <label><input type="radio" name="talle" checked>34</label>
+            </span>
+            <span>
+              <label><input type="radio" name="talle" checked>36</label>
+            </span>
+            <span>
+              <label><input type="radio" name="talle" checked>38</label>
+            </span>
+            <span>
+              <label><input type="radio" name="talle" checked>40</label>
+            </span>
+          </div>
+        </div>
+      <hr>
+
+          <h4>Ubicación:</h4>
+          <p class="border-left border-secondary"><%= @product_item.address %></p>
+      <%= link_to "Hacer Oferta", new_product_item_purchase_path(@product_item), class: "button-general"  %>
+    <% end %>
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+

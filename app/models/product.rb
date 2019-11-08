@@ -11,7 +11,7 @@ class Product < ApplicationRecord
   validates :category, presence: true
   validates :description, presence: true
   validates :sku_ext, presence: true
-  validates :published, presence: true
+  # validates :published, presence: true
 
 
 end
