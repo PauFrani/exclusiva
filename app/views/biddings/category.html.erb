@@ -21,7 +21,7 @@
 </div>
 <br>
 
-<%= simple_form_for :bidding, url: brands_biddings_path, method: :get do |b| %>
+<%= simple_form_for(@bidding) do |b| %>
   <%= b.hidden_field :category %>
   <%= b.submit "Continuar", class:"btn btn-primary" %>
 <% end %>
