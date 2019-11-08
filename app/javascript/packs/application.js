@@ -2,8 +2,9 @@ import "bootstrap";
 import 'mapbox-gl/dist/mapbox-gl.css';
 import { initMapbox } from '../plugins/init_mapbox';
 import { initSlick } from '../plugins/init_slick';
+import { initAutocomplete } from '../plugins/init_autocomplete';
 
-
+initAutocomplete();
 initMapbox();
 
 const brand_ranks_form = document.getElementById("brand_ranks_form");
