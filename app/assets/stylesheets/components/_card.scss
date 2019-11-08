@@ -140,7 +140,7 @@
   height:150px;
   width:100%;
   border: 1px solid rgba(0, 0, 0, 0.0);
-  border-top: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
   justify-content:left;
   padding:20px;
   img {
@@ -154,6 +154,8 @@
   &:hover {
     border: 1px solid rgba(0, 0, 0, 0.3);
     border-radius:5px;
+    box-shadow: -2px 3px 7px rgba(0, 0, 0, 0.2);
+
     }
 
 }
