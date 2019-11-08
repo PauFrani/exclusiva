@@ -12,7 +12,6 @@ class ProductItemsController < ApplicationController
           infoWindow: render_to_string(partial: "info_window", locals: { product_item: product_item }),
           image_url: helpers.asset_url('https://i.ibb.co/MVHrLcB/perchero2.png')
           # image_url: helpers.asset_url('https://i.ibb.co/zfL4Rt9/perchero3.png')
-
         }
       end
     end
