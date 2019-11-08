@@ -44,20 +44,12 @@
       <p>Accesorios</p>
       <%#= image_tag 'circle.png', class: 'circle'%>
     </div>
-
-    <div class="card-bidding-category" data-category="shorts">
-      <div>
-        <%= image_tag "https://images-na.ssl-images-amazon.com/images/I/61DggmSlr1L._UX466_.jpg", class: 'photo'  %>
-      </div>
-      <p>Shorts</p>
-      <%#= image_tag 'circle.png', class: 'circle'%>
-    </div>
   </div>
 </div>
 <!-- END CARD CATEGORY -->
 <div class="text-center">
-  <%= simple_form_for :bidding, url: brands_biddings_path, method: :get do |b| %>
+  <%= simple_form_for(@bidding) do |b| %>
     <%= b.hidden_field :category %>
-    <%= b.submit "Continuar", class: "button-general" %>
+    <%= b.submit "Continuar", class:"btn btn-primary" %>
   <% end %>
 </div>
