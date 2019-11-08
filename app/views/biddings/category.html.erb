@@ -7,21 +7,57 @@
 </div>
 
 <!-- CARDS CATEGORY  -->
-
-<div class="cards-bidding">
-  <% 8.times do %>
-    <div class="card-bidding-category" data-category="jean">
+<div class="container" id="button-transparent">
+  <div class="cards-bidding">
+    <div class="card-bidding-category" data-category="shoes">
       <div>
-        <img class="photo" src="https://gloimg.drlcdn.com/L/pdm-product-pic/Clothing/2018/10/12/goods-img-app/1539716058960958979.jpg" alt="vestidos">
+        <%= image_tag "https://static.zattini.com.br/produtos/sandalia-bottero-salto-grosso-laser/70/D96-0612-070/D96-0612-070_zoom1.jpg?ims=544x", class: 'photo'  %>
       </div>
-      <p>Category</p>
-      <%= image_tag 'circle.png', class: 'circle'%>
+      <p>Zapatos</p>
+      <%#= image_tag 'circle.png', class: 'circle'%>
     </div>
+    <div class="card-bidding-category" data-category="dress">
+      <div>
+        <%= image_tag "https://zefinka.com/assets/images/resources/5841/564x/sleeveless-dot-print-dress-women-2019-new-summer-casual-loose-dress-plus-size-cute-thin-o-0.jpg", class: 'photo'  %>
+      </div>
+      <p>Vestidos</p>
+      <%#= image_tag 'circle.png', class: 'circle'%>
+    </div>
+    <div class="card-bidding-category" data-category="shirts">
+      <div>
+        <%= image_tag "https://www.camisetasymoda.es/23756-large_default/camisa-manga-corta-heritage-mujer-de-b-c.jpg", class: 'photo'  %>
+      </div>
+      <p>Camisas</p>
+      <%#= image_tag 'circle.png', class: 'circle'%>
+    </div>
+    <div class="card-bidding-category" data-category="jeans">
+      <div>
+        <%= image_tag "https://laropa.store/1565-large_default/jeans-mujer-levanta-cola-push-up-elastano-15-30017.jpg", class: 'photo'  %>
+      </div>
+      <p>Jeans</p>
+      <%#= image_tag 'circle.png', class: 'circle'%>
+    </div>
+    <div class="card-bidding-category" data-category="accessories">
+      <div>
+        <%= image_tag "https://media.herworld.com/public/2019/01/image/luxury_accessories.jpg", class: 'photo'  %>
+      </div>
+      <p>Accesorios</p>
+      <%#= image_tag 'circle.png', class: 'circle'%>
+    </div>
+
+    <div class="card-bidding-category" data-category="shorts">
+      <div>
+        <%= image_tag "https://images-na.ssl-images-amazon.com/images/I/61DggmSlr1L._UX466_.jpg", class: 'photo'  %>
+      </div>
+      <p>Shorts</p>
+      <%#= image_tag 'circle.png', class: 'circle'%>
+    </div>
+  </div>
+</div>
+<!-- END CARD CATEGORY -->
+<div class="text-center">
+  <%= simple_form_for :bidding, url: brands_biddings_path, method: :get do |b| %>
+    <%= b.hidden_field :category %>
+    <%= b.submit "Continuar", class: "button-general" %>
   <% end %>
 </div>
-<br>
-
-<%= simple_form_for :bidding, url: brands_biddings_path, method: :get do |b| %>
-  <%= b.hidden_field :category %>
-  <%= b.submit "Continuar", class:"btn btn-primary" %>
-<% end %>

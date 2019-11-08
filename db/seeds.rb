@@ -64,7 +64,7 @@ nombres_marcas.each_with_index do |name, index|
         name: Faker::Name.first_name,
         min_price: Faker::Number.between(from: 100, to: 4999),
         max_price: Faker::Number.between(from: 5000, to: 9999),
-        category: Product::CATEGORIES.sample,
+        category: ["shoes", "dress", "shirts", "jeans", "shorts", "accessories"].sample,
         description: "Long description of a product. Length aprox 1000 char? " ,
         sku_ext: Faker::Number.number(digits: 15),
         published: false
@@ -85,7 +85,7 @@ end
 5.times do
   Bidding.create(
     amount: Faker::Number.between(from: 100, to: 10000),
-    category: Product::CATEGORIES.sample,
+    category: ["shoes", "dress", "shirts", "jeans", "shorts", "accessories"].sample,
     user: User.all.sample
     )
 end

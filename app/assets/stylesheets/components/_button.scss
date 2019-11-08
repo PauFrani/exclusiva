@@ -48,3 +48,17 @@
   }
 }
 
+#button-transparent {
+  button {
+    margin: 20px 0px;
+    background-color: transparent;
+    color:lightgray;
+    border: 1px solid rgba(0,0,0, 0.2);
+    padding: 0 20px;
+    font-size:12px;
+    &:hover {
+    border: 1px solid rgba(0,0,0, 0.4);
+
+    }
+  }
+}
