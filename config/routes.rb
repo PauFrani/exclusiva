@@ -11,11 +11,11 @@ Rails.application.routes.draw do
     end
 
     resources :showroom_variant_stocks, only: [:index, :show] do
-      resources :purchases, only: :new
+      resources :purchases, only: [:new, :create]
     end
 
     resources :purchases, only: :show
-
+1
     resources :products, only: :show
 
   get '/cards', to: 'pages#cards'

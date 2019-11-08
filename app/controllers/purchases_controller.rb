@@ -12,8 +12,14 @@ class PurchasesController < ApplicationController
   end
 
   def create
-    @purchase = Purchase.find(params[:purchase_id])
-    redirect_to  purchase_path(@purchase)
+    @showroom_variant_stock = ShowroomVariantStock.find(params[:showroom_variant_stock_id])
+    @purchase = @showroom_variant_stock.purchases.build(purchase_params)
+    @purchase.bidding_id = session[:bidding_id]
+    if @purchase.save!
+      redirect_to  purchase_path(@purchase)
+    else
+      render :new
+    end
   end
 
 
@@ -25,6 +31,13 @@ class PurchasesController < ApplicationController
       redirect_to root_path
     end
   end
+
+   private
+
+  def purchase_params
+    params.require(:purchase).permit(:payment_method, :showroom_variant_stock_id)
+  end
+
 
 
 end
