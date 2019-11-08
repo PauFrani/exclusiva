@@ -11,7 +11,7 @@
         Marcas: <%= f.select :brands, ["Clifftone", "Mango", "Vitamina"] %>
       </div>
       <div>
-        Ubicacion  : <%= f.text_field :address, disabled: true%>
+        Ubicacion  : <%= f.text_field :address, disabled: false%>
       </div>
       <div>
         <%= f.submit "Buscar Oferta", class: "button-general" %>
