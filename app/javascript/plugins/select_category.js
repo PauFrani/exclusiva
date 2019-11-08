@@ -23,6 +23,7 @@ const selectCategory = (event) => {
 
   input.value = card.dataset.category;
 
+
   // add active to selected card
   card.classList.add('active')
 
