@@ -49,6 +49,14 @@
   font-size: 16px;
 }
 
+#fotos-shop {
+  img {
+    height: 100px;
+    width: 100;
+    object-fit: cover;
+  }
+}
+
 // Para version mobile
 @media (max-width: 520px) {
   .title-text {
