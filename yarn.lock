@@ -4262,11 +4262,14 @@ load-json-file@^4.0.0:
     pify "^3.0.0"
     strip-bom "^3.0.0"
 
+<<<<<<< HEAD
+=======
 load-script@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/load-script/-/load-script-1.0.0.tgz#0491939e0bee5643ee494a7e3da3d2bac70c6ca4"
   integrity sha1-BJGTngvuVkPuSUp+PaPSuscMbKQ=
 
+>>>>>>> master
 loader-runner@^2.4.0:
   version "2.4.0"
   resolved "https://registry.yarnpkg.com/loader-runner/-/loader-runner-2.4.0.tgz#ed47066bfe534d7e84c4c7b9998c2a75607d9357"
@@ -4612,6 +4615,8 @@ mimic-response@^1.0.0:
   resolved "https://registry.yarnpkg.com/mimic-response/-/mimic-response-1.0.1.tgz#4923538878eef42063cb8a3e3b0798781487ab1b"
   integrity sha512-j5EctnkH7amfV/q5Hgmoal1g2QHFJRraOtmx0JpIqkxhBhI/lJSl1nMpQ45hVarwNETOoWEimndZ4QK0RHxuxQ==
 
+<<<<<<< HEAD
+=======
 min-document@^2.19.0:
   version "2.19.0"
   resolved "https://registry.yarnpkg.com/min-document/-/min-document-2.19.0.tgz#7bd282e3f5842ed295bb748cdd9f1ffa2c824685"
@@ -4619,6 +4624,7 @@ min-document@^2.19.0:
   dependencies:
     dom-walk "^0.1.0"
 
+>>>>>>> master
 mini-css-extract-plugin@^0.7.0:
   version "0.7.0"
   resolved "https://registry.yarnpkg.com/mini-css-extract-plugin/-/mini-css-extract-plugin-0.7.0.tgz#5ba8290fbb4179a43dd27cca444ba150bee743a0"
@@ -6275,7 +6281,11 @@ query-string@^5.0.1:
     object-assign "^4.1.0"
     strict-uri-encode "^1.0.0"
 
+<<<<<<< HEAD
+querystring-es3@^0.2.0:
+=======
 querystring-es3@^0.2.0, querystring-es3@^0.2.1:
+>>>>>>> master
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/querystring-es3/-/querystring-es3-0.2.1.tgz#9ec61f79049875707d69414596fd907a4d711e73"
   integrity sha1-nsYfeQSYdXB9aUFFlv2Qek1xHnM=
