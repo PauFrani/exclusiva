@@ -3,7 +3,7 @@ class ShowroomVariantStocksController < ApplicationController
 
   def index
     @bidding = Bidding.find(session[:bidding_id])
-    @products_items = ShowroomVariantStock.joins(:product).where(products: { category: @bidding.category }).where("products.min_price < ?", @bidding.amount).where("products.max_price > ?", @bidding.amount).where("showroom_variant_stocks.stock > ?", 0)
+    @products_items = ShowroomVariantStock.near(@bidding.address.street, 20, :select => "addresses.*, showroom_variant_stocks.*").joins(:address).joins(:product).where(products: { category: @bidding.category }).where("products.min_price < ?", @bidding.amount).where("products.max_price > ?", @bidding.amount).where("showroom_variant_stocks.stock > ?", 0)
     @markers = @products_items.map do |product_item|
       if product_item.showroom.address.latitude != nil
         {
@@ -19,5 +19,8 @@ class ShowroomVariantStocksController < ApplicationController
 
   def show
     @showroom_variant_stock = ShowroomVariantStock.find(params[:id])
+    @variants = @showroom_variant_stock.variant.product
+    @purchase = Purchase.new
+
   end
 end
