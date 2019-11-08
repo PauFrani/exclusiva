@@ -1,13 +1,3 @@
-<h2>Category</h2>
-
-<%= simple_form_for(@bidding) do |b| %>
-
-	<%= b.input :category %>
-  <%= b.submit %>
-<% end %>
-
-<%= link_to "Avanzar", brands_biddings_path  %>
-
 <div class="step-by-step">
   <div class="number">
     <span>2</span>
@@ -20,7 +10,7 @@
 
 <div class="cards-bidding">
   <% 8.times do %>
-    <div class="card-bidding-category">
+    <div class="card-bidding-category" data-category="jean">
       <div>
         <img class="photo" src="https://gloimg.drlcdn.com/L/pdm-product-pic/Clothing/2018/10/12/goods-img-app/1539716058960958979.jpg" alt="vestidos">
       </div>
@@ -30,3 +20,8 @@
   <% end %>
 </div>
 <br>
+
+<%= simple_form_for :bidding, url: brands_biddings_path, method: :get do |b| %>
+  <%= b.hidden_field :category %>
+  <%= b.submit "Continuar", class:"btn btn-primary" %>
+<% end %>
