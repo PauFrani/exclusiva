@@ -1,6 +1,7 @@
 class Product < ApplicationRecord
   CATEGORIES = ["jean","pants","shirt"]
 
+
   has_many :photos, dependent: :destroy
   has_many :variants, dependent: :destroy
   has_many :showroom_variant_stocks, through: :variants

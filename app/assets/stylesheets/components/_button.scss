@@ -29,3 +29,22 @@
     color:white;
   }
 }
+
+#button-rounded {
+  border-radius: 50%;
+}
+
+
+.select-color {
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  border: unset;
+  &.select-color-red {
+    background-color: red;
+  }
+  &.select-color-blue {
+    background-color: blue;
+  }
+}
+

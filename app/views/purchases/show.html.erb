@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-lg-4">
+      <h2>Detalle del Producto</h2>
+      <p><%= @purchase.showroom_variant_stock.showroom.address.street %></p>
+      <p>Cómo llegar?</p>
+    </div>
+    <div class="col-lg-4">
+      <img src="https://www.qrcode-monkey.com/img/default-preview-qr.svg" class="img-fluid" alt="Responsive image">
+      <button type="button" class="button-general">Descargar</button>
+    </div>
+    <div class="col-lg-4">
+      <div class="d-flex flex-column align-center">
+      <h3>Exclusiva</h3>
+      <p> Gracias por usar Excluiva Camila, esperamos haya disfrutado de su compra</p>
+      <p>Cantidad: 1</p>
+      <p>Subtotal: <%= @bidding.amount %></p>
+      <p>Showroom: <%= @purchase.showroom_variant_stock.showroom.name %></p>
+      <p>Método de pago: Tarjeta</p>
+    </div>
+    </div>
+  </div>
+</div>
