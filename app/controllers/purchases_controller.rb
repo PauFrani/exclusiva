@@ -2,7 +2,7 @@ class PurchasesController < ApplicationController
 
   def new
     @purchase = Purchase.new
-    @product_item = ProductItem.find(params[:product_item_id])
+    @showroom_variant_stock = ShowroomVariantStock.find(params[:showroom_variant_stock_id])
     if session[:bidding_id]
       @bidding = Bidding.find(session[:bidding_id])
     else
@@ -19,7 +19,11 @@ class PurchasesController < ApplicationController
 
   def show
     @purchase = Purchase.find(params[:id])
-    @product_item = ProductItem.find(params[:product_item_id])
+        if session[:bidding_id]
+      @bidding = Bidding.find(session[:bidding_id])
+    else
+      redirect_to root_path
+    end
   end
 
 

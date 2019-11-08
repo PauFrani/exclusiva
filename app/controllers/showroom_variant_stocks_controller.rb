@@ -17,7 +17,7 @@ class ShowroomVariantStocksController < ApplicationController
 
   def show
     @showroom_variant_stock = ShowroomVariantStock.find(params[:id])
-    @variants = @showroom_variant_stock.variant.products
+    @variants = @showroom_variant_stock.variant.product
     @purchase = Purchase.new
 
   end
