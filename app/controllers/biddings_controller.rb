@@ -40,7 +40,7 @@ class BiddingsController < ApplicationController
     @bidding = Bidding.find(session[:bidding_id])
     @brands = Brand.all
     @brands.each do |brand|
-      @bidding.brand_ranks. build(brand: brand)
+      @bidding.brand_ranks.build(brand: brand)
     end
   end
 

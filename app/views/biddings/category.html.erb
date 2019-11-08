@@ -10,7 +10,7 @@
 
 <div class="cards-bidding">
   <% 8.times do %>
-    <div class="card-bidding-category" data-category="jean">
+    <div class="card-bidding-category" data-category="Pants">
       <div>
         <img class="photo" src="https://gloimg.drlcdn.com/L/pdm-product-pic/Clothing/2018/10/12/goods-img-app/1539716058960958979.jpg" alt="vestidos">
       </div>
@@ -21,7 +21,7 @@
 </div>
 <br>
 
-<%= simple_form_for :bidding, url: brands_biddings_path, method: :get do |b| %>
+<%= simple_form_for(@bidding) do |b| %>
   <%= b.hidden_field :category %>
   <%= b.submit "Continuar", class:"btn btn-primary" %>
 <% end %>
