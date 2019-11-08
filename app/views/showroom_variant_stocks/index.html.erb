@@ -1,30 +1,20 @@
-<div class="navbar-filters d-flex justify-content-between align-items-center m-3 border-bottom border-white">
-  <form action="" class="form_oferta">
-    <%= form_for :@bidding do |f| %>
-      <div>
-        Presupuesto: <%= f.text_field :amount, disabled: true %>
-      </div>
-      <div>
-        Categoria: <%= f.text_field :category, disabled: true %>
-      </div>
-      <div>
-        Marcas: <%= f.select :brands, ["Clifftone", "Mango", "Vitamina"] %>
-      </div>
-      <div>
-        Ubicacion  : <%= f.text_field :address, disabled: false%>
-      </div>
-      <div>
-        <%= f.submit "Buscar Oferta", class: "button-general" %>
-      </div>
-    <% end %>
-  </form>
-</div>
+<form class="form-inline" action="/product_items">
+  <label for="amount">Bid:</label>
+  <input type="text" id="amount"  name="amount"  value="<%= @bidding.amount %>">
+  <label for="category">Category:</label>
+  <input type="text" id="category" name="category" value="<%= @bidding.category %>">
+  <label for="address">Address:</label>
+  <input type="text" id="address" name="address" value="<%= @bidding.address.street %>">
+
+  <button type="submit">Submit</button>
+</form>
+
 <div class="cards-results-container">
   <div class="cards-results-list">
     <% @products_items.each do |showroom_variant_stock|%>
       <%= link_to product_path(showroom_variant_stock.product), class: 'link-card' do %>
         <div class="card-results-individual">
-          <img src="https://conocedores.com/wp-content/uploads/2019/02/zara-new-logo-06022019in2.png" alt="logo">
+          <img src="https://source.unsplash.com/collection/3557248/480x480" alt="logo">
           <div class="paragraph">
             <h2><%= showroom_variant_stock.product.name %></h1>
             <p><%= showroom_variant_stock.product.category %></p>
