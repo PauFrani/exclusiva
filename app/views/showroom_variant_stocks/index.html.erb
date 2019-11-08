@@ -1,38 +1,53 @@
-<form class="form-inline" action="/product_items">
-  <label for="amount">Bid:</label>
-  <input type="text" id="amount"  name="amount"  value="<%= @bidding.amount %>">
-  <label for="category">Category:</label>
-  <input type="text" id="category" name="category" value="<%= @bidding.category %>">
-  <label for="address">Address:</label>
-  <input type="text" id="address" name="address" value="<%= @bidding.address.street %>">
-
-  <button type="submit">Submit</button>
-</form>
-
-<div class="cards-results-container">
-  <div class="cards-results-list">
-    <% @products_items.each do |showroom_variant_stock|%>
-      <%= link_to product_path(showroom_variant_stock.product), class: 'link-card' do %>
-        <div class="card-results-individual">
-          <img src="https://source.unsplash.com/collection/3557248/480x480" alt="logo">
-          <div class="paragraph">
-            <h2><%= showroom_variant_stock.product.name %></h1>
-            <p><%= showroom_variant_stock.product.category %></p>
-            <p id="address-result"><%= showroom_variant_stock.address %></p>
-            <div class="location">
-              <i class="fas fa-map-marker-alt"></i>
-              <p>2.5 km</p>
+<div>
+  <form class="form-inline" action="/product_items">
+    <div class="form-inline2">
+      <label for="amount">Bid:</label>
+      <input type="text" id="amount"  name="amount"  value="<%= @bidding.amount %>">
+      <label for="category">Category:</label>
+      <input type="text" id="category" name="category" value="<%= @bidding.category %>">
+    </div>
+    <div class="form-inline2">
+      <label for="address">Address:</label>
+      <input type="text" id="address" name="address" value="<%= @bidding.address.street %>">
+      <button type="submit">Submit</button>
+    </div>
+  </form>
+</div>
+<div class="row">
+  <div class="col-xm-12 col-sm-9 col-md-6 col-lg-4" style="padding:0px margin:0px 10px">
+    <div>
+      <% @products_items.each do |product_item|%>
+        <%= link_to product_path(product_item.product), class: 'link-card' do %>
+          <div class="card-results-individual">
+            <img src="https://source.unsplash.com/collection/3557248/480x480" alt="logo">
+            <div class="paragraph">
+              <div class="d-flex justify-content-between align-items-start">
+                <div>
+                  <h2><%= product_item.product.name %></h1>
+                  <p><%= product_item.product.category %></p>
+                </div>
+                <div id="logo-results">
+                  <%= image_tag product_item.showroom.brand.logo %>
+                </div>
+              </div>
+              <p id="address-result"><%= product_item.address %></p>
+              <div class="location">
+                <i class="fas fa-map-marker-alt"></i>
+                <p>2.5 km</p>
+              </div>
             </div>
           </div>
-        </div>
+        <% end %>
       <% end %>
-    <% end %>
+    </div>
   </div>
-  <div
-    id="map"
-    style="width: 100%;
-    height: 600px;"
-    data-markers="<%= @markers.to_json %>"
-    data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
-  ></div>
+  <div class="col-xm-12 col-md-6 col-lg-8" style="padding:0px">
+    <div
+      id="map"
+      style="width: 100%;
+      height: 600px;"
+      data-markers="<%= @markers.to_json %>"
+      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+    ></div>
+  </div>
 </div>

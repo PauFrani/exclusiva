@@ -27,21 +27,30 @@
 /* Style the form - display items horizontally */
 .form-inline {
   display: flex;
-  flex-flow: row wrap;
   align-items: center;
   border-bottom: 1px solid #929292;
   background-color:white;
   font-family: 'Roboto', sans-serif;
+  width:100%;
+}
+
+.form-inline2 {
+  display: flex;
+  // flex-flow: row wrap;
+  align-items: center;
+  background-color:white;
+  font-family: 'Roboto', sans-serif;
+  width:50%;
 
 }
 
 /* Add some margins for each label */
 .form-inline label {
   margin: 0px 10px;
-  padding: 5px 0px;
+  padding:0px;
   font-size:12px;
   text-align:left;
-  width:auto;
+  width:20%;
 }
 
 /* Style the input fields */
@@ -53,34 +62,52 @@
   border: none;
   border-right: 1px solid #929292;
   padding-right:15px;
-  width:auto;
+  width:80%;
 
 }
-  textarea:focus, input:focus{
-      outline: none;
-  }
+
 
 
 /* Style the submit button */
 .form-inline button {
-  padding: 3px 20px;
+  padding: 3px 0px;
   background-color: #596681;
   color: white;
   border:none;
+  margin: 0px 10px;
+  width:250px;
+  border-right: 1px solid #929292;
+
 }
 
 .form-inline button:hover {
   background-color: #294683;
 }
 
+textarea:focus, input:focus{
+    outline: none;
+}
+
 /* Add responsiveness - display the form controls vertically instead of horizontally on screens that are less than 800px wide */
-@media (max-width: 800px) {
-  .form-inline input {
-    margin: 10px 0;
+@media (max-width: 600px) {
+  .form-inline {
+    display: block;
+
   }
 
-  .form-inline {
-    flex-direction: column;
-    align-items: stretch;
+  .form-inline2 {
+    width:100%;
+  }
+  .form-inline2 button {
+    width:50%;
+    margin: 0px 20px;
+
+  }
+  .form-inline2 input {
+    width:40%;
+  }
+  .form-inline2 label {
+    width:10%;
+
   }
 }
