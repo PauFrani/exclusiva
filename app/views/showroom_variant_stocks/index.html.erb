@@ -21,14 +21,14 @@
 </div>
 <div class="cards-results-container">
   <div class="cards-results-list">
-    <% @products_items.each do |product_item|%>
-      <%= link_to product_path(product_item.product), class: 'link-card' do %>
+    <% @products_items.each do |showroom_variant_stock|%>
+      <%= link_to product_path(showroom_variant_stock.product), class: 'link-card' do %>
         <div class="card-results-individual">
           <img src="https://conocedores.com/wp-content/uploads/2019/02/zara-new-logo-06022019in2.png" alt="logo">
           <div class="paragraph">
-            <h2><%= product_item.product.name %></h1>
-            <p><%= product_item.product.category %></p>
-            <p id="address-result"><%= product_item.address %></p>
+            <h2><%= showroom_variant_stock.product.name %></h1>
+            <p><%= showroom_variant_stock.product.category %></p>
+            <p id="address-result"><%= showroom_variant_stock.address %></p>
             <div class="location">
               <i class="fas fa-map-marker-alt"></i>
               <p>2.5 km</p>

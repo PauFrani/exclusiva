@@ -4,7 +4,7 @@ require 'faker'
 puts 'Cleaning DB...'
 
 
-ProductItem.destroy_all
+ShowroomVariantStock.destroy_all
 Variant.destroy_all
 Product.destroy_all
 Photo.destroy_all
@@ -51,14 +51,13 @@ nombres_marcas.each_with_index do |name, index|
 
 
   3.times do
-    address = Address.new(street: ADDRESSES.sample)
     showroom = Showroom.new(
       brand: brand,
       name: Faker::Name.first_name,
       phone_number: Faker::PhoneNumber.phone_number,
       email: Faker::Internet.email
-      )
-    showroom.address = address
+    )
+    showroom.build_address(street: ADDRESSES.sample)
     showroom.save!
     10.times do
       product = Product.create!(
@@ -70,24 +69,18 @@ nombres_marcas.each_with_index do |name, index|
         sku_ext: Faker::Number.number(digits: 15),
         published: false
         )
-      product_item = ProductItem.new(product: product, showroom: showroom, stock: rand(0..5))
-      product_item.save!
+      ["red", "blue", "yellow"].each do |color|
+        variant = product.variants.build(
+          color: color,
+          size: ["medium","small", "large"].sample
+        )
+        variant.showroom_variant_stocks.build(showroom: showroom, stock: rand(0..5))
+        variant.save!
+      end
     end
   end
 end
 
-
-
-puts "creating products variants"
-Product.all.each do |product|
-  5.times do
-    Variant.create(
-      color: ["red", "blue", "yellow"].sample,
-      size: ["medium","small", "large"].sample,
-      product: product
-      )
-  end
-end
 
 5.times do
   Bidding.create(
@@ -106,9 +99,9 @@ Bidding.all.each do |bidding|
       brand: brand).save!
   end
   if rand(0..50) > 40
-    product = Product.where(category: bidding.category).sample
+    variant = Product.where(category: bidding.category).sample.variants.sample
     purchase = Purchase.create!(
-      product_item: ProductItem.where(product: product).sample,
+      showroom_variant_stock: ShowroomVariantStock.where(variant: variant).sample,
       bidding: bidding,
       qr: "link",
       payment_method: ["efectivo", "tarjeta"].sample,
@@ -122,7 +115,5 @@ Bidding.all.each do |bidding|
     end
   end
 end
-
-
 
 puts "finished db"
