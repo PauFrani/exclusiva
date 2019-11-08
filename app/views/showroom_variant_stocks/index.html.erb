@@ -16,21 +16,21 @@
 <div class="row">
   <div class="col-xm-12 col-sm-9 col-md-6 col-lg-4" style="padding:0px margin:0px 10px">
     <div>
-      <% @products_items.each do |product_item|%>
-        <%= link_to product_path(product_item.product), class: 'link-card' do %>
+      <% @showroom_variant_stocks.each do |showroom_variant_stock|%>
+        <%= link_to showroom_variant_stock_path(showroom_variant_stock), class: 'link-card' do %>
           <div class="card-results-individual">
             <img src="https://source.unsplash.com/collection/3557248/480x480" alt="logo">
             <div class="paragraph">
               <div class="d-flex justify-content-between align-items-start">
                 <div>
-                  <h2><%= product_item.product.name %></h1>
-                  <p><%= product_item.product.category %></p>
+                  <h2><%= showroom_variant_stock.product.name %></h1>
+                  <p><%= showroom_variant_stock.product.category %></p>
                 </div>
                 <div id="logo-results">
-                  <%= image_tag product_item.showroom.brand.logo %>
+                  <%= image_tag showroom_variant_stock.showroom.brand.logo %>
                 </div>
               </div>
-              <p id="address-result"><%= product_item.address %></p>
+              <p id="address-result"><%= showroom_variant_stock.address.street %></p>
               <div class="location">
                 <i class="fas fa-map-marker-alt"></i>
                 <p>2.5 km</p>
