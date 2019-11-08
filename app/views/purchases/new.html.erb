@@ -1,15 +1,32 @@
-<h2><%= @showroom_variant_stock.variant.product.name %></h2>
-<%= @showroom_variant_stock.variant.product.photos.each do |photo| %>
-<li><%= photo.url_photo %></li>
-<% end %>
-<p><%= @showroom_variant_stock.variant.product.category %></p>
-<p> Color: Red </p>
-<p> Talle: Medium </p>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-lg-3">
+      <span class="border-primary">
+      <img src="https://d26lpennugtm8s.cloudfront.net/stores/246/391/products/dsc_54751-4f2499aa13a426007a15700604112508-1024-1024.jpg" alt="..." class="img-fluid rounded-sm-lg">
+    </div>
+    <div class="col-lg-3">
+      <h2><%= @showroom_variant_stock.variant.product.name %></h2>
+      <p><%= @showroom_variant_stock.variant.product.category %></p>
+      <div>
+      Color:  <input type="button" name="color" class="select-color select-color-red">
+      </div>
+      <br>
+      <div>Talle:
+      <span>
+        <label><input type="radio" name="talle" checked>36</label>
+      </span>
+    </div>
+      <br>
+      Precio: $<%= @bidding.amount %>
+    </span>
+    </div>
+    <div class="col-lg-6">
+      <h2>Elegí un método de pago</h2>
+        <%= simple_form_for [@showroom_variant_stock, @purchase] do |f| %>
+          <%= f.input :payment_method, collection: ["Efectivo", "Tarjeta"] %>
+          <%= f.submit %>
+        <% end %>
+    </div>
+  </div>
+</div>
 
-<%= @bidding.amount %>
-
-<h2>Elegí un método de pago</h2>
-
-<%# simple_form_for [@product_item, @purchase] do |f| %>
-  <%#= f.input :payment_method, collection: ["Efectivo", "Tarjeta"] %>
-<% #end %>

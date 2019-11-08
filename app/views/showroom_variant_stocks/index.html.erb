@@ -1,5 +1,5 @@
 <div>
-  <form class="form-inline" action="/product_items">
+  <form class="form-inline" action="/showroom_variant_stocks">
     <div class="form-inline2">
       <label for="amount">Bid:</label>
       <input type="text" id="amount"  name="amount"  value="<%= @bidding.amount %>">
@@ -17,7 +17,9 @@
   <div class="col-xm-12 col-sm-9 col-md-6 col-lg-4" style="padding:0px margin:0px 10px">
     <div>
       <% @showroom_variant_stocks.each do |showroom_variant_stock|%>
+
         <%= link_to showroom_variant_stock_path(showroom_variant_stock), class: 'link-card' do %>
+
           <div class="card-results-individual">
             <img src="https://source.unsplash.com/collection/3557248/480x480" alt="logo">
             <div class="paragraph">
@@ -30,7 +32,7 @@
                   <%= image_tag showroom_variant_stock.showroom.brand.logo %>
                 </div>
               </div>
-              <p id="address-result"><%= showroom_variant_stock.address.street %></p>
+              <p id="address-result"><%= showroom_variant_stock.showroom.address.street %></p>
               <div class="location">
                 <i class="fas fa-map-marker-alt"></i>
                 <p>2.5 km</p>
