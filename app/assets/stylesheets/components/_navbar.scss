@@ -21,3 +21,18 @@
 .space-navbar-banner {
   margin-top: 100px
 }
+
+ .exclusiva {
+    position: absolute;
+    right: 580px;
+    top: 20px;
+  }
+
+@media(max-width: 520px) {
+     .exclusiva {
+        position: relative;
+    top: 0px;
+    right: 10px;
+
+  }
+  }
