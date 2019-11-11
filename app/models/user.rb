@@ -5,4 +5,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :biddings
   has_one :address, as: :addressable
+
+  #scope :today_biddings, -> { biddings.where('bidding.created_at > ?', Time.now.midnight)}
 end

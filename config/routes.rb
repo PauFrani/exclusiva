@@ -11,6 +11,9 @@ Rails.application.routes.draw do
     end
 
     resources :showroom_variant_stocks, only: [:index, :show] do
+      collection do
+        get 'unique'
+      end
       resources :purchases, only: [:new, :create]
     end
 
