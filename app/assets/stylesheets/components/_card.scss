@@ -211,7 +211,7 @@
 // CARD-PAGES
 
 .cards-sumary-container {
-  width: 40%;
+  width: 30%;
   margin:20px 0px;
   height:auto;
 
@@ -228,7 +228,12 @@
   img {
     width: 40%;
     height:100%;
-    margin-right:20px;
+    margin-right:20px;height:300px;
+  width:100%;
+  border: 1px solid lightgray;
+  justify-content:left;
+  padding:20px;
+  border-radius:10px;
     border-radius:10px;
     object-fit:cover;
     object-position:center;
@@ -247,4 +252,19 @@
 /* the parent */
 .slick-list {
     margin: 0 -10px;
+}
+
+
+.cards-payment-container {
+  width: 90%;
+  margin:20px 0px;
+  height:auto;
+}
+.card-payment-individual {
+  height:300px;
+  width:100%;
+  border: 1px solid lightgray;
+  justify-content:left;
+  padding:20px;
+  border-radius:10px;
 }

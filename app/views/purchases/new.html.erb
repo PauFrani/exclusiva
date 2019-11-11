@@ -1,32 +1,44 @@
 <div class="container">
   <div class="row justify-content-center">
-    <div class="col-lg-3">
-      <span class="border-primary">
-      <img src="https://d26lpennugtm8s.cloudfront.net/stores/246/391/products/dsc_54751-4f2499aa13a426007a15700604112508-1024-1024.jpg" alt="..." class="img-fluid rounded-sm-lg">
-    </div>
-    <div class="col-lg-3">
-      <h2><%= @showroom_variant_stock.variant.product.name %></h2>
-      <p><%= @showroom_variant_stock.variant.product.category %></p>
-      <div>
-      Color:  <input type="button" name="color" class="select-color select-color-red">
+    <div class="col-xs-12 col-lg-6 cards-sumary-container">
+      <div class="card-sumary-individual">
+        <img src="https://d26lpennugtm8s.cloudfront.net/stores/246/391/products/dsc_54751-4f2499aa13a426007a15700604112508-1024-1024.jpg" alt="logo" class="img-fluid rounded-sm-lg">
+        <div class="paragraph">
+          <h2><%= @showroom_variant_stock.variant.product.name %></h2>
+          <p><%= @showroom_variant_stock.showroom.brand.name%></p>
+          <p><%= @showroom_variant_stock.variant.product.category %></p>
+          <h3> <%= @bidding.amount %></h3>
+          <h3>
+            Color:  <input type="button" name="color" class="select-color select-color-red">
+          </h3>
+          <h3>Talle:
+            <span>
+              <label><input type="radio" name="talle" checked>36</label>
+            </span>
+          </h3>
+          <h3>Precio: $<%= @bidding.amount %></h3>
+          <div class="location">
+            <i class="fas fa-map-marker-alt"></i>
+            <p>2.5 km</p>
+          </div>
+        </div>
       </div>
-      <br>
-      <div>Talle:
-      <span>
-        <label><input type="radio" name="talle" checked>36</label>
-      </span>
+      <div class= "my-3">
+        <%= link_to "Terminos y Condiciones", "#", id:"title-terminos_condiciones" %>
+        <p id="terminos_condiciones"> La vigencia de los presentes Términos y Condiciones se mantendrá mientras se encuentren los mismos publicados en “el sitio” pudiendo “La Empresa”  modificarlos sin previo aviso. En virtud de ello se recomienda al usuario que revise periódicamente los presentes Términos y Condiciones. Cualquier modificación que se introduzca estará vigente a partir de su publicación en “el sitio” y el uso del sitio con posterioridad a la modificación implica aceptación de dichos cambios por parte del usuario.
+        Podrán operar en “el sitio” personas que sean capaces para contratar conforme lo establecido por el Código Civil y leyes aplicables (en adelante el usuario). No podrán hacer uso del sitio aquellas personas que no tengan dicha capacidad legal.</p>
+      </div>
     </div>
-      <br>
-      Precio: $<%= @bidding.amount %>
-    </span>
-    </div>
-    <div class="col-lg-6">
-      <h2>Elegí un método de pago</h2>
+    <div class="col-lg-6 cards-payment-container">
+      <div class="card-payment-individual">
+        <h2>Elegí un método de pago</h2>
         <%= simple_form_for [@showroom_variant_stock, @purchase] do |f| %>
-          <%= f.input :payment_method, collection: ["Efectivo", "Tarjeta"] %>
-          <%= f.submit %>
+        <%= f.input :payment_method, collection: ["Efectivo", "Tarjeta"] %>
+        <%= f.submit %>
         <% end %>
+      </div>
     </div>
   </div>
 </div>
+
 
