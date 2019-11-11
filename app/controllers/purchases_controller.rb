@@ -40,7 +40,11 @@ class PurchasesController < ApplicationController
     end
   end
 
-  private
+  def index
+    @purchase = Purchase.all
+  end
+
+   private
 
   def purchase_params
     params.require(:purchase).permit(:payment_method, :showroom_variant_stock_id)

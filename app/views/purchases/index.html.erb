@@ -1,0 +1,9 @@
+<% @purchase.each do |purchase| %>
+  <h2>Purchase n° (id): <%= purchase.bidding.id %></h2>
+  <p>Oferta aprobada: <%= purchase.bidding.amount %></p>
+  <p>QR: <%= purchase.qr %></p>
+  <p>Nombre producto: <%=  purchase.showroom_variant_stock.product.name %> </p>
+  <p>Categoria: <%=  purchase.showroom_variant_stock.product.category %></p>
+  <p>Dirección Retiro: <%= purchase.showroom_variant_stock.showroom.address.street %> </p>
+
+<% end %>
