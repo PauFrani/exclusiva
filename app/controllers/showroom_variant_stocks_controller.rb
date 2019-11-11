@@ -14,7 +14,7 @@ class ShowroomVariantStocksController < ApplicationController
             lat: showroom_variant_stock.showroom.address.latitude,
             lng: showroom_variant_stock.showroom.address.longitude,
             infoWindow: render_to_string(partial: "info_window", locals: { showroom_variant_stock: showroom_variant_stock }),
-            image_url: helpers.asset_url('https://i.ibb.co/MVHrLcB/perchero2.png')
+            image_url: 'https://i.ibb.co/MVHrLcB/perchero2.png'
             # image_url: helpers.asset_url('https://i.ibb.co/zfL4Rt9/perchero3.png')
           }
         end
