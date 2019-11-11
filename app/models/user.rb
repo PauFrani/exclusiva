@@ -4,5 +4,6 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   has_many :biddings
+  has_many :purchases, through: :biddings
   has_one :address, as: :addressable
 end

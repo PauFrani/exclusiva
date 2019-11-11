@@ -1,6 +1,6 @@
 class Purchase < ApplicationRecord
-  belongs_to :showroom_variant_stock
   belongs_to :bidding
+  belongs_to :showroom_variant_stock
   has_many :payments
   # validates :status, presence: true
   # validates :qr, presence: true

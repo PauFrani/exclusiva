@@ -1,5 +1,6 @@
 class Bidding < ApplicationRecord
   belongs_to :user, optional: true
+  has_one :purchase
 
   has_many :brand_ranks, dependent: :destroy
 
