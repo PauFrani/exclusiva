@@ -1,9 +1,15 @@
-<% @purchase.each do |purchase| %>
-  <h2>Purchase n° (id): <%= purchase.bidding.id %></h2>
-  <p>Oferta aprobada: <%= purchase.bidding.amount %></p>
-  <p>QR: <%= purchase.qr %></p>
-  <p>Nombre producto: <%=  purchase.showroom_variant_stock.product.name %> </p>
-  <p>Categoria: <%=  purchase.showroom_variant_stock.product.category %></p>
-  <p>Dirección Retiro: <%= purchase.showroom_variant_stock.showroom.address.street %> </p>
-
-<% end %>
+<div class="cards-sumary-container">
+  <% current_user.purchases.each do |purchase| %>
+    <div class="card-sumary-individual">
+       <%= image_tag purchase.showroom_variant_stock.variant.product.photos.first.url_photo %>
+      <div class="paragraph">
+        <h2> <%=purchase.showroom_variant_stock.variant.product.name %></h2>
+        <p>Brand: <%=  purchase.showroom_variant_stock.showroom.brand.name %></p>
+        <h3>Color: <%=  purchase.showroom_variant_stock.variant.color %></h3>
+        <h3>Talle: <%=  purchase.showroom_variant_stock.variant.size%></h3>
+        <h3>Precio: <%= purchase.bidding.amount %></h3>
+        <p><%= purchase.showroom_variant_stock.showroom.address.street %></p>
+      </div>
+  </div>
+  <% end %>
+</div>
