@@ -1,3 +1,5 @@
+Tenes <%= (15-(Time.now - @bidding.created_at)/60).round(0)  %> minutos antes que finalice tu oferta!
+
 <div>
   <form class="form-inline" action="/showroom_variant_stocks">
     <div class="form-inline2">
@@ -21,7 +23,7 @@
         <%= link_to showroom_variant_stock_path(showroom_variant_stock), class: 'link-card' do %>
 
           <div class="card-results-individual">
-            <img src="https://source.unsplash.com/collection/3557248/480x480" alt="logo">
+            <%= image_tag showroom_variant_stock.product.photos.first.url_photo %>
             <div class="paragraph">
               <div class="d-flex justify-content-between align-items-start">
                 <div>

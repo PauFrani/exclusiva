@@ -1,6 +1,5 @@
 class Product < ApplicationRecord
-  CATEGORIES = ["jean","pants","shirt"]
-
+  CATEGORIES = ["jean", "pants", "shirt"]
 
   has_many :photos, dependent: :destroy
   has_many :variants, dependent: :destroy
@@ -12,8 +11,6 @@ class Product < ApplicationRecord
   validates :description, presence: true
   validates :sku_ext, presence: true
   # validates :published, presence: true
-
-
 end
 
  # sql_query = "SELECT * FROM products as pr JOIN showroom_variant_stocks AS pi ON pr.id = pi.product_id \
