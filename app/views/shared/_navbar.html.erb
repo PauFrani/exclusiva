@@ -4,6 +4,7 @@
     <% if user_signed_in? %>
       <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
         <%= link_to "Home", root_path, class:"dropdown-item"  %>
+        <%= link_to "Tus compras", purchases_path, class:"dropdown-item"  %>
         <%= link_to "Salir", destroy_user_session_path, method: :delete, class:"dropdown-item" %>
       </div>
     <% else %>

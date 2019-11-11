@@ -32,6 +32,11 @@ class PurchasesController < ApplicationController
     end
   end
 
+
+  def index
+    @purchase = Purchase.all
+  end
+
    private
 
   def purchase_params
