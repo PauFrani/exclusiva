@@ -24,7 +24,7 @@
       <h2>Elegí un método de pago</h2>
         <%= simple_form_for [@showroom_variant_stock, @purchase] do |f| %>
           <%= f.input :payment_method, collection: ["Efectivo", "Tarjeta"] %>
-          <%= f.submit %>
+          <%= f.submit "Confirmar y continuar", class:'button-search mx-auto flex-grow-0 mt-3 mt-md-0'%>
         <% end %>
     </div>
   </div>
