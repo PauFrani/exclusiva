@@ -17,8 +17,11 @@ Rails.application.routes.draw do
       resources :purchases, only: [:new, :create]
     end
 
-    resources :purchases, only: :show
-1
+    resources :purchases, only: [:show, :index] do
+      get '/confirm_payment', to: 'purchases#confirm_payment'
+      post '/make_payment', to: 'purchases#make_payment'
+    end
+
     resources :products, only: :show
 
   get '/cards', to: 'pages#cards'

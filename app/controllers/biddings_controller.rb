@@ -19,16 +19,21 @@ class BiddingsController < ApplicationController
 
   def update
     @bidding = Bidding.find(params[:id])
-    if request.referrer.include? 'category'
-      @bidding.update(biddings_params)
-      redirect_to brands_biddings_path
-    elsif request.referrer.include? 'brands'
-      @bidding.update(biddings_params)
-      redirect_to location_biddings_path # location_bidding_path
-    elsif request.referrer.include? 'location'
-      @bidding.address = Address.new(address_params)
-      @bidding.save
-      redirect_to showroom_variant_stocks_path # pagina de resultados
+    if @bidding.expired?
+      flash[:alert] = 'EL tiempo de tu oferta finalizó!'
+      redirect_to root_path
+    else
+      if request.referrer.include? 'category'
+        @bidding.update(biddings_params)
+        redirect_to brands_biddings_path
+      elsif request.referrer.include? 'brands'
+        @bidding.update(biddings_params)
+        redirect_to location_biddings_path # location_bidding_path
+      elsif request.referrer.include? 'location'
+        @bidding.address = Address.new(address_params)
+        @bidding.save
+        redirect_to showroom_variant_stocks_path # pagina de resultados
+      end
     end
   end
 
