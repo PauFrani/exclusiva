@@ -3,18 +3,26 @@ Tenes <%= (15-(Time.now - @bidding.created_at)/60).round(0)  %> minutos antes qu
 <div class="container">
   <div class="row justify-content-center">
     <div class="col-xs-2 col-md-1">
-      <div >
+      <div id="img-thumbnails">
         <% @showroom_variant_stock.variant.product.photos.each_with_index do |photo, index| %>
-          <%= image_tag photo.url_photo, class: "img-thumbnail #{'greyscale' if index.positive? }" %>
+          <%= image_tag photo.url_photo, class: "img-thumbnail product-images #{'greyscale' if index.positive? }" %>
         <% end %>
       </div>
     </div>
-    <div class="col-xs-10 col-md-5" style="background-size: cover; background-image: url(<%= @showroom_variant_stock.variant.product.photos.first.url_photo %>)">
+    <div class="col-xs-10 col-md-5" id="main-image" style="background-size: cover; background-image: url(<%= @showroom_variant_stock.variant.product.photos.first.url_photo %>)">
     </div>
   <div class="col-xs-12 col-md-6">
     <div class="pl-md-5">
       <h2><%= @showroom_variant_stock.variant.product.name %></h2>
-      <p><%= @showroom_variant_stock.variant.product.category %></p>
+      <p><%= @showroom_variant_stock.showroom.name %></p>
+      <div class="d-flex">
+        <div>
+          <p>Color: </p>
+        </div>
+        <div>
+          <p>Talle:</p>
+        </div>
+      </div>
       <p><%= @showroom_variant_stock.variant.product.description %></p>
       <%= simple_form_for(@showroom_variant_stock.variant.product, as: :product, method: :get, url: new_showroom_variant_stock_purchase_path(@showroom_variant_stock.variant)) do |f|%>
 

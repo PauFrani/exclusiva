@@ -3,7 +3,6 @@ const cards = document.querySelectorAll('.card-bidding-category');
 const initCategorySelector = () => {
 
   if (cards) {
-    console.log(cards)
     cards.forEach( card => card.addEventListener('click', selectCategory));
   }
 
@@ -18,7 +17,6 @@ const selectCategory = (event) => {
   activesCards.forEach( card => card.classList.remove('active') )
 
   // populate input hidden
-  console.log(card.dataset.category);
   const input = document.getElementById('bidding_category');
 
   input.value = card.dataset.category;
