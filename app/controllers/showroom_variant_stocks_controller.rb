@@ -21,6 +21,6 @@ class ShowroomVariantStocksController < ApplicationController
     @showroom_variant_stock = ShowroomVariantStock.find(params[:id])
     @variants = @showroom_variant_stock.variant.product
     @purchase = Purchase.new
-
+    @bidding = Bidding.find(session[:bidding_id])
   end
 end
