@@ -6,11 +6,13 @@ import { initSlick } from '../plugins/init_slick';
 import { initAutocomplete } from '../plugins/init_autocomplete';
 import { initAutocomplete1 } from '../plugins/init_autocomplete';
 import { initCategorySelector } from '../plugins/select_category'
+import { initImages } from '../plugins/init_thumbnails'
 
 initMapbox();
 initAutocomplete();
 initAutocomplete1();
 initCategorySelector();
+initImages();
 
 const brand_ranks_form = document.getElementById("brand_ranks_form");
 
