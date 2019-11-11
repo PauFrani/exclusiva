@@ -7,21 +7,17 @@
   <p>Ordena tus preferidas para que te las mostremos primero</p>
 </div>
   <ul id="columns" style="list-style-type:none; padding: 0;">
-    <div class="draggable-zone my-3 ">
       <% @brands.each_with_index do |brand, index| %>
-
-      <li id="draggable" class="column brand_order " draggable="true" value="<%= brand.id %>">
+      <li class="column brand_order" draggable="true" value="<%= brand.id %>">
         <div class="card-brand-ranking ">
-
           <div class="logo">
-            <div class="number"><span class="rank"><%= index + 1 %></span></div>
+            <div class="number" id="number-rank"><span class="rank adsfasdf"></span></div>
             <img src="<%= brand.logo %>" alt="">
           </div>
 
         </div>
       </li>
       <% end %>
-    </div>
   </ul>
 <br>
 <br>
