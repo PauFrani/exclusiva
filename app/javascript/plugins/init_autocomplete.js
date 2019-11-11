@@ -14,5 +14,4 @@ const initAutocomplete1 = () => {
   }
 };
 
-export { initAutocomplete };
-export { initAutocomplete1 };
+export { initAutocomplete, initAutocomplete1 };
