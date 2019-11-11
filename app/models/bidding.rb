@@ -8,4 +8,11 @@ class Bidding < ApplicationRecord
   accepts_nested_attributes_for :address
 
   validates :amount, presence: true
+
+  def expired?
+    if (Time.now - self.created_at)/60 > 1000
+      return true
+    end
+  end
+
 end
