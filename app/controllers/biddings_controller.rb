@@ -30,7 +30,12 @@ class BiddingsController < ApplicationController
         @bidding.update(biddings_params)
         redirect_to location_biddings_path # location_bidding_path
       elsif request.referrer.include? 'location'
-        @bidding.address = Address.new(address_params)
+        begin
+          @bidding.address = Address.new(address_params)
+        rescue
+          flash[:notice] = "¡Las ofertas son únicas, debe crear una nueva oferta!"
+          return redirect_to root_path
+        end
         @bidding.save
         redirect_to showroom_variant_stocks_path # pagina de resultados
       end
