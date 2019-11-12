@@ -6,7 +6,8 @@ import { initSlick } from '../plugins/init_slick';
 import { initAutocomplete, initAutocomplete1 } from '../plugins/init_autocomplete';
 import { initCategorySelector } from '../plugins/select_category';
 import { initSortable } from '../plugins/init_sortable';
-import { initImages } from '../plugins/init_images'
+import { initImages } from '../plugins/init_images';
+import '../plugins/init_timer';
 
 initMapbox();
 initAutocomplete();

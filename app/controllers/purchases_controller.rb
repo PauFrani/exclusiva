@@ -28,7 +28,8 @@ class PurchasesController < ApplicationController
   end
 
   def make_payment
-    raise
+    # process payment
+    # if payment is ok, the redir to
   end
 
   def show

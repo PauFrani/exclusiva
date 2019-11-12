@@ -22,13 +22,15 @@ class ShowroomVariantStocksController < ApplicationController
       @brand_ranks = @bidding.brand_ranks.sort_by{|br| br.order}.map{|br| br.brand_id}
       @showroom_variant_stocks.sort_by!{|svs| @brand_ranks.index(svs.showroom.brand.id)}
       @markers = @showroom_variant_stocks.map do |showroom_variant_stock|
-        {
-          lat: showroom_variant_stock.showroom.address.latitude,
-          lng: showroom_variant_stock.showroom.address.longitude,
-          infoWindow: render_to_string(partial: "info_window", locals: { showroom_variant_stock: showroom_variant_stock }),
-          image_url: helpers.asset_url('https://i.ibb.co/MVHrLcB/perchero2.png')
-          # image_url: helpers.asset_url('https://i.ibb.co/zfL4Rt9/perchero3.png')
-        }
+        if showroom_variant_stock.showroom.address.latitude != nil
+          {
+            lat: showroom_variant_stock.showroom.address.latitude,
+            lng: showroom_variant_stock.showroom.address.longitude,
+            infoWindow: render_to_string(partial: "info_window", locals: { showroom_variant_stock: showroom_variant_stock }),
+            image_url: 'https://i.ibb.co/MVHrLcB/perchero2.png'
+            # image_url: helpers.asset_url('https://i.ibb.co/zfL4Rt9/perchero3.png')
+          }
+        end
       end
     end
   end
@@ -43,6 +45,7 @@ class ShowroomVariantStocksController < ApplicationController
     @variants = @showroom_variant_stock.variant.product
     @purchase = Purchase.new
     @bidding = Bidding.find(session[:bidding_id])
+    flash[:timer] = @bidding.created_at
   end
 end
 
