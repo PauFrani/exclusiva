@@ -1,15 +1,33 @@
-<div class="cards-sumary-container">
-  <% current_user.purchases.each do |purchase| %>
-    <div class="card-sumary-individual">
-       <%= image_tag purchase.showroom_variant_stock.variant.product.photos.first.url_photo %>
-      <div class="paragraph">
-        <h2> <%=purchase.showroom_variant_stock.variant.product.name %></h2>
-        <p>Brand: <%=  purchase.showroom_variant_stock.showroom.brand.name %></p>
-        <h3>Color: <%=  purchase.showroom_variant_stock.variant.color %></h3>
-        <h3>Talle: <%=  purchase.showroom_variant_stock.variant.size%></h3>
-        <h3>Precio: <%= purchase.bidding.amount %></h3>
-        <p><%= purchase.showroom_variant_stock.showroom.address.street %></p>
+<div class="container">
+    <% current_user.purchases.each do |purchase| %>
+
+      <div class="card mb-3">
+        <div class="row no-gutters">
+          <div class="align-items-center col-md-3 d-flex justify-content-center">
+            <img src="<%= purchase.showroom_variant_stock.variant.product.photos.first.url_photo %>" alt="logo" width="80%" height="164">
+          </div>
+          <div class="col-md-3">
+            <div class="card-body text-center">
+              <h5 class="card-title"><%= purchase.showroom_variant_stock.product.name %> - <%= purchase.showroom_variant_stock.showroom.brand.name %></h5>
+              <p class="card-text">Color: <%= purchase.showroom_variant_stock.variant.color %>  - Talle: <%= purchase.showroom_variant_stock.variant.size%></p>
+              <p class="card-text">Precio: $<%= purchase.bidding.amount %></p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card-body text-center">
+              <h5 class="card-title"><%= purchase.showroom_variant_stock.showroom.name %> </h5>
+              <p class="card-text">Location: <%= purchase.showroom_variant_stock.showroom.address.street %> </p>
+              <%= link_to "http://www.google.com/maps/place/#{purchase.showroom_variant_stock.showroom.address.latitude},#{purchase.showroom_variant_stock.showroom.address.longitude}", target:"_blank" do %>
+              <button type="button" class="btn btn-secondary btn-sm">Cómo llegar?</button>
+              <% end %>
+            </div>
+          </div>
+          <div class="align-items-center col-md-3 d-flex justify-content-center">
+            <img src="https://api.qrserver.com/v1/create-qr-code/?data=www.exclusiva.xyz&amp;size=100x100" alt="QR code" title="" />
+          </div>
+        </div>
       </div>
-  </div>
-  <% end %>
+
+    <% end %>
 </div>
+
