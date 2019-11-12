@@ -25,16 +25,15 @@
       </div>
       <div class= "my-3">
         <%= link_to "Terminos y Condiciones", "#", id:"title-terminos_condiciones" %>
-        <p id="terminos_condiciones"> La vigencia de los presentes Términos y Condiciones se mantendrá mientras se encuentren los mismos publicados en “el sitio” pudiendo “La Empresa”  modificarlos sin previo aviso. En virtud de ello se recomienda al usuario que revise periódicamente los presentes Términos y Condiciones. Cualquier modificación que se introduzca estará vigente a partir de su publicación en “el sitio” y el uso del sitio con posterioridad a la modificación implica aceptación de dichos cambios por parte del usuario.
-        Podrán operar en “el sitio” personas que sean capaces para contratar conforme lo establecido por el Código Civil y leyes aplicables (en adelante el usuario). No podrán hacer uso del sitio aquellas personas que no tengan dicha capacidad legal.</p>
+        <p id="terminos_condiciones"> La vigencia de los presentes Términos y Condiciones se mantendrá mientras se encuentren los mismos publicados en “el sitio” pudiendo “La Empresa”  modificarlos sin previo aviso. En virtud de ello se recomienda al usuario que revise periódicamente los presentes Términos y Condiciones. Cualquier modificación que se introduzca estará vigente a partir de su publicación en “el sitio” y el uso del sitio con posterioridad a la modificación implica aceptación de dichos cambios por parte del usuario.Podrán operar en “el sitio” personas que sean capaces para contratar conforme lo establecido por el Código Civil y leyes aplicables (en adelante el usuario). No podrán hacer uso del sitio aquellas personas que no tengan dicha capacidad legal.</p>
       </div>
     </div>
     <div class="col-lg-6 cards-payment-container">
       <div class="card-payment-individual">
         <h2>Elegí un método de pago</h2>
         <%= simple_form_for [@showroom_variant_stock, @purchase] do |f| %>
-        <%= f.input :payment_method, collection: ["Efectivo", "Tarjeta"] %>
-        <%= f.submit %>
+        <%= f.input :payment_method, collection: ["Tarjeta"] %>
+        <%= f.submit "Confirmar" , class:"button-general"%>
         <% end %>
       </div>
     </div>

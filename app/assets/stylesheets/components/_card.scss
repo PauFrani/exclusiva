@@ -211,9 +211,9 @@
 // CARD-PAGES
 
 .cards-sumary-container {
-  width: 30%;
+  width: 100%;
   margin:20px 0px;
-  height:auto;
+  height: auto;
 
 }
 .card-sumary-individual {
@@ -228,12 +228,11 @@
   img {
     width: 40%;
     height:100%;
-    margin-right:20px;height:300px;
-  width:100%;
-  border: 1px solid lightgray;
-  justify-content:left;
-  padding:20px;
-  border-radius:10px;
+    margin-right:20px;
+    border: 1px solid lightgray;
+    justify-content:left;
+    padding:20px;
+    border-radius:10px;
     border-radius:10px;
     object-fit:cover;
     object-position:center;
