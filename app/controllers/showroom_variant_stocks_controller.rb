@@ -41,6 +41,7 @@ class ShowroomVariantStocksController < ApplicationController
     @variants = @showroom_variant_stock.variant.product
     @purchase = Purchase.new
     @bidding = Bidding.find(session[:bidding_id])
+    flash[:timer] = @bidding.created_at
   end
 end
 

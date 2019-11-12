@@ -14,7 +14,7 @@
         <% if current_user.purchases.empty? %>
           <%= link_to "Hace tu primera compra", root_path, class:"dropdown-item"  %>
         <% else %>
-          <%= link_to "Tus compras", purchases_path, class:"dropdown-item"  %>
+          <%= link_to "Mis compras", purchases_path, class:"dropdown-item"  %>
         <% end %>
         <%= link_to "Salir", destroy_user_session_path, method: :delete, class:"dropdown-item" %>
       </div>
