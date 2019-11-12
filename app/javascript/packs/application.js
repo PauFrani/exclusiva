@@ -7,6 +7,7 @@ import { initAutocomplete, initAutocomplete1 } from '../plugins/init_autocomplet
 import { initCategorySelector } from '../plugins/select_category';
 import { initSortable } from '../plugins/init_sortable';
 import { initImages } from '../plugins/init_images'
+import { initSize } from '../plugins/init_size'
 
 initMapbox();
 initAutocomplete();
@@ -14,3 +15,4 @@ initAutocomplete1();
 initCategorySelector();
 initSortable();
 initImages();
+initSize();
