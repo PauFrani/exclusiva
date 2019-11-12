@@ -1,0 +1,45 @@
+#img-thumbnails{
+  // width:100%;
+  // height:auto;
+  // img {
+  //   width:100%;
+  //   height:auto;
+  // }
+}
+
+#main-image {
+  // width:100%;
+  // height:auto;
+}
+
+.disable-button-product {
+  pointer-events: none;
+  background-color: $gray;
+}
+
+.color-circle {
+  width: 20px;
+  height: 20px;
+  border-radius:50%;
+  border: 1px solid white;
+}
+
+.size-greyscale {
+  opacity:0.2;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.variant_stock {
+  color:black;
+}
+
+.size-selected {
+  text-decoration: underline;
+}
+
+#p-talle {
+  margin:0px;
+  padding:0px;
+}

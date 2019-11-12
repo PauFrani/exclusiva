@@ -38,16 +38,20 @@ class ShowroomVariantStocksController < ApplicationController
     biddings.where(category: bidding.category).where("amount >= ?", bidding.amount).last
   end
 
-
   def show
+    @bidding = Bidding.find(session[:bidding_id])
     @showroom_variant_stock = ShowroomVariantStock.find(params[:id])
-    @variants = @showroom_variant_stock.variant.product
+    @showroom_variant_stocks = ShowroomVariantStock.joins(:variant).joins(:product).where("products.id = ?", @showroom_variant_stock.variant.product.id).where("showroom_variant_stocks.stock > 0").near(@bidding.address.street, 20, :select => "addresses.*, showroom_variant_stocks.*").joins(:address)
     @purchase = Purchase.new
     @bidding = Bidding.find(session[:bidding_id])
+    @variants_hash = {}
+    @showroom_variant_stocks.each do |item|
+      @variants_hash[item.variant.color] ||= []
+      @variants_hash[item.variant.color] << { id: item.id, size: item.variant.size }
+    end
     flash[:timer] = @bidding.created_at
   end
 end
-
 
 # ShowroomVariantStock.near(@bidding.address.street, 20, :select => "addresses.*, showroom_variant_stocks.*").joins(:address).joins(:product).where(products: { category: @bidding.category }).where("products.min_price < ?", @bidding.amount).where("products.max_price > ?", @bidding.amount).where("showroom_variant_stocks.stock > ?", 0).joins(:bidding).where(brand_ranks: { bidding_id: @bidding.id }).order(order: :desc)
 # ShowroomVariantStock.near(@bidding.address.street, 20, :select => "addresses.*, showroom_variant_stocks.*").joins(:address).joins(:product).where(products: { category: @bidding.category }).where("products.min_price < ?", @bidding.amount).where("products.max_price > ?", @bidding.amount).where("showroom_variant_stocks.stock > ?", 0).joins(showroom: {brand: :brand_ranks}).reorder(order: :asc)
