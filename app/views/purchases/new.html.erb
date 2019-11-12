@@ -22,11 +22,16 @@
     </div>
     <div class="col-lg-6">
       <h2>Elegí un método de pago</h2>
-        <%= simple_form_for [@showroom_variant_stock, @purchase] do |f| %>
-          <%= f.input :payment_method, collection: ["Efectivo", "Tarjeta"] %>
-          <%= f.submit "Confirmar y continuar", class:'button-search mx-auto flex-grow-0 mt-3 mt-md-0'%>
-        <% end %>
+      <form action="<%=  %>" method="post">
+        <script
+          src="https://www.mercadopago.com.ar/integrations/v1/web-tokenize-checkout.js"
+          data-public-key="<%= ENV['MP_PUBLIC_KEY'] %>"
+          data-transaction-amount='<%= @bidding.amount %>'>
+        </script>
+      </form>
     </div>
   </div>
 </div>
+
+
 
