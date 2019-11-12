@@ -10,7 +10,7 @@ class ProductItemsController < ApplicationController
           lat: product_item.showroom.address.latitude,
           lng: product_item.showroom.address.longitude,
           infoWindow: render_to_string(partial: "info_window", locals: { product_item: product_item }),
-          image_url: helpers.asset_url('https://i.ibb.co/MVHrLcB/perchero2.png')
+          image_url: 'https://i.ibb.co/MVHrLcB/perchero2.png'
           # image_url: helpers.asset_url('https://i.ibb.co/zfL4Rt9/perchero3.png')
         }
       end

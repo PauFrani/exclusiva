@@ -1,0 +1,8 @@
+<form action="<%= purchase_make_payment_path @purchase %>" method="post">
+  <script
+    src="https://www.mercadopago.com.ar/integrations/v1/web-tokenize-checkout.js"
+    data-public-key="<%= ENV['MP_PUBLIC_KEY'] %>"
+    data-transaction-amount='<%= @purchase.bidding.amount %>'>
+  </script>
+</form>
+
