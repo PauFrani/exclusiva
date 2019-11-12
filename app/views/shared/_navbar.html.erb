@@ -1,38 +1,31 @@
-   <%if controller_name == 'biddings' && action_name == 'new'%>
-   <% color = 'white' %>
-  <% else %>
-   <% color = 'primary' %>
-  <% end %>
-<nav class="navbar navbar-expand-xs navbar-light bg-transparent border-bottom border-#{color} fixed-top">
-  <div class="dropdown">
+<%if controller_name == 'biddings' && action_name == 'new'%>
+  <% color = 'white' %>
+  <% at_index = '' %>
+<% else %>
+  <% color = 'primary' %>
+  <% at_index = 'not_at_index' %>
+<% end %>
+<nav class="navbar navbar-expand-xs navbar-light border-bottom border-<%= color %>  <%= controller_name == 'biddings' && action_name == 'new' ? 'bg-transparent negative-margin' : 'bg-white fixed-top' %>">
+    <h1 class="title-text mx-auto" href="#"> <%= link_to "Exclusiva", root_path, class:"text-decoration-none text-#{color} navbar-title exclusiva"  %> </h1>
+  <div class="dropleft">
     <% if user_signed_in? %>
-      <i class="fas fa-bars d-block text-#{color}" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
+        <i class="fas fa-tshirt text-<%= color %>" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
     <% end %>
     <% if user_signed_in? %>
       <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
         <%= link_to "Home", root_path, class:"dropdown-item"  %>
         <% if current_user.purchases.empty? %>
-          <%= link_to "Hace tu primera compra", root_path, class:"dropdown-item"  %>
         <% else %>
           <%= link_to "Mis compras", purchases_path, class:"dropdown-item"  %>
         <% end %>
         <%= link_to "Salir", destroy_user_session_path, method: :delete, class:"dropdown-item" %>
       </div>
-    <% end %>
-  </div>
-    <h1 class="title-text" href="#"> <%= link_to "Exclusiva", root_path, class:"text-decoration-none text-#{color} navbar-title exclusiva"  %> </h1>
-  <div>
-    <% if user_signed_in? %>
-      <div class="upper-right-box">
-        <i class="fas fa-tshirt text-#{color}"></i>
-      </div>
     <% else %>
       <div class="d-none d-sm-block">
         <%= link_to "Ayuda", '#', class:"text-decoration-none text-#{color} body-text"  %>
         <%= link_to "Iniciar Sesión", new_user_session_path, class:"text-decoration-none text-#{color} body-text"  %>
-        <button class="btn body-text my-2 my-sm-0" type="submit"> <%= link_to "Registrate", new_user_registration_path, class:"btn btn-ghost text-decoration-none text-#{color}"  %></button>
+        <button class="btn body-text my-2 my-sm-0 " type="submit"> <%= link_to "Registrate", new_user_registration_path, class:"btn btn-ghost text-decoration-none text-#{color} #{at_index}"  %></button>
       </div>
     <% end %>
   </div>
 </nav>
-
