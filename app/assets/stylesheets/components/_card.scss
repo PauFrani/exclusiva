@@ -109,7 +109,7 @@
     }
   }
 
-  img {
+  .logo-draggble{
     height:100%;
     width:100%;
     object-fit:cover;
@@ -159,9 +159,18 @@
 
 }
 
-@media(max-width: 500px){
+@media(max-width: 520px){
   .cards-results-container{
   display: block;
+  }
+
+  .card-brand-ranking {
+    height: 100px;
+    width: 90%;
+    .logo{
+      width:80%;
+      height:100%;
+    }
   }
 }
 
