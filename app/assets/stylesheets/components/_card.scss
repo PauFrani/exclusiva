@@ -175,6 +175,9 @@
     margin:0px;
     padding:0px;
   }
+  h3 {
+    padding:5px;
+  }
 }
 
 #address-result {
@@ -258,11 +261,12 @@
   width: 90%;
   margin:20px 0px;
   height:auto;
+  border-radius:10px;
 }
 .card-payment-individual {
   height:300px;
   width:100%;
-  border: 1px solid lightgray;
+  // border: 1px solid lightgray;
   justify-content:left;
   padding:20px;
   border-radius:10px;

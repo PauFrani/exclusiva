@@ -18,6 +18,7 @@ gem 'webpacker'
 gem 'faker'
 gem 'geocoder'
 gem 'cloudinary', '~> 1.9.1'
+gem 'mercadopago-sdk'
 
 group :development do
   gem 'web-console', '>= 3.3.0'

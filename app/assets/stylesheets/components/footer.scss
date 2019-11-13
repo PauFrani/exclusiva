@@ -15,9 +15,15 @@ font-family: 'Roboto', sans-serif;
 
 #footer-xl {
   background-color: #596681;
+  .footer-info-container-responsive {
+    background-color: #596681;
+      p {
+      color: white;
+    }
 
-
-  p {
-    color: white;
   }
+
 }
+  // p {
+  //   color: white;
+  // }
