@@ -18,9 +18,26 @@ class ShowroomVariantStocksController < ApplicationController
                                 where("products.max_price > ?", @bidding.amount).
                                 where("showroom_variant_stocks.stock > ?", 0).
                                 all.uniq { |svs| "#{svs.showroom_id}-#{svs.variant.product_id}" }
-      @brand_ranks = @bidding.brand_ranks.sort_by{|br| br.order}.map{|br| br.brand_id}
-      @showroom_variant_stocks.sort_by!{|svs| @brand_ranks.index(svs.showroom.brand.id)}
-      @markers = @showroom_variant_stocks.map do |showroom_variant_stock|
+      #orden por Brands
+      @brands = @bidding.brand_ranks.sort_by{|br| br.order}.map{|br| br.brand}
+
+      results = @showroom_variant_stocks
+      quantity = @showroom_variant_stocks.size
+      weight = [0.5, 0.3, 0.15, 0.05]
+
+      if quantity > 5
+        results = []
+        @brands.each_with_index do |brand, index|
+          svs_filtered = @showroom_variant_stocks
+                          .select{|svs| svs.brand == brand }
+          results << svs_filtered.sample((quantity * weight[index]).round) unless svs_filtered.empty?
+        end
+        results = results.flatten
+      end
+
+      @results = results.sort_by { |svs| @brands.index(svs.brand) }
+
+      @markers = results.map do |showroom_variant_stock|
         if showroom_variant_stock.showroom.address.latitude != nil
           {
             lat: showroom_variant_stock.showroom.address.latitude,

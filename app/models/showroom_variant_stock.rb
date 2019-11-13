@@ -4,6 +4,7 @@ class ShowroomVariantStock < ApplicationRecord
   has_one :product, through: :variant
   has_many :purchases, dependent: :destroy
   has_one :address, through: :showroom
+  has_one :brand, through: :showroom
 
   validates :stock, presence: true
 

@@ -48,7 +48,6 @@ class BiddingsController < ApplicationController
   end
 
   def brands
-
     @bidding = Bidding.find(session[:bidding_id])
     @brands = Brand.all
     @brands.each do |brand|
