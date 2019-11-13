@@ -11,7 +11,7 @@ class Bidding < ApplicationRecord
   validates :amount, presence: true
 
   def expired?
-    if (Time.now - self.created_at)/60 > 1000
+    if (Time.now - self.created_at)/60 > ENV['BIDDING_MINUTES'].to_i
       return true
     end
   end

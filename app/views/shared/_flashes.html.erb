@@ -15,7 +15,7 @@
   </div>
 <% end %>
 <% if timer %>
-  <div class="alert alert-warning alert-dismissible fade show m-1" id="timerFlash" role="alert" data-created="<%= timer %>">
+  <div class="alert alert-warning alert-dismissible fade show m-1" id="timerFlash" role="alert" data-created="<%= timer %>" data-expiration="<%= ENV['BIDDING_MINUTES'] %>">
     Te quedan <span id="countDown"></span> antes que finalice tu oferta!
     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
       <span aria-hidden="true">&times;</span>
