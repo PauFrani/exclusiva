@@ -1,0 +1,29 @@
+
+
+@media (max-width: 500px) {
+
+  #title-terminos_condiciones {
+    text-justify: auto;
+    text-size-adjust: 10px;
+  }
+  #terminos_condiciones {
+  display: none;
+  }
+ }
+
+.img-card-pay {
+  width: 20%;
+  height: 35px;
+  object-fit: cover;
+}
+.mercadopago-logo {
+  width: 50%;
+  height: 60px;
+  object-fit: cover;
+}
+.qr-img {
+  width: 60%;
+  height: 20%;
+  object-fit: cover;
+  margin-top: 20px;
+}
