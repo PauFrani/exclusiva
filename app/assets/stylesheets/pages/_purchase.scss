@@ -1,0 +1,45 @@
+
+button.mercadopago-button {
+  background-color: #596681;
+  color: white;
+  border: none;
+  border-radius:3px;
+  width: 255px;
+  padding: 2px 2px;
+  text-decoration: none;
+  font-size: 25px;
+   &:hover {
+    text-decoration:none;
+    background-color:#294683;
+    color:white;
+  }
+
+}
+
+@media (max-width: 500px) {
+
+  #title-terminos_condiciones {
+    text-justify: auto;
+    text-size-adjust: 10px;
+  }
+  #terminos_condiciones {
+  display: none;
+  }
+ }
+
+.img-card-pay {
+  width: 20%;
+  height: 35px;
+  object-fit: cover;
+}
+.mercadopago-logo {
+  width: 50%;
+  height: 60px;
+  object-fit: cover;
+}
+.qr-img {
+  width: 60%;
+  height: 150%;
+  object-fit: cover;
+  margin-top: 20px;
+}
