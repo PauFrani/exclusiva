@@ -1,6 +1,6 @@
-.search-background {
-  height: 20vh;
-}
+// .search-background {
+//   height: 20vh;
+// }
 
 .search-background {
   height: 50vh;
@@ -30,6 +30,11 @@
   background-color: #F1F2F6;
   padding: 5px 8px;
   border-radius: 5px;
+  color: #CACACA;
+}
+
+.cta-search-input-parent {
+  background-color: #F1F2F6;
 }
 
 .cta-search-input {
@@ -67,10 +72,10 @@
     margin-top: 5vh;
   }
   .search-background {
-    height: 15vh;
+    height: 30vh;
   }
   .cta-search-input::placeholder {
-    color: $primary;
+    color: #CACACA;
     background-color: #F1F2F6;
     padding: 5px 8px;
   }
