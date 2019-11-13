@@ -25,5 +25,5 @@ Rails.application.routes.draw do
     resources :products, only: :show
 
   get '/cards', to: 'pages#cards'
-
+  get '/dashboard', to: 'pages#dashboard'
 end
