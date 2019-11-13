@@ -28,8 +28,7 @@ class ShowroomVariantStocksController < ApplicationController
       if quantity > 5
         results = []
         @brands.each_with_index do |brand, index|
-          svs_filtered = @showroom_variant_stocks
-                          .select{|svs| svs.brand == brand }
+          svs_filtered = @showroom_variant_stocks.select{|svs| svs.brand == brand }
           results << svs_filtered.sample((quantity * weight[index]).round) unless svs_filtered.empty?
         end
         results = results.flatten
