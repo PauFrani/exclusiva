@@ -1,9 +1,43 @@
 .search-background2 {
   height: 30vh;
+  margin-top: -22px;
 }
 
 .dash {
-  margin-left: 526px;
-  margin-top: -22px;
   padding-top: 50px;
 }
+
+
+.card-category {
+  background-size: cover;
+  background-position: center;
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  border-radius: 0px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.title-dashboard {
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding: 15px;
+  padding-top: 85px;
+  border-radius: 4px;
+  width: 100%;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+@media (max-width: 520px) {
+  .search-background2 {
+  margin-top: -40px;
+  }
+}
+

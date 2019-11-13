@@ -50,6 +50,10 @@
               src="https://www.mercadopago.com.ar/integrations/v1/web-tokenize-checkout.js"
               data-public-key="<%= ENV['MP_PUBLIC_KEY'] %>"
               data-transaction-amount='<%= @bidding.amount %>'
+              <% if current_user.mp_customer_id %>
+                data-customer-id="<%= current_user.mp_customer_id %>"
+                data-card-ids="<%= current_user.mp_card_id %>"
+              <% end %>
               data-button-label="Comprar">
             </script>
           </form>

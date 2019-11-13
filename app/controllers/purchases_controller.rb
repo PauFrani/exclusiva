@@ -22,14 +22,16 @@ class PurchasesController < ApplicationController
       # create card in mp
       # save card_id in user table
 
-
     @showroom_variant_stock = ShowroomVariantStock.find(params[:showroom_variant_stock_id])
     @purchase = @showroom_variant_stock.purchases.build(purchase_params)
     @purchase.bidding_id = session[:bidding_id]
     @payment = Payment.new
     @payment.purchase = @purchase
     @payment.status = 'Pending'
+    @purchase.status = 'Pending'
     @purchase.payment_method = params[:payment_method_id]
+
+    @payment.save!
 
     require 'mercadopago'
     $mp = MercadoPago.new(ENV["MP_ACCESS_TOKEN"])
@@ -55,27 +57,29 @@ class PurchasesController < ApplicationController
     # response = {}
     # response[:payment_response] = payment_response
 
-    if payment_response["status"] == "201" && !current_user.mp_customer_id
-      # create a customer
-      customer_response = $mp.post("/v1/customers", { email: current_user.email })
-
-      # save customer_id to user
-      current_user.mp_customer_id = customer_response["response"]["id"]
-
-      # add a card to the customer
-      card_response = $mp.post("/v1/customers/#{customer_response["response"]["id"]}/cards", { token: token })
-
-      current_user.mp_card_id  = card_response["response"]["id"]
-      current_user.save!
-      # save card_id to user
-      # response[:customer_response] = customer_response
-      # response[:card_response] = card_response
+    if payment_response["status"] == "201"
 
       @payment.status = 'Cobrado'
+
+      if !current_user.mp_customer_id
+        # create a customer
+        customer_response = $mp.post("/v1/customers", { email: current_user.email })
+
+        # save customer_id to user
+        current_user.mp_customer_id = customer_response["response"]["id"]
+
+        # add a card to the customer
+        card_response = $mp.post("/v1/customers/#{customer_response["response"]["id"]}/cards", { token: token })
+
+        current_user.mp_card_id  = card_response["response"]["id"]
+        # save card_id to user
+        # response[:customer_response] = customer_response
+        # response[:card_response] = card_response
+      end
     end
 
-    if @payment.save!
-      @purchase.save!
+    if @payment.save
+      @purchase.save
       redirect_to purchase_path(@purchase)
     else
       render :new

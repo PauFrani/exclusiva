@@ -8,6 +8,6 @@ class PagesController < ApplicationController
   end
 
   def dashboard
-    @purchases = Purchase.all
+    @purchases = Purchase.where(status: "Pending")
   end
 end
