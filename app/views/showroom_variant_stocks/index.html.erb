@@ -1,5 +1,5 @@
-<div>
-  <form class="form-inline" action="/showroom_variant_stocks">
+<div class="">
+  <form class="form-inline" style="position: fixed;" action="/showroom_variant_stocks">
     <div class="form-inline2">
       <label for="amount">Bid:</label>
       <input type="text" id="amount"  name="amount"  value="<%= @bidding.amount %>">
@@ -13,7 +13,7 @@
     </div>
   </form>
 </div>
-<div class="row justify-content-sm-center justify-content-xs-center">
+<div class="row justify-content-sm-center justify-content-xs-center" style="margin-top:80px; padding-top:34px;">
   <div class="col-xs-12 col-sm-9 col-md-6 col-lg-5" style="padding:0px margin:0px 10px">
     <div>
       <% @showroom_variant_stocks.each do |showroom_variant_stock|%>
@@ -33,7 +33,7 @@
                     <%= image_tag showroom_variant_stock.showroom.brand.logo %>
                   </div>
                 </div>
-                <p id="address-result"><%= showroom_variant_stock.showroom.address.street %></p>
+                <p id="address-result"><%= truncate(showroom_variant_stock.showroom.address.street, :length => 50) %></p>
                 <div class="location">
                   <i class="fas fa-map-marker-alt"></i>
                   <p><%= Geocoder::Calculations.distance_between(showroom_variant_stock.showroom.address, @bidding.address).round(2) %> km</p>
