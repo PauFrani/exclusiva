@@ -1,32 +1,62 @@
-Tenes <%= (15-(Time.now - @bidding.created_at)/60).round(0)  %> minutos antes que finalice tu oferta!
-
 <div class="container">
-  <div class="row justify-content-center">
-    <div class="col-xs-2 col-md-1">
-      <div id="img-thumbnails">
-        <% @showroom_variant_stock.variant.product.photos.each_with_index do |photo, index| %>
-          <%= image_tag photo.url_photo, class: "img-thumbnail product-images #{'greyscale' if index.positive? }" %>
-        <% end %>
+  <div class="row">
+<!-- IMAGES -->
+    <div class="col-xs-12 col-md-7">
+      <div class="row">
+        <!-- THUMBNAILS -->
+        <div class="col-2">
+          <div id="img-thumbnails">
+            <% @showroom_variant_stock.variant.product.photos.each_with_index do |photo, index| %>
+              <%= image_tag photo.url_photo, class: "img-thumbnail product-images #{'greyscale' if index.positive? }" %>
+            <% end %>
+          </div>
+        </div>
+        <!-- MAIN IMAGE -->
+        <div class="col-10" id="main-image" style="background-size: cover; background-image: url(<%= @showroom_variant_stock.variant.product.photos.first.url_photo %>)">
+        </div>
       </div>
     </div>
-    <div class="col-xs-10 col-md-5" id="main-image" style="background-size: cover; background-image: url(<%= @showroom_variant_stock.variant.product.photos.first.url_photo %>)">
-    </div>
-  <div class="col-xs-12 col-md-6">
-    <div class="pl-md-5">
+<!-- DESCRIPTION -->
+  <div class="col-xs-12 col-md-5">
+    <div class="pl-3">
       <h2><%= @showroom_variant_stock.variant.product.name %></h2>
       <p><%= @showroom_variant_stock.showroom.name %></p>
-      <div class="d-flex">
-        <div>
-          <p>Color: </p>
-        </div>
-        <div>
-          <p>Talle:</p>
-        </div>
+      <div><p>Color:</p></div>
+      <div>
+      <!-- PRODUCT VARIANTS -->
+        <% @variants_hash.each do |color, values| %>
+          <div class="d-flex justify-content-left mx-2 border-bottom-primary">
+            <div class="color-circle" style=" background-color: <%= color %>"></div>
+            <div class="px-3 mx-3"><p id="p-talle">Talle:</p></div>
+            <div class="d-flex">
+              <p class="ml-2"  id="p-talle">
+                <% values.each do |value| %>
+                  <div class="variant_stock size-greyscale mx-3" data-id-product="<%= value[:id] %>"><%= value[:size] %></div>
+                <% end %>
+              </p>
+            </div>
+          </div>
+        <% end %>
       </div>
+      <!-- PRODUCT DESCRIPTION -->
       <p><%= @showroom_variant_stock.variant.product.description %></p>
-      <%= simple_form_for(@showroom_variant_stock.variant.product, as: :product, method: :get, url: new_showroom_variant_stock_purchase_path(@showroom_variant_stock.variant)) do |f|%>
+      <hr>
+      <%= link_to "Hacer Oferta", new_showroom_variant_stock_purchase_path(@showroom_variant_stock.variant), class: "button-general disable-button-product" %>
+      <div class="mt-3">
+        <h4>Ubicación:</h4>
+        <p class="border-left border-secondary"><%= @showroom_variant_stock.showroom.address.street %></p>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
 
-        <div class="d-flex justify-content-between">
+
+
+
+
+      <%#= simple_form_for(@showroom_variant_stock.variant.product, as: :product, method: :get, url: new_showroom_variant_stock_purchase_path(@showroom_variant_stock.variant)) do |f|%>
+<!--         <div class="d-flex justify-content-between">
           <div>
             Color:
             <input type="button" name="color" class="select-color select-color-red">
@@ -48,17 +78,5 @@ Tenes <%= (15-(Time.now - @bidding.created_at)/60).round(0)  %> minutos antes qu
             </span>
           </div>
         </div>
-      <hr>
-
-          <h4>Ubicación:</h4>
-          <p class="border-left border-secondary"><%= @showroom_variant_stock.showroom.address.street %></p>
-      <%= link_to "Hacer Oferta", new_showroom_variant_stock_purchase_path(@showroom_variant_stock.variant), class: "button-general"  %>
-    <% end %>
-    </div>
-  </div>
-</div>
-</div>
-
-
-
-
+      <hr> -->
+    <%# end %>

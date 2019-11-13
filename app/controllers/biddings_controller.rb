@@ -20,7 +20,7 @@ class BiddingsController < ApplicationController
   def update
     @bidding = Bidding.find(params[:id])
     if @bidding.expired?
-      flash[:alert] = 'EL tiempo de tu oferta finalizó!'
+      flash[:alert] = 'El tiempo de tu oferta finalizó!'
       redirect_to root_path
     else
       if request.referrer.include? 'category'
@@ -30,7 +30,12 @@ class BiddingsController < ApplicationController
         @bidding.update(biddings_params)
         redirect_to location_biddings_path # location_bidding_path
       elsif request.referrer.include? 'location'
-        @bidding.address = Address.new(address_params)
+        begin
+          @bidding.address = Address.new(address_params)
+        rescue
+          flash[:notice] = "¡Las ofertas son únicas, debe crear una nueva oferta!"
+          return redirect_to root_path
+        end
         @bidding.save
         redirect_to showroom_variant_stocks_path # pagina de resultados
       end
@@ -39,18 +44,22 @@ class BiddingsController < ApplicationController
 
   def category
     @bidding = Bidding.find(session[:bidding_id])
+    flash[:timer] = @bidding.created_at
   end
 
   def brands
+
     @bidding = Bidding.find(session[:bidding_id])
     @brands = Brand.all
     @brands.each do |brand|
       @bidding.brand_ranks.build(brand: brand)
     end
+    flash[:timer] = @bidding.created_at
   end
 
   def location
     @bidding = Bidding.find(session[:bidding_id])
+    flash[:timer] = @bidding.created_at
   end
 
   private
