@@ -77,7 +77,6 @@ class PurchasesController < ApplicationController
 
     if @payment.save!
       @purchase.save!
-
       redirect_to purchase_path(@purchase)
     else
       render :new
