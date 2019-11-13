@@ -32,15 +32,14 @@ class PurchasesController < ApplicationController
     @purchase.payment_method = params[:payment_method_id]
 
     require 'mercadopago'
-    $mp = MercadoPago.new(ENV["MP_PRIVATE_TOKEN"])
+    $mp = MercadoPago.new(ENV["MP_ACCESS_TOKEN"])
 
     token = params[:token]
     payment_method_id = params[:payment_method_id]
     installments = 1
     issuer_id = params[:issuer_id]
 
-
-
+    # payment hash for mp
     payment = {}
     payment[:transaction_amount] = @purchase.bidding.amount
     payment[:token] = token
@@ -69,15 +68,14 @@ class PurchasesController < ApplicationController
       current_user.mp_card_id  = card_response["response"]["id"]
       current_user.save!
       # save card_id to user
-      response[:customer_response] = customer_response
-      response[:card_response] = card_response
+      # response[:customer_response] = customer_response
+      # response[:card_response] = card_response
 
       @payment.status = 'Cobrado'
     end
 
     if @payment.save!
       @purchase.save!
-      raise
       redirect_to purchase_path(@purchase)
     else
       render :new
