@@ -2,21 +2,25 @@
   <div class="row justify-content-center">
     <div class=" col-xs-12 col-lg-4 cards-sumary-container">
       <h2>Detalle del Producto</h2>
-      <div class="card-sumary-individual my-3">
+      <div class="card-details-individual my-3">
         <img src="https://d26lpennugtm8s.cloudfront.net/stores/246/391/products/dsc_54751-4f2499aa13a426007a15700604112508-1024-1024.jpg" alt="logo" class="img-fluid rounded-sm-lg">
         <div class="paragraph">
-          <h2><%=  @purchase.showroom_variant_stock.variant.product.name %></h2>
-          <p><%=  @purchase.showroom_variant_stock.showroom.name%></p>
+          <h2 class="mb-0 mt-2"><%=  @purchase.showroom_variant_stock.variant.product.name %></h2>
+          <p class="mt-0"><%=  @purchase.showroom_variant_stock.showroom.name%></p>
           <div class="location">
             <i class="fas fa-map-marker-alt"></i>
             <p>2.5 km</p>
           </div>
         </div>
-      <p>Cómo llegar?</p>
       </div>
-      <div class="d-flex align-center">
+      <div class="d-flex align-center my-5">
         <i class="fas fa-map-marker-alt"></i>
         <p class="ml-1"><%= @purchase.showroom_variant_stock.showroom.address.street %></p>
+      </div>
+      <div class="my-3">
+        <%= link_to "http://www.google.com/maps/place/#{@purchase.showroom_variant_stock.showroom.address.latitude},#{@purchase.showroom_variant_stock.showroom.address.longitude}", target:"_blank" do %>
+          <button type="button" class="btn btn-secondary btn-xs">¿Cómo llegar?</button>
+        <% end %>
       </div>
     </div>
     <div class="col-xs-12 col-lg-4">
@@ -26,14 +30,14 @@
       <div class="d-flex justify-content-center mt-4 mb-5"><button class="button-general">Descargar</button>
       </div>
       <div>
-        <h2 class=""><strong>Instrucciones</strong></h2>
+        <h2 class="">Instrucciones</h2>
         <p class="py-0 my-0">1.- Guardar o descargar la imagen</p>
         <p class="py-0 my-0">2.- Ve a la tienda que figura en la oferta</p>
         <p class="py-0 my-0">3.- Muestra este codigo QR al vendedor</p>
         <p class="py-0 my-0">4.- Retira el producto y disfruta!</p>
       </div>
     </div>
-    <div class="col-xs-12 col-lg-4 cards-payment-container border">
+    <div class="col-xs-12 col-lg-4 cards-details-container">
       <div class="d-flex flex-column align-center">
         <h3 class="mt-4 text-center">Exclusiva</h3>
         <p class="my-3 text-center"> Gracias por usar Excluiva, esperamos haya disfrutado de su compra.</p>
@@ -49,7 +53,7 @@
         <div class="d-flex justify-content-between"><p>Subtotal:</p>
           <p>$<%= @bidding.amount %></p>
         </div>
-        <div class= "d-flex justify-content-between border-top my-5 py-3" >
+        <div class= "d-flex justify-content-between border-top mt-5 py-3" >
           <p> <strong>Total a pagar</strong></p>
           <p><strong> $<%=@bidding.amount%></strong></p>
         </div>

@@ -1,0 +1,19 @@
+.logo-draggble {
+  object-fit: cover;
+}
+.button-ranks {
+  width: 70%;
+  margin:0px;
+  padding: 8px 50px;
+  background-color:#596681;
+  border-radius:3px;
+  border: none;
+  text-decoration: none;
+  color:white;
+  font-size: 22px;
+  &:hover {
+    text-decoration:none;
+    background-color:#294683;
+    color:white;
+  }
+}
