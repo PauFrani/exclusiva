@@ -11,8 +11,8 @@
       <li class="column brand_order" draggable="true" value="<%= brand.id %>">
         <div class="card-brand-ranking ">
           <div class="logo">
-            <div class="number" id="number-rank"><span class="rank adsfasdf"></span></div>
-            <img src="<%= brand.logo %>" alt="">
+
+            <img class="logo-draggble"src="<%= brand.logo %>" alt="">
           </div>
 
         </div>
@@ -26,8 +26,10 @@
   <%= ff.hidden_field :order, class:"brand_input" %>
   <%= ff.hidden_field :brand_id  %>
   <% end %>
-  <div class="d-flex justify-content-center"><%= form.submit "Continuar", id: "brand_ranks_submit", class:"button-general" %></div>
+  <div class="row justify-content-center">
+  <div class="col-12 col-md-6 d-flex justify-content-center"><%= form.submit "Continuar", id: "brand_ranks_submit", class:"button-ranks" %></div>
   <% end %>
+</div>
 </div>
 <br>
 <br>
