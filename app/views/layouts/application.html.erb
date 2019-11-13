@@ -29,10 +29,7 @@
   <body>
     <%= render 'shared/navbar' %>
     <%= render 'shared/flashes' %>
-    <%if controller_name == 'biddings' && action_name == 'new'%>
-    <% else %>
-      <div class="space-navbar-banner"></div>
-    <% end %>
+
     <%= yield %>
 
     <%= render 'shared/footer' %>

@@ -88,6 +88,14 @@ textarea:focus, input:focus{
     outline: none;
 }
 
+.form-results-search {
+  // margin-top:80px;
+  position: sticky;
+}
+.form-results-content {
+  // margin-top:114px;
+}
+
 /* Add responsiveness - display the form controls vertically instead of horizontally on screens that are less than 800px wide */
 @media (max-width: 600px) {
   .form-inline {
@@ -111,3 +119,4 @@ textarea:focus, input:focus{
 
   }
 }
+
