@@ -86,6 +86,17 @@ class PurchasesController < ApplicationController
     end
   end
 
+  def update
+    @purchase = Purchase.find(params[:id])
+    @purchase.status = params[:status]
+    if @purchase.save
+      flash[:notice] = "La compra ha sido #{@purchase.status.downcase}."
+    else
+      flash[:alert] = "La compra NO ha sido #{@purchase.status.downcase}."
+    end
+    redirect_to dashboard_path
+  end
+
   def show
     @purchase = Purchase.find(params[:id])
     if session[:bidding_id]
