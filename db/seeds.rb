@@ -87,7 +87,8 @@ USERS.each do |user|
 end
 
 
-BRANDS = [
+BRANDS =
+[
   {
     name: "Akiabara",
     logo: "https://i.imgur.com/cDxvUy7.png",
@@ -95,7 +96,7 @@ BRANDS = [
     showrooms: [
       {
         name: "Gurruchaga",
-        phone_number: "111111111",
+        phone_number: "123456847",
         email: "akiabara@jot.com",
         address: "San martin de tours 2908, Capital Federal, Buenos Aires"
       }
@@ -138,7 +139,7 @@ BRANDS = [
         name: "Tortuguitas",
         phone_number: "1545454632",
         email: "clifftone@jot.com",
-        address: "San martin de tours 2908, Capital Federal, Buenos Aires"
+        address: "Necochea 3903, Buenos Aires, Ciudad Autónoma de Buenos Aires, Argentina"
       }
     ],
     products:
@@ -317,46 +318,6 @@ BRANDS = [
       }
     ]
   },
-{
-    name: "Kevingston",
-    logo: "https://i.ibb.co/9r4QYMW/kevingston.png",
-    status: true,
-    showrooms: [
-      {
-        name: "Cordoba",
-        phone_number: "14569879",
-        email: "kevingston@jot.com",
-        address: "Av. Córdoba 4874, C1414BAT CABA"
-      }
-    ],
-    products: [
-      {
-        name: "Saco Waters",
-        min_price: 2000,
-        max_price: 2500,
-        category: "shirts",
-        description: "Saco Azul Akiabara Waters" ,
-        sku_ext: Faker::Number.number(digits: 15),
-        published: false,
-        photos: [
-          "https://dafitistaticar-a.akamaihd.net/p/akiabara-0967-383183-1-zoom.jpg",
-          "https://dafitistaticar-a.akamaihd.net/p/akiabara-0968-383183-2-zoom.jpg",
-          "https://dafitistaticar-a.akamaihd.net/p/akiabara-0969-383183-3-zoom.jpg",
-          "https://dafitistaticar-a.akamaihd.net/p/akiabara-0971-383183-4-zoom.jpg"
-        ],
-        variants: [
-          {
-            color: "#596681",
-            size: "38"
-          },
-          {
-            color: "#596681",
-            size: "40"
-          },
-        ]
-      }
-    ]
-  },
   {
     name: "Vitamina",
     logo: "https://i.imgur.com/EJ8pgGJ.png",
@@ -366,7 +327,7 @@ BRANDS = [
         name: "Salguero",
         phone_number: "15648996",
         email: "vitamina@jot.com",
-        address: "San martin de tours 2908, Capital Federal, Buenos Aires"
+        address: "Jerónimo Salguero 3125, Buenos Aires, Ciudad Autónoma de Buenos Aires, Argentina"
       }
     ],
     products:
@@ -1099,16 +1060,16 @@ BRANDS = [
       }
     ]
   },
-{
+  {
     name: "Van Como Piña",
-    logo: "",
+    logo: "https://ibb.co/rwW5zjT",
     status: true,
     showrooms: [
       {
         name: "Moldes",
         phone_number: "157899654",
         email: "vcp@jot.com",
-        address: "San martin de tours 2908, Capital Federal, Buenos Aires"
+        address: "Moldes 807, Buenos Aires, Ciudad Autónoma de Buenos Aires, Argentina"
       }
     ],
     products: [
@@ -1203,14 +1164,14 @@ BRANDS = [
   },
   {
     name: "Sarkany",
-    logo: "",
+    logo: "https://ibb.co/pWzGzq9",
     status: true,
     showrooms: [
       {
         name: "Posadas",
         phone_number: "154545454",
         email: "sarkany@jot.com",
-        address: "San martin de tours 2908, Capital Federal, Buenos Aires"
+        address: "Avenida Corrientes 3247, Buenos Aires, Ciudad Autónoma de Buenos Aires, Argentina"
       }
     ],
     products: [
@@ -1312,31 +1273,314 @@ BRANDS = [
         name: "Vicente Lopez",
         phone_number: "15684496616",
         email: "rapsodia@jot.com",
-        address: "Vicente López 2050, Local 213, C0011 CABA"
+        address: "Aguirre 729, Buenos Aires, Ciudad Autónoma de Buenos Aires, Argentina"
       }
     ],
     products: [
       {
-        name: "Saco Waters",
-        min_price: 2000,
-        max_price: 2500,
-        category: "shirts",
-        description: "Saco Azul Akiabara Waters" ,
+        name: "Bota Delhi",
+        min_price: 8000,
+        max_price: 10990,
+        category: "shoes",
+        description: "Bota de cuero negra con remaches metalicos, caña baja." ,
         sku_ext: Faker::Number.number(digits: 15),
         published: false,
         photos: [
-          "https://dafitistaticar-a.akamaihd.net/p/akiabara-0967-383183-1-zoom.jpg",
-          "https://dafitistaticar-a.akamaihd.net/p/akiabara-0968-383183-2-zoom.jpg",
-          "https://dafitistaticar-a.akamaihd.net/p/akiabara-0969-383183-3-zoom.jpg",
-          "https://dafitistaticar-a.akamaihd.net/p/akiabara-0971-383183-4-zoom.jpg"
+          "https://statics.glamit.com.ar/media/catalog/product/cache/58/image/9df78eab33525d08d6e5fb8d27136e95/r/a/rapsodiaar_11114118051a_01_1.jpg",
+          "https://statics.glamit.com.ar/media/catalog/product/cache/58/image/9df78eab33525d08d6e5fb8d27136e95/r/a/rapsodiaar_11114118051a_01_2.jpg",
         ],
         variants: [
           {
-            color: "#596681",
+            color: "#17202A",
+            size: "36"
+          },
+
+          {
+            color: "#17202A",
             size: "38"
           },
           {
-            color: "#596681",
+            color: "#17202A",
+            size: "40"
+          }
+        ]
+      },
+      {
+        name: "Sandalia Tuscany",
+        min_price: 5000,
+        max_price: 7990,
+        category: "shoes",
+        description: "Sandalia de cuero, estampado simil reptil negro con remaches pastilla metalicos." ,
+        sku_ext: Faker::Number.number(digits: 15),
+        published: false,
+        photos: [
+          "https://statics.glamit.com.ar/media/catalog/product/cache/58/image/9df78eab33525d08d6e5fb8d27136e95/r/a/rapsodiaar_11114118074a_01_1.jpg",
+          "https://statics.glamit.com.ar/media/catalog/product/cache/58/image/9df78eab33525d08d6e5fb8d27136e95/r/a/rapsodiaar_11114118074a_01_2.jpg"
+        ],
+        variants: [
+          {
+            color: "#17202A",
+            size: "36"
+          },
+
+          {
+            color: "#17202A",
+            size: "38"
+          },
+          {
+            color: "#17202A",
+            size: "40"
+          }
+        ]
+      },
+            {
+        name: "Vestido Ramya Suhan",
+        min_price: 5000,
+        max_price: 6990,
+        category: "dress",
+        description: "Vestido cordo verde estampado." ,
+        sku_ext: Faker::Number.number(digits: 15),
+        published: false,
+        photos: [
+          "https://statics.glamit.com.ar/media/catalog/product/cache/58/image/9df78eab33525d08d6e5fb8d27136e95/4/3/43006_rapsodia_11114117210a_14_2.jpg",
+          "https://statics.glamit.com.ar/media/catalog/product/cache/58/image/9df78eab33525d08d6e5fb8d27136e95/4/3/43007_rapsodia_11114117210a_14_1.jpg"
+        ],
+        variants: [
+          {
+            color: "#73C6B6",
+            size: "36"
+          },
+
+          {
+            color: "#73C6B6",
+            size: "38"
+          },
+          {
+            color: "#73C6B6",
+            size: "40"
+          }
+        ]
+      },
+            {
+        name: "Camisa Darra",
+        min_price: 5000,
+        max_price: 6990,
+        category: "shirts",
+        description: "Camisa de algodon amplia bordada." ,
+        sku_ext: Faker::Number.number(digits: 15),
+        published: false,
+        photos: [
+          "https://statics.glamit.com.ar/media/catalog/product/cache/58/image/9df78eab33525d08d6e5fb8d27136e95/4/3/43083_rapsodia_11114016523i_02_1.jpg",
+          "https://statics.glamit.com.ar/media/catalog/product/cache/58/image/9df78eab33525d08d6e5fb8d27136e95/4/3/43084_rapsodia_11114016523i_02_2.jpg"
+        ],
+        variants: [
+          {
+            color: "#F8F9F9",
+            size: "36"
+          },
+
+          {
+            color: "#F8F9F9",
+            size: "38"
+          },
+          {
+            color: "#F8F9F9",
+            size: "40"
+          }
+        ]
+      },
+            {
+        name: "Camisa Isaura Nisha",
+        min_price: 4000,
+        max_price: 5990,
+        category: "shirts",
+        description: "Camisa de punto y plano con bordado en dorado y plateado en el frente." ,
+        sku_ext: Faker::Number.number(digits: 15),
+        published: false,
+        photos: [
+          "https://statics.glamit.com.ar/media/catalog/product/cache/58/image/9df78eab33525d08d6e5fb8d27136e95/r/a/rapsodiaar_11114117085c_38_1.jpg",
+          "https://statics.glamit.com.ar/media/catalog/product/cache/58/image/9df78eab33525d08d6e5fb8d27136e95/r/a/rapsodiaar_11114117085c_38_2.jpg"
+        ],
+        variants: [
+          {
+            color: "#F8F9F9",
+            size: "36"
+          },
+
+          {
+            color: "#F8F9F9",
+            size: "38"
+          },
+          {
+            color: "#F8F9F9",
+            size: "40"
+          }
+        ]
+      },
+            {
+        name: "Legging Shinny Carter",
+        min_price: 2000,
+        max_price: 3990,
+        category: "jeans",
+        description: "Calza negra basica." ,
+        sku_ext: Faker::Number.number(digits: 15),
+        published: false,
+        photos: [
+          "https://statics.glamit.com.ar/media/catalog/product/cache/58/image/9df78eab33525d08d6e5fb8d27136e95/r/a/rapsodiaar_11114117024a_01_1.jpg",
+          "https://statics.glamit.com.ar/media/catalog/product/cache/58/image/9df78eab33525d08d6e5fb8d27136e95/r/a/rapsodiaar_11114117024a_01_2.jpg"
+        ],
+        variants: [
+          {
+            color: "#17202A",
+            size: "36"
+          },
+
+          {
+            color: "#17202A",
+            size: "38"
+          },
+          {
+            color: "#17202A",
+            size: "40"
+          }
+        ]
+      },
+                  {
+        name: "Pantalon New Tomy",
+        min_price: 3000,
+        max_price: 4990,
+        category: "jeans",
+        description: "Babucha basica al tobillo." ,
+        sku_ext: Faker::Number.number(digits: 15),
+        published: false,
+        photos: [
+          "https://statics.glamit.com.ar/media/catalog/product/cache/58/image/9df78eab33525d08d6e5fb8d27136e95/r/a/rapsodiaar_11114117248c_01_1.jpg",
+          "https://statics.glamit.com.ar/media/catalog/product/cache/58/image/9df78eab33525d08d6e5fb8d27136e95/r/a/rapsodiaar_11114117248c_01_2.jpg"
+        ],
+        variants: [
+          {
+            color: "#17202A",
+            size: "36"
+          },
+
+          {
+            color: "#17202A",
+            size: "38"
+          },
+          {
+            color: "#17202A",
+            size: "40"
+          }
+        ]
+      },
+                  {
+        name: "Legging Shinny Carter",
+        min_price: 2000,
+        max_price: 3990,
+        category: "jeans",
+        description: "Calza negra basica." ,
+        sku_ext: Faker::Number.number(digits: 15),
+        published: false,
+        photos: [
+          "https://statics.glamit.com.ar/media/catalog/product/cache/58/image/9df78eab33525d08d6e5fb8d27136e95/r/a/rapsodiaar_11114117024a_01_1.jpg",
+          "https://statics.glamit.com.ar/media/catalog/product/cache/58/image/9df78eab33525d08d6e5fb8d27136e95/r/a/rapsodiaar_11114117024a_01_2.jpg"
+        ],
+        variants: [
+          {
+            color: "#17202A",
+            size: "36"
+          },
+
+          {
+            color: "#17202A",
+            size: "38"
+          },
+          {
+            color: "#17202A",
+            size: "40"
+          }
+        ]
+      },
+                  {
+        name: "Pañuelo New Animal",
+        min_price: 1000,
+        max_price: 1690,
+        category: "accessories",
+        description: "Pañuelo suave con estampa animal print. Un clasico, reversionado" ,
+        sku_ext: Faker::Number.number(digits: 15),
+        published: false,
+        photos: [
+          "https://statics.glamit.com.ar/media/catalog/product/cache/58/image/9df78eab33525d08d6e5fb8d27136e95/r/a/rapsodiaar_11114117736i_27_2.jpg",
+          "https://statics.glamit.com.ar/media/catalog/product/cache/58/image/9df78eab33525d08d6e5fb8d27136e95/r/a/rapsodiaar_11114117736i_27_3.jpg"
+        ],
+        variants: [
+          {
+            color: "#17202A",
+            size: "36"
+          },
+
+          {
+            color: "#17202A",
+            size: "38"
+          },
+          {
+            color: "#17202A",
+            size: "40"
+          }
+        ]
+      },
+       {
+        name: "Pulsera Azar",
+        min_price: 1000,
+        max_price: 1490,
+        category: "accessories",
+        description: "Pulsera con mix de cadenas, dijes y strass" ,
+        sku_ext: Faker::Number.number(digits: 15),
+        published: false,
+        photos: [
+          "https://statics.glamit.com.ar/media/catalog/product/cache/58/image/9df78eab33525d08d6e5fb8d27136e95/r/a/rapsodiaar_11114118310a_23_1.jpg",
+          "https://statics.glamit.com.ar/media/catalog/product/cache/58/image/9df78eab33525d08d6e5fb8d27136e95/r/a/rapsodiaar_11114118310a_23_2.jpg"
+        ],
+        variants: [
+          {
+            color: "#D7DBDD",
+            size: "36"
+          },
+
+          {
+            color: "#D7DBDD",
+            size: "38"
+          },
+          {
+            color: "#D7DBDD",
+            size: "40"
+          }
+        ]
+      },
+      {
+        name: "Vestido Indie",
+        min_price: 11000,
+        max_price: 12990,
+        category: "dress",
+        description: "Vestido Indie" ,
+        sku_ext: Faker::Number.number(digits: 15),
+        published: false,
+        photos: [
+          "https://statics.glamit.com.ar/media/catalog/product/cache/58/image/9df78eab33525d08d6e5fb8d27136e95/4/6/46842_rapsodia_11114119549a_10_1.jpg",
+          "https://statics.glamit.com.ar/media/catalog/product/cache/58/image/9df78eab33525d08d6e5fb8d27136e95/4/6/46843_rapsodia_11114119549a_10_2.jpg",
+        ],
+        variants: [
+          {
+            color: "#FDEDEC",
+            size: "36"
+          },
+
+          {
+            color: "##FDEDEC",
+            size: "38"
+          },
+          {
+            color: "##FDEDEC",
             size: "40"
           },
         ]
@@ -1352,31 +1596,314 @@ BRANDS = [
         name: "Santa Fe",
         phone_number: "156879979",
         email: "zara@jot.com",
-        address: "Av. Santa Fe 1937, Capital Federal, Buenos Aires"
+        address: "San martin de tours 2908, Capital Federal, Buenos Aires"
       }
     ],
     products: [
       {
-        name: "Saco Waters",
-        min_price: 2000,
-        max_price: 2500,
-        category: "shirts",
-        description: "Saco Azul Akiabara Waters" ,
+        name: "Bota de tacón",
+        min_price: 13000,
+        max_price: 15000,
+        category: "shoes",
+        description: "Bota de tacón de piel disponible en varios colores: negro y plomo. Corte de piel con estampado animal. Tacón fino forrado. Acabada en punta." ,
         sku_ext: Faker::Number.number(digits: 15),
         published: false,
         photos: [
-          "https://dafitistaticar-a.akamaihd.net/p/akiabara-0967-383183-1-zoom.jpg",
-          "https://dafitistaticar-a.akamaihd.net/p/akiabara-0968-383183-2-zoom.jpg",
-          "https://dafitistaticar-a.akamaihd.net/p/akiabara-0969-383183-3-zoom.jpg",
-          "https://dafitistaticar-a.akamaihd.net/p/akiabara-0971-383183-4-zoom.jpg"
+          "https://static.zara.net/photos///2019/I/1/1/p/5036/001/005/2/w/1024/5036001005_2_2_1.jpg?ts=1571911876345",
+          "https://static.zara.net/photos///2019/I/1/1/p/5036/001/005/2/w/1024/5036001005_1_1_1.jpg?ts=1571911908339",
         ],
         variants: [
           {
-            color: "#596681",
+            color: "#FEF9E7",
+            size: "36"
+          },
+
+          {
+            color: "#FEF9E7",
             size: "38"
           },
           {
-            color: "#596681",
+            color: "#FEF9E7",
+            size: "40"
+          }
+        ]
+      },
+      {
+        name: " Bota de tacón piel",
+        min_price: 10000,
+        max_price: 12000,
+        category: "shoes",
+        description: "Bota de tacón de piel disponible en varios colores: cuero y negro. Corte de serraje. Detalle de bordado en la caña. Tacón cowboy. Acabada en punta. Tiradores en los laterales." ,
+        sku_ext: Faker::Number.number(digits: 15),
+        published: false,
+        photos: [
+          "https://static.zara.net/photos///2019/I/1/1/p/5035/001/040/3/w/1024/5035001040_2_3_1.jpg?ts=1571904171446",
+          "https://static.zara.net/photos///2019/I/1/1/p/5035/001/040/3/w/1024/5035001040_1_1_1.jpg?ts=1571904045705"
+        ],
+        variants: [
+          {
+            color: "#17202A",
+            size: "36"
+          },
+
+          {
+            color: "#17202A",
+            size: "38"
+          },
+          {
+            color: "#17202A",
+            size: "40"
+          }
+        ]
+      },
+            {
+        name: "Vestido Cinturón",
+        min_price: 5000,
+        max_price: 7990,
+        category: "dress",
+        description: "Vestido de escote pico y manga larga acabada en elástico. Detalle aplicación cinturón combinado a tono. Cierre frontal cruzado con botones." ,
+        sku_ext: Faker::Number.number(digits: 15),
+        published: false,
+        photos: [
+          "https://static.zara.net/photos///2019/I/0/1/p/0208/452/800/7/w/1920/0208452800_1_1_1.jpg?ts=<1573115282124></1573115282124>",
+          "https://static.zara.net/photos///2019/I/0/1/p/0208/452/800/7/w/1920/0208452800_2_1_1.jpg?ts=1573115325455"
+        ],
+        variants: [
+          {
+            color: "#17202A",
+            size: "36"
+          },
+
+          {
+            color: "#17202A",
+            size: "38"
+          },
+          {
+            color: "#17202A",
+            size: "40"
+          }
+        ]
+      },
+            {
+        name: "Camisa Lazo",
+        min_price: 4000,
+        max_price: 5990,
+        category: "shirts",
+        description: "Camisa de cuello subido con escote pico y lazo. Manga larga acabada en puño. Bajo asimétrico con aberturas laterales. Cierre delantero con botones." ,
+        sku_ext: Faker::Number.number(digits: 15),
+        published: false,
+        photos: [
+          "https://static.zara.net/photos///2019/I/0/1/p/6929/301/406/26/w/1024/6929301406_1_1_1.jpg?ts=1573584654628",
+          "https://static.zara.net/photos///2019/I/0/1/p/6929/301/406/26/w/1024/6929301406_2_1_1.jpg?ts=1573584668313"
+        ],
+        variants: [
+          {
+            color: "#17202A",
+            size: "36"
+          },
+
+          {
+            color: "#17202A",
+            size: "38"
+          },
+          {
+            color: "#17202A",
+            size: "40"
+          }
+        ]
+      },
+            {
+        name: "Camisa oversize",
+        min_price: 4000,
+        max_price: 5990,
+        category: "shirts",
+        description: "Camisa oversize de cuello subido y escote pico con lazo. Manga larga. " ,
+        sku_ext: Faker::Number.number(digits: 15),
+        published: false,
+        photos: [
+          "https://static.zara.net/photos///2019/I/0/1/p/4043/172/020/26/w/1024/4043172020_1_1_1.jpg?ts=1573584657044",
+          "https://static.zara.net/photos///2019/I/0/1/p/4043/172/020/26/w/1024/4043172020_2_1_1.jpg?ts=1573638481969"
+        ],
+        variants: [
+          {
+            color: "#FDFEFE",
+            size: "36"
+          },
+
+          {
+            color: "#FDFEFE",
+            size: "38"
+          },
+          {
+            color: "#FDFEFE",
+            size: "40"
+          }
+        ]
+      },
+            {
+        name: "Jeans ZW",
+        min_price: 3000,
+        max_price: 4990,
+        category: "jeans",
+        description: "Jeans de tiro alto con cinco bolsillos. Efecto lavado. Cierre frontal con cremallera y botón metálico." ,
+        sku_ext: Faker::Number.number(digits: 15),
+        published: false,
+        photos: [
+          "https://static.zara.net/photos///2019/I/0/1/p/2553/248/800/2/w/1024/2553248800_1_1_1.jpg?ts=1571310866783",
+          "https://static.zara.net/photos///2019/I/0/1/p/2553/248/800/2/w/1024/2553248800_2_1_1.jpg?ts=1571310969898"
+        ],
+        variants: [
+          {
+            color: "#17202A",
+            size: "36"
+          },
+
+          {
+            color: "#17202A",
+            size: "38"
+          },
+          {
+            color: "#17202A",
+            size: "40"
+          }
+        ]
+      },
+                  {
+        name: "Jason Mom",
+        min_price: 3000,
+        max_price: 3990,
+        category: "jeans",
+        description: "Jeans de tiro alto con cinco bolsillos. Cierre delantero con cremallera y botón metálico." ,
+        sku_ext: Faker::Number.number(digits: 15),
+        published: false,
+        photos: [
+          "https://static.zara.net/photos///2019/I/0/1/p/8197/233/800/3/w/1024/8197233800_1_1_1.jpg?ts=1570445176736",
+          "https://static.zara.net/photos///2019/I/0/1/p/8197/233/800/3/w/1920/8197233800_2_1_1.jpg?ts=1570445284494"
+        ],
+        variants: [
+          {
+            color: "#17202A",
+            size: "36"
+          },
+
+          {
+            color: "#17202A",
+            size: "38"
+          },
+          {
+            color: "#17202A",
+            size: "40"
+          }
+        ]
+      },
+                  {
+        name: "Vestido Lazada",
+        min_price: 6000,
+        max_price: 6990,
+        category: "dress",
+        description: "Vestido fluido de cuello redondo y manga larga .Detalle de lazada en mismo tejido. Cierre en espalda con abertura y botón." ,
+        sku_ext: Faker::Number.number(digits: 15),
+        published: false,
+        photos: [
+          "https://static.zara.net/photos///2019/I/0/1/p/8342/325/630/2/w/1024/8342325630_1_1_1.jpg?ts=1568655682492",
+          "https://static.zara.net/photos///2019/I/0/1/p/8342/325/630/2/w/1024/8342325630_2_1_1.jpg?ts=1568655682711"
+        ],
+        variants: [
+          {
+            color: "#D98880",
+            size: "36"
+          },
+
+          {
+            color: "#D98880",
+            size: "38"
+          },
+          {
+            color: "#D98880",
+            size: "40"
+          }
+        ]
+      },
+                  {
+        name: "Anillo maxi ",
+        min_price: 1000,
+        max_price: 1590,
+        category: "accessories",
+        description: "Anillo maxi sello realizado en plata de ley y bañado en oro de 24 quilates." ,
+        sku_ext: Faker::Number.number(digits: 15),
+        published: false,
+        photos: [
+          "https://static.zara.net/photos///2019/I/0/1/p/2621/006/303/2/w/1024/2621006303_2_8_1.jpg?ts=1573494519209",
+          "https://static.zara.net/photos///2019/I/0/1/p/2621/006/303/2/w/1024/2621006303_2_11_1.jpg?ts=1573637678999"
+        ],
+        variants: [
+          {
+            color: "#F4D03F",
+            size: "36"
+          },
+
+          {
+            color: "#F4D03F",
+            size: "38"
+          },
+          {
+            color: "#F4D03F",
+            size: "40"
+          }
+        ]
+      },
+       {
+        name: "Cadena con colgante",
+        min_price: 1000,
+        max_price: 1490,
+        category: "accessories",
+        description: "Cadena con colgante tipo medalla confeccionada en plata de ley y bañado en oro de 24 quilates. Cierre tipo palanca." ,
+        sku_ext: Faker::Number.number(digits: 15),
+        published: false,
+        photos: [
+          "https://static.zara.net/photos///2019/I/0/1/p/2621/001/303/2/w/1024/2621001303_2_8_1.jpg?ts=1573726331627",
+          "https://static.zara.net/photos///2019/I/0/1/p/2621/001/303/2/w/1024/2621001303_1_1_1.jpg?ts=1573726331625"
+        ],
+        variants: [
+          {
+            color: "F4D03F",
+            size: "36"
+          },
+
+          {
+            color: "F4D03F",
+            size: "38"
+          },
+          {
+            color: "F4D03F",
+            size: "40"
+          }
+        ]
+      },
+      {
+        name: "Vestido Esampado",
+        min_price: 11000,
+        max_price: 12990,
+        category: "dress",
+        description: "Vestido fluido de cuello redondo y manga larga amplia acabada. Detalle acabados con volante. Cierre en espalda con abertura y botón. " ,
+        sku_ext: Faker::Number.number(digits: 15),
+        published: false,
+        photos: [
+          "https://static.zara.net/photos///2019/I/0/1/p/8826/191/070/2/w/1024/8826191070_1_1_1.jpg?ts=1573650694045",
+          "https://static.zara.net/photos///2019/I/0/1/p/8826/191/070/2/w/1024/8826191070_2_1_1.jpg?ts=1573665479641",
+        ],
+        variants: [
+          {
+            color: "#D5DBDB",
+            size: "36"
+          },
+
+          {
+            color: "#D5DBDB",
+            size: "38"
+          },
+          {
+            color: "#D5DBDB",
             size: "40"
           },
         ]
