@@ -2,6 +2,7 @@
   <div class="row justify-content-center">
     <div class="col-xs-12 col-lg-6 cards-sumary-container">
      <div class="d-flex justify-content-center mb-3"><h2>Realizá tu pago!</h2></div>
+     <!-- PRODUCT DETAILS   -->
      <div class="card-sumary-individual">
       <%= image_tag @showroom_variant_stock.variant.product.photos.first.url_photo %>
       <div class="paragraph">
@@ -22,12 +23,14 @@
           </div>
         </div>
       </div>
+      <!-- AMOUNT TO PAY -->
       <div class="my-5" >
         <div class= "d-flex justify-content-between border-bottom border-top pt-3" >
           <p> <strong>Total a pagar</strong></p>
           <p><strong> $<%=@bidding.amount%></strong></p>
         </div>
       </div>
+      <!-- MERCADOPAGO -->
       <div class="d-flex justify-content-center my-5">
         <form action="<%= showroom_variant_stock_purchases_path %>" method="post" >
           <script
@@ -42,6 +45,7 @@
         </script>
       </form>
     </div>
+
     <div class="d-flex justify-content-between mt-5 pt-5 mx-0">
       <%= image_tag 'https://www.mastercard.com.ar/content/dam/mccom/global/logos/logo-mastercard-mobile.svg', class:"img-card-pay" %>
       <%= image_tag 'https://i.pinimg.com/280x280_RS/b8/d0/62/b8d06229505ae08140d489c821b87747.jpg', class:"img-card-pay" %>
