@@ -105,7 +105,7 @@ BRANDS =
       {
         name: "Saco Waters",
         min_price: 2000,
-        max_price: 2500,
+        max_price: 5000,
         category: "shirts",
         description: "Saco Azul Akiabara Waters" ,
         sku_ext: Faker::Number.number(digits: 15),
@@ -146,8 +146,8 @@ BRANDS =
     [
       {
         name: "Sandalia Brownstone Mujer - Thin Strips",
-        min_price: 3000,
-        max_price: 4000,
+        min_price: 8000,
+        max_price: 12000,
         category: "shoes",
         description: "Base de corcho y látex de forma anatómica. Suela: EVA.Detalles: dos correas, cada una con una hebilla de espiga de metal con ajuste individual, Completa el diseño un grabado Clifftone en su lateral.",
         sku_ext: Faker::Number.number(digits: 15),
@@ -187,8 +187,8 @@ BRANDS =
       },
       {
         name: "Botas de Cuero Negro",
-        min_price: 2990,
-        max_price: 3990,
+        min_price: 8000,
+        max_price: 12000,
         category: "shoes",
         description: "Bota de Mujer en Cuero Negro. Caña de 13cm y un Taco de 5cm. Completa su diseño un cierre elastico en ambos lados, para mayor comodidad a la hora de poner y sacarselas",
         sku_ext: Faker::Number.number(digits: 15),
@@ -225,8 +225,8 @@ BRANDS =
       },
       {
         name: "Bota Texana",
-        min_price: 3500,
-        max_price: 4500,
+        min_price: 8000,
+        max_price: 12000,
         category: "shoes",
         description: "Bota Texana de Mujer, con capellada de cuero gastado. Caña de 12cm y Taco de 4cm de Alto. Completa el diseño un cierre en el lado interno para mayor comodidad.",
         sku_ext: Faker::Number.number(digits: 15),
@@ -263,8 +263,8 @@ BRANDS =
       },
       {
         name: "Sandalia Brownstone Mujer - Wide Strips",
-        min_price: 3000,
-        max_price: 4000,
+        min_price: 8000,
+        max_price: 12000,
         category: "shoes",
         description: "Base de corcho y látex de forma anatómica. Suela: EVA. Detalles: dos correas, cada una con una hebilla de espiga de metal con ajuste individual, Completa el diseño un grabado Clifftone en su lateral.",
         sku_ext: Faker::Number.number(digits: 15),
@@ -298,8 +298,8 @@ BRANDS =
       },
       {
         name: "Tarjetero Cuero Vacuno",
-        min_price: 1300,
-        max_price: 1400,
+        min_price: 1000,
+        max_price: 2000,
         category: "accessories",
         description: "Tarjetero en Cuero Vacuno con Textura, 4 ranuras para tarjetas por lado y el logo grabado en el frente. 10cms de Ancho, 7,5 cms de Alto",
         sku_ext: Faker::Number.number(digits: 15),
@@ -334,8 +334,8 @@ BRANDS =
     [
       {
         name: "Jean Brit Liston",
-        min_price: 1300,
-        max_price: 1400,
+        min_price: 4000,
+        max_price: 7000,
         category: "jeans",
         description: "Jean calce recto de tiro alto con tela azul súper desgastada , cuyo valor agregado son sus 2 lineas engomadas en frente de una de las piernas.",
         sku_ext: Faker::Number.number(digits: 15),
@@ -366,8 +366,8 @@ BRANDS =
 
       {
         name: "JEAN HOLLYWOOD",
-        min_price: 2500,
-        max_price: 2600,
+        min_price: 4000,
+        max_price: 7000,
         category: "jeans",
         description: "Jean de calce Liverpool que combina denim y coating metalizado. Ampliando la propuesta de noche que permite estar canchera y relajada. Tiro medio.",
         sku_ext: Faker::Number.number(digits: 15),
@@ -414,8 +414,8 @@ BRANDS =
 
       {
         name: "JEAN ABBEY BENAQUA",
-        min_price: 1800,
-        max_price: 1900,
+        min_price: 4000,
+        max_price: 7000,
         category: "jeans",
         description: "Jean skinny tiro alto con bajado de color a celeste, desgastado suave y delicado.",
         sku_ext: Faker::Number.number(digits: 15),
@@ -445,8 +445,8 @@ BRANDS =
       },
       {
         name: "JEAN LIVERPOOL SALEM",
-        min_price: 5000,
-        max_price: 6000,
+        min_price: 4000,
+        max_price: 7000,
         category: "jeans",
         description: "CALCE: Skinny tiro medio. TEJIDO: Gabardina 8 Oz",
         sku_ext: Faker::Number.number(digits: 15),
@@ -477,8 +477,8 @@ BRANDS =
       },
       {
         name: "JEAN LIVERPOOL SALEM",
-        min_price: 5000,
-        max_price: 6000,
+        min_price: 4000,
+        max_price: 7000,
         category: "dress",
         description: "CALCE: Skinny tiro medio. TEJIDO: Gabardina 8 Oz",
         sku_ext: Faker::Number.number(digits: 15),
@@ -509,8 +509,8 @@ BRANDS =
       },
       {
         name: "VESTIDO CAICOS",
-        min_price: 6500,
-        max_price: 7500,
+        min_price: 3000,
+        max_price: 7000,
         category: "dress",
         description: "Maxi-vestido con parte superior al cuerpo, y parte inferior en evasé. TEJIDO :Tejido plano con caído estampado con diseño abstracto.",
         sku_ext: Faker::Number.number(digits: 15),
@@ -542,8 +542,8 @@ BRANDS =
       },
       {
         name: "VESTIDO NOSARA",
-        min_price: 5000,
-        max_price: 6000,
+        min_price: 3000,
+        max_price: 7000,
         category: "dress",
         description: "Vestido corto a la rodilla con frente cruzado tipo cache-coeur, breteles finos, volado en cruce de pollera. TEJIDO: Sarga liviana con caída, símil Tencel.",
         sku_ext: Faker::Number.number(digits: 15),
@@ -575,8 +575,8 @@ BRANDS =
       },
       {
         name: "VESTIDO HOLLYWOOD",
-        min_price: 6900,
-        max_price: 7900,
+        min_price: 3000,
+        max_price: 7000,
         category: "dress",
         description: "Vestido corto con entalle en cintura con faja de símil cuero, escote en V cruzado, con falda fruncida y vuelo. TEJIDO : Punto liviano con efecto plisado, metalizado con foil.",
         sku_ext: Faker::Number.number(digits: 15),
@@ -607,8 +607,8 @@ BRANDS =
       },
       {
         name: "VESTIDO BEVERLY",
-        min_price: 7800,
-        max_price: 9800,
+        min_price: 3000,
+        max_price: 7000,
         category: "dress",
         description: "Vestido corto de calce relajado e impronta de remerón, con mangas al codo en ángulo, cuello a la base. TEJIDO : Tul bordado con lentejuelas en diseño de rayas acebradas.",
         sku_ext: Faker::Number.number(digits: 15),
@@ -640,8 +640,8 @@ BRANDS =
       },
       {
         name: "VESTIDO CHICAGO",
-        min_price: 7800,
-        max_price: 9800,
+        min_price: 3000,
+        max_price: 7000,
         category: "dress",
         description: "Vestido camisero liso, corto, con mangas cortas enterizas, cuello estilo Mao, y detalle de nudo de ajuste en cintura. TEJIDO : Crepe liviano liso.",
         sku_ext: Faker::Number.number(digits: 15),
@@ -673,8 +673,8 @@ BRANDS =
       },
       {
         name: "CAMISA VERDI",
-        min_price: 3500,
-        max_price: 4500,
+        min_price: 2000,
+        max_price: 5000,
         category: "shirts",
         description: "Camisa básica de corte clásico y calce semientallado, con detalle de tablas en espalda, borde inferior en curva y trabas en mangas para sostener el arremangado. TEJIDO: Poplín camisero liso o rayado.",
         sku_ext: Faker::Number.number(digits: 15),
@@ -726,8 +726,8 @@ BRANDS =
       },
       {
         name: "CAMISOLA AUSTIN",
-        min_price: 4900,
-        max_price: 5900,
+        min_price: 2000,
+        max_price: 5000,
         category: "shirts",
         description: "Camisa larga, de calce amplio en evasé, mangas largas con detalle de cintas para atar y detalles camiseros. TEJIDO : Crepe liviano estampado con diseño de flores pintadas.",
         sku_ext: Faker::Number.number(digits: 15),
@@ -770,8 +770,8 @@ BRANDS =
       },
       {
         name: "CAMISOLA CALDES",
-        min_price: 4400,
-        max_price: 5400,
+        min_price: 2000,
+        max_price: 5000,
         category: "shirts",
         description: "Camisola larga y amplia con mangas 3/4, combinación de rayas y bolsillo plaqué. TEJIDO: Lino rayado camisero importado de Italia",
         sku_ext: Faker::Number.number(digits: 15),
@@ -799,8 +799,8 @@ BRANDS =
       },
       {
         name: "CAMISOLA PENSILVANIA",
-        min_price: 5900,
-        max_price: 6900,
+        min_price: 2000,
+        max_price: 5000,
         category: "shirts",
         description: "Puro lino, bordado, cortado en un modelo de camisola larga, con cuello mao y tajos en costados. TEJIDO: Fil a fil de textura linosa tejido a rayas.",
         sku_ext: Faker::Number.number(digits: 15),
@@ -840,8 +840,8 @@ BRANDS =
       },
       {
         name: "SLIP ON ATLANTA",
-        min_price: 4400,
-        max_price: 5400,
+        min_price: 8000,
+        max_price: 12000,
         category: "shoes",
         description: "Slip on con plataforma a rayas. Doble tira cruzada en simil cuero tipo espejo, con logo Vitamina grabado en bajo relieve. MATERIAL: Simil cuero con acabado de espejo.",
         sku_ext: Faker::Number.number(digits: 15),
@@ -880,8 +880,8 @@ BRANDS =
       },
       {
         name: "STILETTO MADISON",
-        min_price: 3300,
-        max_price: 4300,
+        min_price: 8000,
+        max_price: 12000,
         category: "shoes",
         description: "Stiletto con escote cuadrado y detalle de tira en talón. MATERIAL: Gamuza de cabra.",
         sku_ext: Faker::Number.number(digits: 15),
@@ -918,8 +918,8 @@ BRANDS =
       },
       {
         name: "SLIP ON MENPHIS",
-        min_price: 6300,
-        max_price: 7300,
+        min_price: 8000,
+        max_price: 12000,
         category: "shoes",
         description: "Slip on que combina dos cueros, uno de reptil y otro graneado. Taco redondo forrado y puntera metálica. MATERIAL: Cuero vacuno graneado combinado con reptil.",
         sku_ext: Faker::Number.number(digits: 15),
@@ -957,8 +957,8 @@ BRANDS =
       },
       {
         name: "Bota Mussi",
-        min_price: 3900,
-        max_price: 4900,
+        min_price: 8000,
+        max_price: 12000,
         category: "shoes",
         description: "Bota tejida tipo media, en punta y con taco chupete, el ultimo grito de la moda. MATERIAL: Tejido tipo media, la variante negra combinada con lurex plateado y la variante roja lisa.",
         sku_ext: Faker::Number.number(digits: 15),
@@ -996,8 +996,8 @@ BRANDS =
       },
       {
         name: "AROS MADISON",
-        min_price: 3900,
-        max_price: 4900,
+        min_price: 1000,
+        max_price: 2000,
         category: "accessories",
         description: "Aros circulares en carey y detalle metálico. MATERIAL: circulos de carey con metal.",
         sku_ext: Faker::Number.number(digits: 15),
@@ -1018,8 +1018,8 @@ BRANDS =
       },
       {
         name: "SHOPPING HONOLULU",
-        min_price: 2700,
-        max_price: 3700,
+        min_price: 1000,
+        max_price: 2000,
         category: "accessories",
         description: "Shopping en plastico transparente, con sobre interior en tela estampada con logo. MATERIAL: Plástico transparente en colores combinado con cuero ecológico.",
         sku_ext: Faker::Number.number(digits: 15),
@@ -1037,8 +1037,8 @@ BRANDS =
       {
 
         name: "SHOPPING FARGO",
-        min_price: 2700,
-        max_price: 3700,
+        min_price: 1000,
+        max_price: 2000,
         category: "accessories",
         description: "Shopping en lona de 100% algodón, con base, acentos y logo Vitamina en charol. MATERIAL: Lona combinada con charol.",
         sku_ext: Faker::Number.number(digits: 15),
@@ -1075,8 +1075,8 @@ BRANDS =
     products: [
       {
         name: "Bikini Waikiki",
-        min_price: 1100,
-        max_price: 1800,
+        min_price: 1000,
+        max_price: 2000,
         category: "accessories",
         description: "Bikini Waikiki Colaless Tiritas (Conjunto)" ,
         sku_ext: Faker::Number.number(digits: 15),
@@ -1104,8 +1104,8 @@ BRANDS =
       },
       {
         name: "Bikini Sleepy",
-        min_price: 1100,
-        max_price: 1800,
+        min_price: 1000,
+        max_price: 2000,
         category: "accessories",
         description: "Bikini Sleepy Hollow Colaless Con Voladitos (Conjunto)" ,
         sku_ext: Faker::Number.number(digits: 15),
@@ -1133,8 +1133,8 @@ BRANDS =
       },
       {
         name: "Bikini Europa",
-        min_price: 1100,
-        max_price: 1900,
+        min_price: 1000,
+        max_price: 2000,
         category: "accessories",
         description: "Bikini Europa Bordeaux (Conjunto)" ,
         sku_ext: Faker::Number.number(digits: 15),
@@ -1177,7 +1177,7 @@ BRANDS =
     products: [
       {
         name: "Sandalia Carolin",
-        min_price: 9000,
+        min_price: 8000,
         max_price: 12000,
         category: "Shoes",
         description: "Sandalia de mujer, en glitter ribeteado en cabretilla metalizada a tono con tira fina en talón. " ,
@@ -1207,7 +1207,7 @@ BRANDS =
         {
         name: "Sandalia Julia",
         min_price: 8000,
-        max_price: 10290,
+        max_price: 12000,
         category: "shoes",
         description: "Sandalia de mujer en cuero de oveja color suela, con talón simulado para pisar." ,
         sku_ext: Faker::Number.number(digits: 15),
@@ -1236,7 +1236,7 @@ BRANDS =
           {
         name: "Sandalia Flo",
         min_price: 8000,
-        max_price: 10290,
+        max_price: 12000,
         category: "shoes",
         description: "Sandalia de mujer, con agarre en pulsera al tobillo en cabretilla" ,
         sku_ext: Faker::Number.number(digits: 15),
@@ -1280,7 +1280,7 @@ BRANDS =
       {
         name: "Bota Delhi",
         min_price: 8000,
-        max_price: 10990,
+        max_price: 12000,
         category: "shoes",
         description: "Bota de cuero negra con remaches metalicos, caña baja." ,
         sku_ext: Faker::Number.number(digits: 15),
@@ -1307,8 +1307,8 @@ BRANDS =
       },
       {
         name: "Sandalia Tuscany",
-        min_price: 5000,
-        max_price: 7990,
+        min_price: 8000,
+        max_price: 12000,
         category: "shoes",
         description: "Sandalia de cuero, estampado simil reptil negro con remaches pastilla metalicos." ,
         sku_ext: Faker::Number.number(digits: 15),
@@ -1335,8 +1335,8 @@ BRANDS =
       },
             {
         name: "Vestido Ramya Suhan",
-        min_price: 5000,
-        max_price: 6990,
+        min_price: 3000,
+        max_price: 7000,
         category: "dress",
         description: "Vestido cordo verde estampado." ,
         sku_ext: Faker::Number.number(digits: 15),
@@ -1363,8 +1363,8 @@ BRANDS =
       },
             {
         name: "Camisa Darra",
-        min_price: 5000,
-        max_price: 6990,
+        min_price: 2000,
+        max_price: 5000,
         category: "shirts",
         description: "Camisa de algodon amplia bordada." ,
         sku_ext: Faker::Number.number(digits: 15),
@@ -1391,8 +1391,8 @@ BRANDS =
       },
             {
         name: "Camisa Isaura Nisha",
-        min_price: 4000,
-        max_price: 5990,
+        min_price: 2000,
+        max_price: 5000,
         category: "shirts",
         description: "Camisa de punto y plano con bordado en dorado y plateado en el frente." ,
         sku_ext: Faker::Number.number(digits: 15),
@@ -1419,8 +1419,8 @@ BRANDS =
       },
             {
         name: "Legging Shinny Carter",
-        min_price: 2000,
-        max_price: 3990,
+        min_price: 4000,
+        max_price: 7000,
         category: "jeans",
         description: "Calza negra basica." ,
         sku_ext: Faker::Number.number(digits: 15),
@@ -1447,8 +1447,8 @@ BRANDS =
       },
                   {
         name: "Pantalon New Tomy",
-        min_price: 3000,
-        max_price: 4990,
+        min_price: 4000,
+        max_price: 7000,
         category: "jeans",
         description: "Babucha basica al tobillo." ,
         sku_ext: Faker::Number.number(digits: 15),
@@ -1475,8 +1475,8 @@ BRANDS =
       },
                   {
         name: "Legging Shinny Carter",
-        min_price: 2000,
-        max_price: 3990,
+        min_price: 4000,
+        max_price: 7000,
         category: "jeans",
         description: "Calza negra basica." ,
         sku_ext: Faker::Number.number(digits: 15),
@@ -1504,7 +1504,7 @@ BRANDS =
                   {
         name: "Pañuelo New Animal",
         min_price: 1000,
-        max_price: 1690,
+        max_price: 2000,
         category: "accessories",
         description: "Pañuelo suave con estampa animal print. Un clasico, reversionado" ,
         sku_ext: Faker::Number.number(digits: 15),
@@ -1532,7 +1532,7 @@ BRANDS =
        {
         name: "Pulsera Azar",
         min_price: 1000,
-        max_price: 1490,
+        max_price: 2000,
         category: "accessories",
         description: "Pulsera con mix de cadenas, dijes y strass" ,
         sku_ext: Faker::Number.number(digits: 15),
@@ -1559,8 +1559,8 @@ BRANDS =
       },
       {
         name: "Vestido Indie",
-        min_price: 11000,
-        max_price: 12990,
+        min_price: 3000,
+        max_price: 7000,
         category: "dress",
         description: "Vestido Indie" ,
         sku_ext: Faker::Number.number(digits: 15),
@@ -1602,8 +1602,8 @@ BRANDS =
     products: [
             {
         name: "VESTIDO CALEPIO",
-        min_price: 1500,
-        max_price: 2500,
+        min_price: 3000,
+        max_price: 7000,
         category: "dress",
         description: "Vestido largo de calce amplio floreado. Escote Halter. Espalda descubierta." ,
         sku_ext: Faker::Number.number(digits: 15),
@@ -1631,8 +1631,8 @@ BRANDS =
       },
             {
         name: "CAMISA RAPUA",
-        min_price: 1000,
-        max_price: 1899,
+        min_price: 2000,
+        max_price: 5000,
         category: "shirts",
         description: "Camisa combinada con distintas telas. Escote en V. mangas largas." ,
         sku_ext: Faker::Number.number(digits: 15),
@@ -1660,8 +1660,8 @@ BRANDS =
       },
       {
         name: "CARGO MULET",
-        min_price: 2000,
-        max_price: 2990,
+        min_price: 4000,
+        max_price: 7000,
         category: "jeans",
         description: "Jean cargo de tiro alto con botamanga skinny. Cierre delantero con cremallera. Bolsillos en los laterales a media pierna y cuatro bolsillos en cadera." ,
         sku_ext: Faker::Number.number(digits: 15),
@@ -1689,8 +1689,8 @@ BRANDS =
       },
       {
         name: "PAÑUELO RUMPUT",
-        min_price: 300,
-        max_price: 1500,
+        min_price: 1000,
+        max_price: 2000,
         category: "accessories",
         description: "Pañuelo de saten" ,
         sku_ext: Faker::Number.number(digits: 15),
@@ -1732,8 +1732,8 @@ BRANDS =
     products: [
       {
         name: "Bota de tacón",
-        min_price: 13000,
-        max_price: 15000,
+        min_price: 8000,
+        max_price: 12000,
         category: "shoes",
         description: "Bota de tacón de piel disponible en varios colores: negro y plomo. Corte de piel con estampado animal. Tacón fino forrado. Acabada en punta." ,
         sku_ext: Faker::Number.number(digits: 15),
@@ -1760,7 +1760,7 @@ BRANDS =
       },
       {
         name: " Bota de tacón piel",
-        min_price: 10000,
+        min_price: 8000,
         max_price: 12000,
         category: "shoes",
         description: "Bota de tacón de piel disponible en varios colores: cuero y negro. Corte de serraje. Detalle de bordado en la caña. Tacón cowboy. Acabada en punta. Tiradores en los laterales." ,
@@ -1788,8 +1788,8 @@ BRANDS =
       },
             {
         name: "Vestido Cinturón",
-        min_price: 5000,
-        max_price: 7990,
+        min_price: 3000,
+        max_price: 7000,
         category: "dress",
         description: "Vestido de escote pico y manga larga acabada en elástico. Detalle aplicación cinturón combinado a tono. Cierre frontal cruzado con botones." ,
         sku_ext: Faker::Number.number(digits: 15),
@@ -1816,8 +1816,8 @@ BRANDS =
       },
             {
         name: "Camisa Lazo",
-        min_price: 4000,
-        max_price: 5990,
+        min_price: 2000,
+        max_price: 5000,
         category: "shirts",
         description: "Camisa de cuello subido con escote pico y lazo. Manga larga acabada en puño. Bajo asimétrico con aberturas laterales. Cierre delantero con botones." ,
         sku_ext: Faker::Number.number(digits: 15),
@@ -1844,8 +1844,8 @@ BRANDS =
       },
             {
         name: "Camisa oversize",
-        min_price: 4000,
-        max_price: 5990,
+        min_price: 2000,
+        max_price: 5000,
         category: "shirts",
         description: "Camisa oversize de cuello subido y escote pico con lazo. Manga larga. " ,
         sku_ext: Faker::Number.number(digits: 15),
@@ -1872,8 +1872,8 @@ BRANDS =
       },
             {
         name: "Jeans ZW",
-        min_price: 3000,
-        max_price: 4990,
+        min_price: 4000,
+        max_price: 7000,
         category: "jeans",
         description: "Jeans de tiro alto con cinco bolsillos. Efecto lavado. Cierre frontal con cremallera y botón metálico." ,
         sku_ext: Faker::Number.number(digits: 15),
@@ -1900,8 +1900,8 @@ BRANDS =
       },
                   {
         name: "Jason Mom",
-        min_price: 3000,
-        max_price: 3990,
+        min_price: 4000,
+        max_price: 7000,
         category: "jeans",
         description: "Jeans de tiro alto con cinco bolsillos. Cierre delantero con cremallera y botón metálico." ,
         sku_ext: Faker::Number.number(digits: 15),
@@ -1928,8 +1928,8 @@ BRANDS =
       },
                   {
         name: "Vestido Lazada",
-        min_price: 6000,
-        max_price: 6990,
+        min_price: 3000,
+        max_price: 7000,
         category: "dress",
         description: "Vestido fluido de cuello redondo y manga larga .Detalle de lazada en mismo tejido. Cierre en espalda con abertura y botón." ,
         sku_ext: Faker::Number.number(digits: 15),
@@ -1957,7 +1957,7 @@ BRANDS =
                   {
         name: "Anillo maxi ",
         min_price: 1000,
-        max_price: 1590,
+        max_price: 2000,
         category: "accessories",
         description: "Anillo maxi sello realizado en plata de ley y bañado en oro de 24 quilates." ,
         sku_ext: Faker::Number.number(digits: 15),
@@ -1985,7 +1985,7 @@ BRANDS =
        {
         name: "Cadena con colgante",
         min_price: 1000,
-        max_price: 1490,
+        max_price: 2000,
         category: "accessories",
         description: "Cadena con colgante tipo medalla confeccionada en plata de ley y bañado en oro de 24 quilates. Cierre tipo palanca." ,
         sku_ext: Faker::Number.number(digits: 15),
@@ -2012,8 +2012,8 @@ BRANDS =
       },
       {
         name: "Vestido Esampado",
-        min_price: 11000,
-        max_price: 12990,
+        min_price: 3000,
+        max_price: 7000,
         category: "dress",
         description: "Vestido fluido de cuello redondo y manga larga amplia acabada. Detalle acabados con volante. Cierre en espalda con abertura y botón. " ,
         sku_ext: Faker::Number.number(digits: 15),
