@@ -34,6 +34,10 @@ class ShowroomVariantStocksController < ApplicationController
         results = results.flatten
       end
 
+      if results.empty?
+        flash[:notice] = "Lo sentimos no existen ofertas para tus parmetros de busqueda!"
+        redirect_to root_path
+      else
       @results = results.sort_by { |svs| @brands.index(svs.brand) }
 
       @markers = results.map do |showroom_variant_stock|
@@ -46,6 +50,7 @@ class ShowroomVariantStocksController < ApplicationController
             # image_url: helpers.asset_url('https://i.ibb.co/zfL4Rt9/perchero3.png')
           }
         end
+      end
       end
     end
   end
