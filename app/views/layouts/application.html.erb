@@ -26,9 +26,11 @@
 
   </head>
   <body>
+    <% unless controller_name == 'biddings' && action_name == 'new' %>
+      <div style="height:80px;"></div>
+    <% end %>
     <%= render 'shared/navbar' %>
     <%= render 'shared/flashes' %>
-
     <%= yield %>
 
     <%= render 'shared/footer' %>
