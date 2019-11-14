@@ -9,7 +9,6 @@ import { initSortable } from '../plugins/init_sortable';
 import { initImages } from '../plugins/init_images'
 import { initSize } from '../plugins/init_size'
 import { launchTimer } from '../plugins/init_timer'
-import '../plugins/init_timer';
 
 initMapbox();
 initAutocomplete();
