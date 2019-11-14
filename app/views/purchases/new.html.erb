@@ -1,65 +1,54 @@
 <div class="container">
   <div class="row justify-content-center">
     <div class="col-xs-12 col-lg-6 cards-sumary-container">
-      <div class="card-sumary-individual">
-        <img src="https://d26lpennugtm8s.cloudfront.net/stores/246/391/products/dsc_54751-4f2499aa13a426007a15700604112508-1024-1024.jpg" alt="logo" class="img-fluid rounded-sm-lg">
-        <div class="paragraph">
-          <h2><%= @showroom_variant_stock.variant.product.name %></h2>
-          <h3><%= @showroom_variant_stock.showroom.brand.name%></h3>
-          <h3><%= @showroom_variant_stock.variant.product.category %></>
-            <h3>
-              Color:  <input type="button" name="color" class="select-color select-color-red">
-            </h3>
-            <h3>Talle:
-              <span>
-                <label><input type="radio" name="talle" checked>36</label>
-              </span>
-            </h3>
-            <div class="location">
-              <i class="fas fa-map-marker-alt"></i>
-              <p>2.5 km</p>
-            </div>
+     <div class="d-flex justify-content-center mb-3"><h2>Realizá tu pago!</h2></div>
+     <div class="card-sumary-individual">
+      <%= image_tag @showroom_variant_stock.variant.product.photos.first.url_photo %>
+      <div class="paragraph">
+        <h2><%= @showroom_variant_stock.variant.product.name %></h2>
+        <h3><%= @showroom_variant_stock.showroom.brand.name%></h3>
+        <p><%= @showroom_variant_stock.variant.product.category %></>
+          <div class="d-flex justify-content-left my-0 align-items-center">
+            <p class="my-0 py-0">Color:</p>
+            <p class="color-circle" style=" background-color:   <%= @showroom_variant_stock.variant.color %>"></p>
           </div>
-        </div>
-        <div class= "my-3">
-          <h5 class="d-flex justify-content-center"> <%= link_to "Terminos y Condiciones", "#", id:"title-terminos_condiciones" %></h5>
-          <small id="terminos_condiciones"> La vigencia de los presentes Términos y Condiciones se mantendrá mientras se encuentren los mismos publicados en “el sitio” pudiendo “La Empresa”  modificarlos sin previo aviso. En virtud de ello se recomienda al usuario que revise periódicamente los presentes Términos y Condiciones. Cualquier modificación que se introduzca estará vigente a partir de su publicación en “el sitio” y el uso del sitio con posterioridad a la modificación implica aceptación de dichos cambios por parte del usuario.Podrán operar en “el sitio” personas que sean capaces para contratar conforme lo establecido por el Código Civil y leyes aplicables (en adelante el usuario). No podrán hacer uso del sitio aquellas personas que no tengan dicha capacidad legal.</small>
+          <div class="d-flex justify-content-left my-0 align-items-center">
+            <p class="pb-0">Talle:</p>
+            <p class="px-0 pb-0"><%= @showroom_variant_stock.variant.size %></p>
+          </div>
+          <div class="location">
+            <i class="fas fa-map-marker-alt"></i>
+            <p><%= Geocoder::Calculations.distance_between(@showroom_variant_stock.showroom.address, @bidding.address).round(2) %> km</p>
+          </div>
         </div>
       </div>
-      <div class="col-xs-12 col-lg-6 cards-payment-container border">
-        <div class="card-payment-individual">
-          <h2>Realiza tu pago!</h2>
-          <div class="d-flex justify-content-between my-5 mx-0">
-            <%= image_tag 'https://www.mastercard.com.ar/content/dam/mccom/global/logos/logo-mastercard-mobile.svg', class:"img-card-pay" %>
-            <%= image_tag 'https://i.pinimg.com/280x280_RS/b8/d0/62/b8d06229505ae08140d489c821b87747.jpg', class:"img-card-pay" %>
-            <%= image_tag 'http://www.brandemia.org/sites/default/files/inline/images/comparacion_amex.gif', class:"img-card-pay" %>
-            <%= image_tag 'https://lh3.googleusercontent.com/tkEELukki1rh_-hBWrpWbI09R8366R_I-Aw8FM_WYUg5AGSxAo7x9A8X-1XhAZaNubE', class:"img-card-pay" %>
-          </div>
-          <div class="d-flex justify-content-center">
-            <%= image_tag 'https://cdn.dribbble.com/users/792539/screenshots/2830556/mercadopago-01.png', class:"mercadopago-logo" %>
-          </div>
-        </div>
-        <div class="my-5" >
-          <div class= "d-flex justify-content-between border-bottom" >
-            <p> <strong>Total a pagar</strong></p>
-            <p><strong> $<%=@bidding.amount%></strong></p>
-          </div>
-          <div class="d-flex justify-content-center my-5">
-            <form action="<%= showroom_variant_stock_purchases_path %>" method="post" >
-              <script
-              src="https://www.mercadopago.com.ar/integrations/v1/web-tokenize-checkout.js"
-              data-public-key="<%= ENV['MP_PUBLIC_KEY'] %>"
-              data-transaction-amount='<%= @bidding.amount %>'
-              <% if current_user.mp_customer_id %>
-                data-customer-id="<%= current_user.mp_customer_id %>"
-                data-card-ids="<%= current_user.mp_card_id %>"
-              <% end %>
-              data-button-label="Comprar">
-            </script>
-          </form>
+      <div class="my-5" >
+        <div class= "d-flex justify-content-between border-bottom border-top pt-3" >
+          <p> <strong>Total a pagar</strong></p>
+          <p><strong> $<%=@bidding.amount%></strong></p>
         </div>
       </div>
+      <div class="d-flex justify-content-center my-5">
+        <form action="<%= showroom_variant_stock_purchases_path %>" method="post" >
+          <script
+          src="https://www.mercadopago.com.ar/integrations/v1/web-tokenize-checkout.js"
+          data-public-key="<%= ENV['MP_PUBLIC_KEY'] %>"
+          data-transaction-amount='<%= @bidding.amount %>'
+          <% if current_user.mp_customer_id %>
+          data-customer-id="<%= current_user.mp_customer_id %>"
+          data-card-ids="<%= current_user.mp_card_id %>"
+          <% end %>
+          data-button-label="Comprar">
+        </script>
+      </form>
+    </div>
+    <div class="d-flex justify-content-between mt-5 pt-5 mx-0">
+      <%= image_tag 'https://www.mastercard.com.ar/content/dam/mccom/global/logos/logo-mastercard-mobile.svg', class:"img-card-pay" %>
+      <%= image_tag 'https://i.pinimg.com/280x280_RS/b8/d0/62/b8d06229505ae08140d489c821b87747.jpg', class:"img-card-pay" %>
+      <%= image_tag 'http://www.brandemia.org/sites/default/files/inline/images/comparacion_amex.gif', class:"img-card-pay" %>
+      <%= image_tag 'https://gropp.com.uy/wp-content/uploads/2019/04/MercadoPago.jpg', class:"img-card-pay"%>
     </div>
   </div>
 </div>
+
 

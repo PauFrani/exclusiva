@@ -3,13 +3,13 @@
     <div class=" col-xs-12 col-lg-4 cards-sumary-container">
       <h2>Detalle del Producto</h2>
       <div class="card-details-individual my-3">
-        <img src="https://d26lpennugtm8s.cloudfront.net/stores/246/391/products/dsc_54751-4f2499aa13a426007a15700604112508-1024-1024.jpg" alt="logo" class="img-fluid rounded-sm-lg">
+        <%= image_tag @purchase.  showroom_variant_stock.variant.product.photos.first.url_photo %>
         <div class="paragraph">
           <h2 class="mb-0 mt-2"><%=  @purchase.showroom_variant_stock.variant.product.name %></h2>
           <p class="mt-0"><%=  @purchase.showroom_variant_stock.showroom.name%></p>
           <div class="location">
             <i class="fas fa-map-marker-alt"></i>
-            <p>2.5 km</p>
+            <p><%= Geocoder::Calculations.distance_between(@purchase.showroom_variant_stock.showroom.address, @bidding.address).round(2) %> km</p>
           </div>
         </div>
       </div>

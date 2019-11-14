@@ -4,16 +4,16 @@ button.mercadopago-button {
   color: white;
   border: none;
   border-radius:3px;
-  width: 255px;
+  width: 220px;
   padding: 2px 2px;
   text-decoration: none;
-  font-size: 25px;
+  font-size: 22px;
+  height: 60px;
    &:hover {
     text-decoration:none;
     background-color:#294683;
     color:white;
   }
-
 }
 
 @media (max-width: 500px) {
@@ -28,14 +28,10 @@ button.mercadopago-button {
  }
 
 .img-card-pay {
-  width: 20%;
-  height: 35px;
+  width: 19%;
+  height: 40px;
   object-fit: cover;
-}
-.mercadopago-logo {
-  width: 50%;
-  height: 60px;
-  object-fit: cover;
+
 }
 .qr-img {
   width: 60%;
