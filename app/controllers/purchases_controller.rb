@@ -1,6 +1,6 @@
 class PurchasesController < ApplicationController
-  skip_forgery_protection only: :create
-
+  # skip_forgery_protection only: :create
+  protect_from_forgery except: :create
   def new
     @purchase = Purchase.new
     @showroom_variant_stock = ShowroomVariantStock.find(params[:showroom_variant_stock_id])

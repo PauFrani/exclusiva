@@ -8,8 +8,8 @@ import { initCategorySelector } from '../plugins/select_category';
 import { initSortable } from '../plugins/init_sortable';
 import { initImages } from '../plugins/init_images'
 import { initSize } from '../plugins/init_size'
+import { initDisable, initDisableLocation } from '../plugins/init_disable'
 import { launchTimer } from '../plugins/init_timer'
-import '../plugins/init_timer';
 
 initMapbox();
 initAutocomplete();
@@ -19,3 +19,5 @@ initSortable();
 initImages();
 initSize();
 launchTimer();
+initDisable();
+initDisableLocation();
