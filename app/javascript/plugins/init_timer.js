@@ -24,14 +24,17 @@ const launchTimer = () => {
       var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
       // Display the result in the element with id="demo"
-      document.getElementById("countDown").innerHTML = minutes + "m " + seconds + "s ";
+      const countDown = document.getElementById("countDown");
 
-      // If the count down is finished, write some text
-      if (distance < 0) {
-        clearInterval(x);
-        document.getElementById("countDown").innerHTML = "EXPIRED";
-        document.location.href="/";
+      if (countDown) {
+        countDown.innerHTML = minutes + "m " + seconds + "s ";
+        if (distance < 0) {
+          clearInterval(x);
+          document.getElementById("countDown").innerHTML = "EXPIRED";
+          document.location.href="/";
+        }
       }
+      // If the count down is finished, write some text
     }, 1000);
   }
 }
