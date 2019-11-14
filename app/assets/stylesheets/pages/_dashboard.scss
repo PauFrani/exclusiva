@@ -47,12 +47,14 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
+  border-radius: 4px;
 }
 
 .card-product img {
   height: 100%;
   width: 120px;
   object-fit: cover;
+  padding: 6px;
 }
 
 .card-product h2 {

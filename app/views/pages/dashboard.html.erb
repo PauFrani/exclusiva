@@ -26,10 +26,10 @@
               <p><strong>Valor:</strong> ARS <%= purchase.bidding.amount %></p>
             </div>
             <div class="mx-3">
-              <%= link_to purchase_path(purchase, status: "Confirmed"), method: :patch, data: { confirm: "Quiere confirmar la oferta."} do %>
+              <%= link_to purchase_path(purchase, status: "Confirmed"), method: :patch, data: { confirm: "Quiere confirmar la oferta?"} do %>
                 <i class="btn-card fas fa-check-square"></i>
               <% end %>
-              <%= link_to purchase_path(purchase, status: "Cancelled"), method: :patch, data: { confirm: "Quiere rechazar la oferta."} do %>
+              <%= link_to purchase_path(purchase, status: "Cancelled"), method: :patch, data: { confirm: "Está seguro de que quiere rechazar la oferta?"} do %>
                 <i class="btn-card-c fas fa-window-close"></i>
               <% end %>
             </div>
@@ -50,14 +50,6 @@
               <p><strong>Cliente: </strong><%= purchase.bidding.user.first_name %> <%= purchase.bidding.user.last_name %></p>
               <p><strong>Valor:</strong> ARS <%= purchase.bidding.amount %></p>
             </div>
-            <div class="mx-3">
-              <%= link_to purchase_path(purchase, status: "Confirmed"), method: :patch, data: { confirm: "Quiere confirmar la oferta."} do %>
-                <i class="btn-card fas fa-check-square"></i>
-              <% end %>
-              <%= link_to purchase_path(purchase, status: "Cancelled"), method: :patch, data: { confirm: "Quiere rechazar la oferta."} do %>
-                <i class="btn-card-c fas fa-window-close"></i>
-              <% end %>
-            </div>
           </div>
         <% end %>
       </div>
@@ -74,14 +66,6 @@
               <p><%= purchase.showroom_variant_stock.showroom.brand.name.upcase %> - <%= purchase.showroom_variant_stock.showroom.name %></p>
               <p><strong>Cliente: </strong><%= purchase.bidding.user.first_name %> <%= purchase.bidding.user.last_name %></p>
               <p><strong>Valor:</strong> ARS <%= purchase.bidding.amount %></p>
-            </div>
-            <div class="mx-3">
-              <%= link_to purchase_path(purchase, status: "Confirmed"), method: :patch, data: { confirm: "Quiere confirmar la oferta."} do %>
-                <i class="btn-card fas fa-check-square"></i>
-              <% end %>
-              <%= link_to purchase_path(purchase, status: "Cancelled"), method: :patch, data: { confirm: "Quiere rechazar la oferta."} do %>
-                <i class="btn-card-c fas fa-window-close"></i>
-              <% end %>
             </div>
           </div>
         <% end %>
