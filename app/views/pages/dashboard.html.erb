@@ -2,42 +2,125 @@
   <h1 class= "title-text title-dashboard">Dashboard</h1>
 </div>
 <div class="container-fluid mt-5">
-  <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
+  <ul class="nav nav-tabs" id="myTab" role="tablist">
     <li class="nav-item">
-      <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="Ofertas Pendientes" aria-selected="false">Ofertas Pendientes</a>
+      <a class="nav-link active" id="Pendientes-tab" data-toggle="tab" href="#Pendientes" role="tab" aria-controls="Pendientes" aria-selected="true">Pendientes</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="Ofertas Confirmadas" aria-selected="true">Ofertas Confirmadas</a>
+      <a class="nav-link" id="Confirmadas-tab" data-toggle="tab" href="#Confirmadas" role="tab" aria-controls="Confirmadas" aria-selected="false">Confirmadas</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="Ofertas Confirmadas" aria-selected="false">Ofertas Confirmadas</a>
+      <a class="nav-link" id="Canceladas-tab" data-toggle="tab" href="#Canceladas" role="tab" aria-controls="Canceladas" aria-selected="false">Canceladas</a>
     </li>
   </ul>
-    <div class="tab-content" id="myTabContent">
-
-    <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
-      <div class="cards d-flex">
-          <% @purchases.each do |purchase| %>
-            <div class="card-body">
-              <h5 class="card-title"><% purchase.product.name %></h5>
-              <h6 class="card-subtitle mb-2 text-muted"><%= purchase.product.showroom_id %></h6>
-              <p class="card-text"><%= purchase.product.description %></p>
+  <div class="tab-content" id="myTabContent">
+    <div class="tab-pane fade show active" id="Pendientes" role="tabpanel" aria-labelledby="Pendientes-tab">
+      <div>
+        <% @purchases_pending.each do |purchase| %>
+          <div class="card-product m-3">
+            <%= image_tag purchase.product.photos.first.url_photo, class:"img-card border-right" %>
+            <div class="card-product-infos flex-grow-1">
+              <h2><%= purchase.product.name %> <em>(<%= purchase.product.description %>)</em></h2>
+              <p><%= purchase.showroom_variant_stock.showroom.brand.name.upcase %> - <%= purchase.showroom_variant_stock.showroom.name %></p>
+              <p><strong>Cliente: </strong><%= purchase.bidding.user.first_name %> <%= purchase.bidding.user.last_name %></p>
+              <p><strong>Valor:</strong> ARS <%= purchase.bidding.amount %></p>
             </div>
-          <% end %>
+            <div class="mx-3">
+              <%= link_to purchase_path(purchase, status: "Confirmed"), method: :patch, data: { confirm: "Quiere confirmar la oferta."} do %>
+                <i class="btn-card fas fa-check-square"></i>
+              <% end %>
+              <%= link_to purchase_path(purchase, status: "Cancelled"), method: :patch, data: { confirm: "Quiere rechazar la oferta."} do %>
+                <i class="btn-card-c fas fa-window-close"></i>
+              <% end %>
+            </div>
+          </div>
+        <% end %>
       </div>
     </div>
 
-    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-      <div class="cards d-flex">
+
+    <div class="tab-pane fade" id="Confirmadas" role="tabpanel" aria-labelledby="Confirmadas-tab">
+      <div>
+        <% @purchases_confirmed.each do |purchase| %>
+          <div class="card-product m-3">
+            <%= image_tag purchase.product.photos.first.url_photo, class:"img-card border-right" %>
+            <div class="card-product-infos flex-grow-1">
+              <h2><%= purchase.product.name %> <em>(<%= purchase.product.description %>)</em></h2>
+              <p><%= purchase.showroom_variant_stock.showroom.brand.name.upcase %> - <%= purchase.showroom_variant_stock.showroom.name %></p>
+              <p><strong>Cliente: </strong><%= purchase.bidding.user.first_name %> <%= purchase.bidding.user.last_name %></p>
+              <p><strong>Valor:</strong> ARS <%= purchase.bidding.amount %></p>
+            </div>
+            <div class="mx-3">
+              <%= link_to purchase_path(purchase, status: "Confirmed"), method: :patch, data: { confirm: "Quiere confirmar la oferta."} do %>
+                <i class="btn-card fas fa-check-square"></i>
+              <% end %>
+              <%= link_to purchase_path(purchase, status: "Cancelled"), method: :patch, data: { confirm: "Quiere rechazar la oferta."} do %>
+                <i class="btn-card-c fas fa-window-close"></i>
+              <% end %>
+            </div>
+          </div>
+        <% end %>
       </div>
     </div>
 
-    <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
-      <div class="cards d-flex">
+
+    <div class="tab-pane fade" id="Canceladas" role="tabpanel" aria-labelledby="Canceladas-tab">
+      <div>
+        <% @purchases_cancelled.each do |purchase| %>
+          <div class="card-product m-3">
+            <%= image_tag purchase.product.photos.first.url_photo, class:"img-card border-right" %>
+            <div class="card-product-infos flex-grow-1">
+              <h2><%= purchase.product.name %> <em>(<%= purchase.product.description %>)</em></h2>
+              <p><%= purchase.showroom_variant_stock.showroom.brand.name.upcase %> - <%= purchase.showroom_variant_stock.showroom.name %></p>
+              <p><strong>Cliente: </strong><%= purchase.bidding.user.first_name %> <%= purchase.bidding.user.last_name %></p>
+              <p><strong>Valor:</strong> ARS <%= purchase.bidding.amount %></p>
+            </div>
+            <div class="mx-3">
+              <%= link_to purchase_path(purchase, status: "Confirmed"), method: :patch, data: { confirm: "Quiere confirmar la oferta."} do %>
+                <i class="btn-card fas fa-check-square"></i>
+              <% end %>
+              <%= link_to purchase_path(purchase, status: "Cancelled"), method: :patch, data: { confirm: "Quiere rechazar la oferta."} do %>
+                <i class="btn-card-c fas fa-window-close"></i>
+              <% end %>
+            </div>
+          </div>
+        <% end %>
       </div>
     </div>
   </div>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
