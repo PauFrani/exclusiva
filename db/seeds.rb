@@ -1062,7 +1062,7 @@ BRANDS =
   },
   {
     name: "Van Como Piña",
-    logo: "https://ibb.co/rwW5zjT",
+    logo: "https://i.ibb.co/crm2ZBM/vcp.png",
     status: true,
     showrooms: [
       {
@@ -1164,7 +1164,7 @@ BRANDS =
   },
   {
     name: "Sarkany",
-    logo: "https://ibb.co/pWzGzq9",
+    logo: "https://zapalook.com.ar/wp-content/uploads/2013/06/logo-Ricky-Sarkany.jpg",
     status: true,
     showrooms: [
       {
@@ -1583,6 +1583,136 @@ BRANDS =
             color: "##FDEDEC",
             size: "40"
           },
+        ]
+      }
+    ]
+  },
+  {
+    name: "Sweet",
+    logo: "https://i.ibb.co/p08vCkX/sweet.png",
+    status: true,
+    showrooms: [
+      {
+        name: "Santa Fe",
+        phone_number: "15684496616",
+        email: "sweet@jot.com",
+        address: "Avenida Santa Fe 3253, Buenos Aires, Ciudad Autónoma de Buenos Aires, Argentina"
+      }
+    ],
+    products: [
+            {
+        name: "VESTIDO CALEPIO",
+        min_price: 1500,
+        max_price: 2500,
+        category: "dress",
+        description: "Vestido largo de calce amplio floreado. Escote Halter. Espalda descubierta." ,
+        sku_ext: Faker::Number.number(digits: 15),
+        published: false,
+        photos: [
+          "https://statics.glamit.com.ar/media/catalog/product/cache/87/image/650x957/9df78eab33525d08d6e5fb8d27136e95/s/w/sweet_010990_bl_1.jpg",
+          "https://statics.glamit.com.ar/media/catalog/product/cache/87/image/650x957/9df78eab33525d08d6e5fb8d27136e95/s/w/sweet_010990_bl_2.jpg",
+          "https://statics.glamit.com.ar/media/catalog/product/cache/87/thumbnail/708x1060/9df78eab33525d08d6e5fb8d27136e95/s/w/sweet_010990_bl_3.jpg"
+        ],
+        variants: [
+          {
+            color: "#F7F9F9",
+            size: "36"
+          },
+
+          {
+            color: "#F7F9F9",
+            size: "38"
+          },
+          {
+            color: "#F7F9F9",
+            size: "40"
+          }
+        ]
+      },
+            {
+        name: "CAMISA RAPUA",
+        min_price: 1000,
+        max_price: 1899,
+        category: "shirts",
+        description: "Camisa combinada con distintas telas. Escote en V. mangas largas." ,
+        sku_ext: Faker::Number.number(digits: 15),
+        published: false,
+        photos: [
+          "https://statics.glamit.com.ar/media/catalog/product/cache/87/thumbnail/708x1060/9df78eab33525d08d6e5fb8d27136e95/s/w/sweet_052034_cr_1.jpg",
+          "https://statics.glamit.com.ar/media/catalog/product/cache/87/thumbnail/708x1060/9df78eab33525d08d6e5fb8d27136e95/s/w/sweet_052034_cr_2.jpg",
+          "https://statics.glamit.com.ar/media/catalog/product/cache/87/thumbnail/708x1060/9df78eab33525d08d6e5fb8d27136e95/s/w/sweet_052034_cr_3.jpg"
+        ],
+        variants: [
+          {
+            color: "#FDFEFE",
+            size: "36"
+          },
+
+          {
+            color: "#FDFEFE",
+            size: "38"
+          },
+          {
+            color: "#FDFEFE",
+            size: "40"
+          }
+        ]
+      },
+      {
+        name: "CARGO MULET",
+        min_price: 2000,
+        max_price: 2990,
+        category: "jeans",
+        description: "Jean cargo de tiro alto con botamanga skinny. Cierre delantero con cremallera. Bolsillos en los laterales a media pierna y cuatro bolsillos en cadera." ,
+        sku_ext: Faker::Number.number(digits: 15),
+        published: false,
+        photos: [
+          "https://statics.glamit.com.ar/media/catalog/product/cache/87/image/650x957/9df78eab33525d08d6e5fb8d27136e95/s/w/sweet_061979_az_1.jpg",
+          "https://statics.glamit.com.ar/media/catalog/product/cache/87/thumbnail/708x1060/9df78eab33525d08d6e5fb8d27136e95/s/w/sweet_061979_az_2.jpg",
+          "https://statics.glamit.com.ar/media/catalog/product/cache/87/thumbnail/708x1060/9df78eab33525d08d6e5fb8d27136e95/s/w/sweet_061979_az_3.jpg"
+        ],
+        variants: [
+          {
+            color: "#D6EAF8",
+            size: "36"
+          },
+
+          {
+            color: "#D6EAF8",
+            size: "38"
+          },
+          {
+            color: "#D6EAF8",
+            size: "40"
+          }
+        ]
+      },
+      {
+        name: "PAÑUELO RUMPUT",
+        min_price: 300,
+        max_price: 1500,
+        category: "accessories",
+        description: "Pañuelo de saten" ,
+        sku_ext: Faker::Number.number(digits: 15),
+        published: false,
+        photos: [
+          "https://statics.glamit.com.ar/media/catalog/product/cache/87/thumbnail/708x1060/9df78eab33525d08d6e5fb8d27136e95/s/w/sweet_182786_rs_1.jpg",
+          "https://statics.glamit.com.ar/media/catalog/product/cache/87/thumbnail/708x1060/9df78eab33525d08d6e5fb8d27136e95/s/w/sweet_182786_rs_2.jpg"
+        ],
+        variants: [
+          {
+            color: "#FDEDEC",
+            size: "36"
+          },
+
+          {
+            color: "#FDEDEC",
+            size: "38"
+          },
+          {
+            color: "#FDEDEC",
+            size: "40"
+          }
         ]
       }
     ]
