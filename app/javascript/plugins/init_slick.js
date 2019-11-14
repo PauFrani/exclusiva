@@ -2,21 +2,19 @@ import slick from 'slick-carousel'
 
 const initSlick = $(document).ready(function(){
   $('.cards-bidding').slick({
-    autoplay: true,
     autoplaySpeed: 4000,
-    infinite: true,
     speed: 400,
-    slidesToShow: 4.5,
-    slidesToSroll: 2,
+    slidesToShow: 5,
+    slidesToSroll: 3,
     centerMode: true,
-    arrows: false,
+    arrows: true,
     pauseOnFocus:true,
     responsive: [
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 3.5,
-          slidesToScroll: 1,
+          slidesToShow: 4.5,
+          slidesToScroll: 3,
           infinite: true,
           dots: false,
         }
@@ -24,7 +22,7 @@ const initSlick = $(document).ready(function(){
       {
         breakpoint: 800,
         settings: {
-          slidesToShow: 2.5,
+          slidesToShow: 3.5,
           slidesToScroll: 1,
         }
       },
