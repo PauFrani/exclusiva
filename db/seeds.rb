@@ -87,7 +87,8 @@ USERS.each do |user|
 end
 
 
-BRANDS = [
+BRANDS =
+[
   {
     name: "Akiabara",
     logo: "https://i.imgur.com/cDxvUy7.png",
@@ -313,46 +314,6 @@ BRANDS = [
             color: "#010101",
             size: "Unico"
           }
-        ]
-      }
-    ]
-  },
-{
-    name: "Kevingston",
-    logo: "https://i.ibb.co/9r4QYMW/kevingston.png",
-    status: true,
-    showrooms: [
-      {
-        name: "Cordoba",
-        phone_number: "14569879",
-        email: "kevingston@jot.com",
-        address: "Av. Córdoba 4874, C1414BAT CABA"
-      }
-    ],
-    products: [
-      {
-        name: "Saco Waters",
-        min_price: 2000,
-        max_price: 2500,
-        category: "shirts",
-        description: "Saco Azul Akiabara Waters" ,
-        sku_ext: Faker::Number.number(digits: 15),
-        published: false,
-        photos: [
-          "https://dafitistaticar-a.akamaihd.net/p/akiabara-0967-383183-1-zoom.jpg",
-          "https://dafitistaticar-a.akamaihd.net/p/akiabara-0968-383183-2-zoom.jpg",
-          "https://dafitistaticar-a.akamaihd.net/p/akiabara-0969-383183-3-zoom.jpg",
-          "https://dafitistaticar-a.akamaihd.net/p/akiabara-0971-383183-4-zoom.jpg"
-        ],
-        variants: [
-          {
-            color: "#596681",
-            size: "38"
-          },
-          {
-            color: "#596681",
-            size: "40"
-          },
         ]
       }
     ]
@@ -1099,7 +1060,7 @@ BRANDS = [
       }
     ]
   },
-{
+  {
     name: "Van Como Piña",
     logo: "",
     status: true,
@@ -1312,31 +1273,314 @@ BRANDS = [
         name: "Vicente Lopez",
         phone_number: "15684496616",
         email: "rapsodia@jot.com",
-        address: "Vicente López 2050, Local 213, C0011 CABA"
+        address: " Vicente López 2050, Local 213, C0011 CABA"
       }
     ],
     products: [
       {
-        name: "Saco Waters",
-        min_price: 2000,
-        max_price: 2500,
-        category: "shirts",
-        description: "Saco Azul Akiabara Waters" ,
+        name: "Bota Delhi",
+        min_price: 8000,
+        max_price: 10990,
+        category: "shoes",
+        description: "Bota de cuero negra con remaches metalicos, caña baja." ,
         sku_ext: Faker::Number.number(digits: 15),
         published: false,
         photos: [
-          "https://dafitistaticar-a.akamaihd.net/p/akiabara-0967-383183-1-zoom.jpg",
-          "https://dafitistaticar-a.akamaihd.net/p/akiabara-0968-383183-2-zoom.jpg",
-          "https://dafitistaticar-a.akamaihd.net/p/akiabara-0969-383183-3-zoom.jpg",
-          "https://dafitistaticar-a.akamaihd.net/p/akiabara-0971-383183-4-zoom.jpg"
+          "https://statics.glamit.com.ar/media/catalog/product/cache/58/image/9df78eab33525d08d6e5fb8d27136e95/r/a/rapsodiaar_11114118051a_01_1.jpg",
+          "https://statics.glamit.com.ar/media/catalog/product/cache/58/image/9df78eab33525d08d6e5fb8d27136e95/r/a/rapsodiaar_11114118051a_01_2.jpg",
         ],
         variants: [
           {
-            color: "#596681",
+            color: "#17202A",
+            size: "36"
+          },
+
+          {
+            color: "#17202A",
             size: "38"
           },
           {
-            color: "#596681",
+            color: "#17202A",
+            size: "40"
+          }
+        ]
+      },
+      {
+        name: "Sandalia Tuscany",
+        min_price: 5000,
+        max_price: 7990,
+        category: "shoes",
+        description: "Sandalia de cuero, estampado simil reptil negro con remaches pastilla metalicos." ,
+        sku_ext: Faker::Number.number(digits: 15),
+        published: false,
+        photos: [
+          "https://statics.glamit.com.ar/media/catalog/product/cache/58/image/9df78eab33525d08d6e5fb8d27136e95/r/a/rapsodiaar_11114118074a_01_1.jpg",
+          "https://statics.glamit.com.ar/media/catalog/product/cache/58/image/9df78eab33525d08d6e5fb8d27136e95/r/a/rapsodiaar_11114118074a_01_2.jpg"
+        ],
+        variants: [
+          {
+            color: "#17202A",
+            size: "36"
+          },
+
+          {
+            color: "#17202A",
+            size: "38"
+          },
+          {
+            color: "#17202A",
+            size: "40"
+          }
+        ]
+      },
+            {
+        name: "Vestido Ramya Suhan",
+        min_price: 5000,
+        max_price: 6990,
+        category: "dress",
+        description: "Vestido cordo verde estampado." ,
+        sku_ext: Faker::Number.number(digits: 15),
+        published: false,
+        photos: [
+          "https://statics.glamit.com.ar/media/catalog/product/cache/58/image/9df78eab33525d08d6e5fb8d27136e95/4/3/43006_rapsodia_11114117210a_14_2.jpg",
+          "https://statics.glamit.com.ar/media/catalog/product/cache/58/image/9df78eab33525d08d6e5fb8d27136e95/4/3/43007_rapsodia_11114117210a_14_1.jpg"
+        ],
+        variants: [
+          {
+            color: "#73C6B6",
+            size: "36"
+          },
+
+          {
+            color: "#73C6B6",
+            size: "38"
+          },
+          {
+            color: "#73C6B6",
+            size: "40"
+          }
+        ]
+      },
+            {
+        name: "Camisa Darra",
+        min_price: 5000,
+        max_price: 6990,
+        category: "shirts",
+        description: "Camisa de algodon amplia bordada." ,
+        sku_ext: Faker::Number.number(digits: 15),
+        published: false,
+        photos: [
+          "https://statics.glamit.com.ar/media/catalog/product/cache/58/image/9df78eab33525d08d6e5fb8d27136e95/4/3/43083_rapsodia_11114016523i_02_1.jpg",
+          "https://statics.glamit.com.ar/media/catalog/product/cache/58/image/9df78eab33525d08d6e5fb8d27136e95/4/3/43084_rapsodia_11114016523i_02_2.jpg"
+        ],
+        variants: [
+          {
+            color: "#F8F9F9",
+            size: "36"
+          },
+
+          {
+            color: "#F8F9F9",
+            size: "38"
+          },
+          {
+            color: "#F8F9F9",
+            size: "40"
+          }
+        ]
+      },
+            {
+        name: "Camisa Isaura Nisha",
+        min_price: 4000,
+        max_price: 5990,
+        category: "shirts",
+        description: "Camisa de punto y plano con bordado en dorado y plateado en el frente." ,
+        sku_ext: Faker::Number.number(digits: 15),
+        published: false,
+        photos: [
+          "https://statics.glamit.com.ar/media/catalog/product/cache/58/image/9df78eab33525d08d6e5fb8d27136e95/r/a/rapsodiaar_11114117085c_38_1.jpg",
+          "https://statics.glamit.com.ar/media/catalog/product/cache/58/image/9df78eab33525d08d6e5fb8d27136e95/r/a/rapsodiaar_11114117085c_38_2.jpg"
+        ],
+        variants: [
+          {
+            color: "#F8F9F9",
+            size: "36"
+          },
+
+          {
+            color: "#F8F9F9",
+            size: "38"
+          },
+          {
+            color: "#F8F9F9",
+            size: "40"
+          }
+        ]
+      },
+            {
+        name: "Legging Shinny Carter",
+        min_price: 2000,
+        max_price: 3990,
+        category: "jeans",
+        description: "Calza negra basica." ,
+        sku_ext: Faker::Number.number(digits: 15),
+        published: false,
+        photos: [
+          "https://statics.glamit.com.ar/media/catalog/product/cache/58/image/9df78eab33525d08d6e5fb8d27136e95/r/a/rapsodiaar_11114117024a_01_1.jpg",
+          "https://statics.glamit.com.ar/media/catalog/product/cache/58/image/9df78eab33525d08d6e5fb8d27136e95/r/a/rapsodiaar_11114117024a_01_2.jpg"
+        ],
+        variants: [
+          {
+            color: "#17202A",
+            size: "36"
+          },
+
+          {
+            color: "#17202A",
+            size: "38"
+          },
+          {
+            color: "#17202A",
+            size: "40"
+          }
+        ]
+      },
+                  {
+        name: "Pantalon New Tomy",
+        min_price: 3000,
+        max_price: 4990,
+        category: "jeans",
+        description: "Babucha basica al tobillo." ,
+        sku_ext: Faker::Number.number(digits: 15),
+        published: false,
+        photos: [
+          "https://statics.glamit.com.ar/media/catalog/product/cache/58/image/9df78eab33525d08d6e5fb8d27136e95/r/a/rapsodiaar_11114117248c_01_1.jpg",
+          "https://statics.glamit.com.ar/media/catalog/product/cache/58/image/9df78eab33525d08d6e5fb8d27136e95/r/a/rapsodiaar_11114117248c_01_2.jpg"
+        ],
+        variants: [
+          {
+            color: "#17202A",
+            size: "36"
+          },
+
+          {
+            color: "#17202A",
+            size: "38"
+          },
+          {
+            color: "#17202A",
+            size: "40"
+          }
+        ]
+      },
+                  {
+        name: "Legging Shinny Carter",
+        min_price: 2000,
+        max_price: 3990,
+        category: "jeans",
+        description: "Calza negra basica." ,
+        sku_ext: Faker::Number.number(digits: 15),
+        published: false,
+        photos: [
+          "https://statics.glamit.com.ar/media/catalog/product/cache/58/image/9df78eab33525d08d6e5fb8d27136e95/r/a/rapsodiaar_11114117024a_01_1.jpg",
+          "https://statics.glamit.com.ar/media/catalog/product/cache/58/image/9df78eab33525d08d6e5fb8d27136e95/r/a/rapsodiaar_11114117024a_01_2.jpg"
+        ],
+        variants: [
+          {
+            color: "#17202A",
+            size: "36"
+          },
+
+          {
+            color: "#17202A",
+            size: "38"
+          },
+          {
+            color: "#17202A",
+            size: "40"
+          }
+        ]
+      },
+                  {
+        name: "Pañuelo New Animal",
+        min_price: 1000,
+        max_price: 1690,
+        category: "accessories",
+        description: "Pañuelo suave con estampa animal print. Un clasico, reversionado" ,
+        sku_ext: Faker::Number.number(digits: 15),
+        published: false,
+        photos: [
+          "https://statics.glamit.com.ar/media/catalog/product/cache/58/image/9df78eab33525d08d6e5fb8d27136e95/r/a/rapsodiaar_11114117736i_27_2.jpg",
+          "https://statics.glamit.com.ar/media/catalog/product/cache/58/image/9df78eab33525d08d6e5fb8d27136e95/r/a/rapsodiaar_11114117736i_27_3.jpg"
+        ],
+        variants: [
+          {
+            color: "#17202A",
+            size: "36"
+          },
+
+          {
+            color: "#17202A",
+            size: "38"
+          },
+          {
+            color: "#17202A",
+            size: "40"
+          }
+        ]
+      },
+       {
+        name: "Pulsera Azar",
+        min_price: 1000,
+        max_price: 1490,
+        category: "accessories",
+        description: "Pulsera con mix de cadenas, dijes y strass" ,
+        sku_ext: Faker::Number.number(digits: 15),
+        published: false,
+        photos: [
+          "https://statics.glamit.com.ar/media/catalog/product/cache/58/image/9df78eab33525d08d6e5fb8d27136e95/r/a/rapsodiaar_11114118310a_23_1.jpg",
+          "https://statics.glamit.com.ar/media/catalog/product/cache/58/image/9df78eab33525d08d6e5fb8d27136e95/r/a/rapsodiaar_11114118310a_23_2.jpg"
+        ],
+        variants: [
+          {
+            color: "#D7DBDD",
+            size: "36"
+          },
+
+          {
+            color: "#D7DBDD",
+            size: "38"
+          },
+          {
+            color: "#D7DBDD",
+            size: "40"
+          }
+        ]
+      },
+      {
+        name: "Vestido Indie",
+        min_price: 11000,
+        max_price: 12990,
+        category: "dress",
+        description: "Vestido Indie" ,
+        sku_ext: Faker::Number.number(digits: 15),
+        published: false,
+        photos: [
+          "https://statics.glamit.com.ar/media/catalog/product/cache/58/image/9df78eab33525d08d6e5fb8d27136e95/4/6/46842_rapsodia_11114119549a_10_1.jpg",
+          "https://statics.glamit.com.ar/media/catalog/product/cache/58/image/9df78eab33525d08d6e5fb8d27136e95/4/6/46843_rapsodia_11114119549a_10_2.jpg",
+        ],
+        variants: [
+          {
+            color: "#FDEDEC",
+            size: "36"
+          },
+
+          {
+            color: "##FDEDEC",
+            size: "38"
+          },
+          {
+            color: "##FDEDEC",
             size: "40"
           },
         ]
@@ -1352,31 +1596,314 @@ BRANDS = [
         name: "Santa Fe",
         phone_number: "156879979",
         email: "zara@jot.com",
-        address: "Av. Santa Fe 1937, Capital Federal, Buenos Aires"
+        address: "San martin de tours 2908, Capital Federal, Buenos Aires"
       }
     ],
     products: [
       {
-        name: "Saco Waters",
-        min_price: 2000,
-        max_price: 2500,
-        category: "shirts",
-        description: "Saco Azul Akiabara Waters" ,
+        name: "Bota Delhi",
+        min_price: 8000,
+        max_price: 10990,
+        category: "shoes",
+        description: "Bota de cuero negra con remaches metalicos, caña baja." ,
         sku_ext: Faker::Number.number(digits: 15),
         published: false,
         photos: [
-          "https://dafitistaticar-a.akamaihd.net/p/akiabara-0967-383183-1-zoom.jpg",
-          "https://dafitistaticar-a.akamaihd.net/p/akiabara-0968-383183-2-zoom.jpg",
-          "https://dafitistaticar-a.akamaihd.net/p/akiabara-0969-383183-3-zoom.jpg",
-          "https://dafitistaticar-a.akamaihd.net/p/akiabara-0971-383183-4-zoom.jpg"
+          "https://statics.glamit.com.ar/media/catalog/product/cache/58/image/9df78eab33525d08d6e5fb8d27136e95/r/a/rapsodiaar_11114118051a_01_1.jpg",
+          "https://statics.glamit.com.ar/media/catalog/product/cache/58/image/9df78eab33525d08d6e5fb8d27136e95/r/a/rapsodiaar_11114118051a_01_2.jpg",
         ],
         variants: [
           {
-            color: "#596681",
+            color: "#17202A",
+            size: "36"
+          },
+
+          {
+            color: "#17202A",
             size: "38"
           },
           {
-            color: "#596681",
+            color: "#17202A",
+            size: "40"
+          }
+        ]
+      },
+      {
+        name: "Sandalia Tuscany",
+        min_price: 5000,
+        max_price: 7990,
+        category: "shoes",
+        description: "Sandalia de cuero, estampado simil reptil negro con remaches pastilla metalicos." ,
+        sku_ext: Faker::Number.number(digits: 15),
+        published: false,
+        photos: [
+          "https://statics.glamit.com.ar/media/catalog/product/cache/58/image/9df78eab33525d08d6e5fb8d27136e95/r/a/rapsodiaar_11114118074a_01_1.jpg",
+          "https://statics.glamit.com.ar/media/catalog/product/cache/58/image/9df78eab33525d08d6e5fb8d27136e95/r/a/rapsodiaar_11114118074a_01_2.jpg"
+        ],
+        variants: [
+          {
+            color: "#17202A",
+            size: "36"
+          },
+
+          {
+            color: "#17202A",
+            size: "38"
+          },
+          {
+            color: "#17202A",
+            size: "40"
+          }
+        ]
+      },
+            {
+        name: "Vestido Ramya Suhan",
+        min_price: 5000,
+        max_price: 6990,
+        category: "dress",
+        description: "Vestido cordo verde estampado." ,
+        sku_ext: Faker::Number.number(digits: 15),
+        published: false,
+        photos: [
+          "https://statics.glamit.com.ar/media/catalog/product/cache/58/image/9df78eab33525d08d6e5fb8d27136e95/4/3/43006_rapsodia_11114117210a_14_2.jpg",
+          "https://statics.glamit.com.ar/media/catalog/product/cache/58/image/9df78eab33525d08d6e5fb8d27136e95/4/3/43007_rapsodia_11114117210a_14_1.jpg"
+        ],
+        variants: [
+          {
+            color: "#73C6B6",
+            size: "36"
+          },
+
+          {
+            color: "#73C6B6",
+            size: "38"
+          },
+          {
+            color: "#73C6B6",
+            size: "40"
+          }
+        ]
+      },
+            {
+        name: "Camisa Darra",
+        min_price: 5000,
+        max_price: 6990,
+        category: "shirts",
+        description: "Camisa de algodon amplia bordada." ,
+        sku_ext: Faker::Number.number(digits: 15),
+        published: false,
+        photos: [
+          "https://statics.glamit.com.ar/media/catalog/product/cache/58/image/9df78eab33525d08d6e5fb8d27136e95/4/3/43083_rapsodia_11114016523i_02_1.jpg",
+          "https://statics.glamit.com.ar/media/catalog/product/cache/58/image/9df78eab33525d08d6e5fb8d27136e95/4/3/43084_rapsodia_11114016523i_02_2.jpg"
+        ],
+        variants: [
+          {
+            color: "#F8F9F9",
+            size: "36"
+          },
+
+          {
+            color: "#F8F9F9",
+            size: "38"
+          },
+          {
+            color: "#F8F9F9",
+            size: "40"
+          }
+        ]
+      },
+            {
+        name: "Camisa Isaura Nisha",
+        min_price: 4000,
+        max_price: 5990,
+        category: "shirts",
+        description: "Camisa de punto y plano con bordado en dorado y plateado en el frente." ,
+        sku_ext: Faker::Number.number(digits: 15),
+        published: false,
+        photos: [
+          "https://statics.glamit.com.ar/media/catalog/product/cache/58/image/9df78eab33525d08d6e5fb8d27136e95/r/a/rapsodiaar_11114117085c_38_1.jpg",
+          "https://statics.glamit.com.ar/media/catalog/product/cache/58/image/9df78eab33525d08d6e5fb8d27136e95/r/a/rapsodiaar_11114117085c_38_2.jpg"
+        ],
+        variants: [
+          {
+            color: "#F8F9F9",
+            size: "36"
+          },
+
+          {
+            color: "#F8F9F9",
+            size: "38"
+          },
+          {
+            color: "#F8F9F9",
+            size: "40"
+          }
+        ]
+      },
+            {
+        name: "Legging Shinny Carter",
+        min_price: 2000,
+        max_price: 3990,
+        category: "jeans",
+        description: "Calza negra basica." ,
+        sku_ext: Faker::Number.number(digits: 15),
+        published: false,
+        photos: [
+          "https://statics.glamit.com.ar/media/catalog/product/cache/58/image/9df78eab33525d08d6e5fb8d27136e95/r/a/rapsodiaar_11114117024a_01_1.jpg",
+          "https://statics.glamit.com.ar/media/catalog/product/cache/58/image/9df78eab33525d08d6e5fb8d27136e95/r/a/rapsodiaar_11114117024a_01_2.jpg"
+        ],
+        variants: [
+          {
+            color: "#17202A",
+            size: "36"
+          },
+
+          {
+            color: "#17202A",
+            size: "38"
+          },
+          {
+            color: "#17202A",
+            size: "40"
+          }
+        ]
+      },
+                  {
+        name: "Pantalon New Tomy",
+        min_price: 3000,
+        max_price: 4990,
+        category: "jeans",
+        description: "Babucha basica al tobillo." ,
+        sku_ext: Faker::Number.number(digits: 15),
+        published: false,
+        photos: [
+          "https://statics.glamit.com.ar/media/catalog/product/cache/58/image/9df78eab33525d08d6e5fb8d27136e95/r/a/rapsodiaar_11114117248c_01_1.jpg",
+          "https://statics.glamit.com.ar/media/catalog/product/cache/58/image/9df78eab33525d08d6e5fb8d27136e95/r/a/rapsodiaar_11114117248c_01_2.jpg"
+        ],
+        variants: [
+          {
+            color: "#17202A",
+            size: "36"
+          },
+
+          {
+            color: "#17202A",
+            size: "38"
+          },
+          {
+            color: "#17202A",
+            size: "40"
+          }
+        ]
+      },
+                  {
+        name: "Legging Shinny Carter",
+        min_price: 2000,
+        max_price: 3990,
+        category: "jeans",
+        description: "Calza negra basica." ,
+        sku_ext: Faker::Number.number(digits: 15),
+        published: false,
+        photos: [
+          "https://statics.glamit.com.ar/media/catalog/product/cache/58/image/9df78eab33525d08d6e5fb8d27136e95/r/a/rapsodiaar_11114117024a_01_1.jpg",
+          "https://statics.glamit.com.ar/media/catalog/product/cache/58/image/9df78eab33525d08d6e5fb8d27136e95/r/a/rapsodiaar_11114117024a_01_2.jpg"
+        ],
+        variants: [
+          {
+            color: "#17202A",
+            size: "36"
+          },
+
+          {
+            color: "#17202A",
+            size: "38"
+          },
+          {
+            color: "#17202A",
+            size: "40"
+          }
+        ]
+      },
+                  {
+        name: "Pañuelo New Animal",
+        min_price: 1000,
+        max_price: 1690,
+        category: "accessories",
+        description: "Pañuelo suave con estampa animal print. Un clasico, reversionado" ,
+        sku_ext: Faker::Number.number(digits: 15),
+        published: false,
+        photos: [
+          "https://statics.glamit.com.ar/media/catalog/product/cache/58/image/9df78eab33525d08d6e5fb8d27136e95/r/a/rapsodiaar_11114117736i_27_2.jpg",
+          "https://statics.glamit.com.ar/media/catalog/product/cache/58/image/9df78eab33525d08d6e5fb8d27136e95/r/a/rapsodiaar_11114117736i_27_3.jpg"
+        ],
+        variants: [
+          {
+            color: "#17202A",
+            size: "36"
+          },
+
+          {
+            color: "#17202A",
+            size: "38"
+          },
+          {
+            color: "#17202A",
+            size: "40"
+          }
+        ]
+      },
+       {
+        name: "Pulsera Azar",
+        min_price: 1000,
+        max_price: 1490,
+        category: "accessories",
+        description: "Pulsera con mix de cadenas, dijes y strass" ,
+        sku_ext: Faker::Number.number(digits: 15),
+        published: false,
+        photos: [
+          "https://statics.glamit.com.ar/media/catalog/product/cache/58/image/9df78eab33525d08d6e5fb8d27136e95/r/a/rapsodiaar_11114118310a_23_1.jpg",
+          "https://statics.glamit.com.ar/media/catalog/product/cache/58/image/9df78eab33525d08d6e5fb8d27136e95/r/a/rapsodiaar_11114118310a_23_2.jpg"
+        ],
+        variants: [
+          {
+            color: "#D7DBDD",
+            size: "36"
+          },
+
+          {
+            color: "#D7DBDD",
+            size: "38"
+          },
+          {
+            color: "#D7DBDD",
+            size: "40"
+          }
+        ]
+      },
+      {
+        name: "Vestido Indie",
+        min_price: 11000,
+        max_price: 12990,
+        category: "dress",
+        description: "Vestido Indie" ,
+        sku_ext: Faker::Number.number(digits: 15),
+        published: false,
+        photos: [
+          "https://statics.glamit.com.ar/media/catalog/product/cache/58/image/9df78eab33525d08d6e5fb8d27136e95/4/6/46842_rapsodia_11114119549a_10_1.jpg",
+          "https://statics.glamit.com.ar/media/catalog/product/cache/58/image/9df78eab33525d08d6e5fb8d27136e95/4/6/46843_rapsodia_11114119549a_10_2.jpg",
+        ],
+        variants: [
+          {
+            color: "#FDEDEC",
+            size: "36"
+          },
+
+          {
+            color: "##FDEDEC",
+            size: "38"
+          },
+          {
+            color: "##FDEDEC",
             size: "40"
           },
         ]
