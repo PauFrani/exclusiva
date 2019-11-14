@@ -3,15 +3,11 @@ import places from 'places.js';
 const initAutocomplete = () => {
   const addressInput = document.getElementById('bidding_address_street');
   if (addressInput) {
+    appId: 'plS27C4JI3TY',
+    apiKey: '0975179f03fc65cd0070b624e9253e9c',
     places({ container: addressInput, countries: ["AR"]  });
   }
 };
 
-const initAutocomplete1 = () => {
-  const addressInput1 = document.getElementById('_bidding_address');
-  if (addressInput1) {
-    places({ container: addressInput1, countries: ["AR"] });
-  }
-};
 
-export { initAutocomplete, initAutocomplete1 };
+export { initAutocomplete };
