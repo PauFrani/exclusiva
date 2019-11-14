@@ -13,7 +13,7 @@
         <%= form.simple_fields_for Address.new do |ff| %>
           <div class="my-5"><%= ff.input :street, input_html: { class: "cta-location-input"}, id: "location_street", label: false, placeholder: "e.g. Av. Santa Fe 1500" %></div>
         <% end %>
-        <div class="d-flex justify-content-center"><%= form.submit "Continuar", id: "location_submit", class:"button-general" %></div>
+        <div class="d-flex justify-content-center"><%= form.submit "Continuar", id: "location_submit", class:"button-general size-greyscale button-disabled" %></div>
       <% end %>
     </div>
   </div>
