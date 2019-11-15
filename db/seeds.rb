@@ -1597,6 +1597,7 @@ BRANDS =
     ]
   },
   {
+
     name: "Sweet",
     # logo: "https://i.ibb.co/DGJr4GS/sweet.png",
     logo: "https://cace-static.s3.us-west-2.amazonaws.com/uploads/socios/1143/logo-sweet-320x130px.png",
