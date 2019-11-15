@@ -764,11 +764,11 @@ BRANDS =
             size: "36"
           },
           {
-            color: "# #030303",
+            color: "#030303",
             size: "38"
           },
           {
-            color: "# #030303",
+            color: "#030303",
             size: "40"
                    }
         ]
@@ -818,27 +818,27 @@ BRANDS =
         ],
         variants: [
           {
-            color: "# #FFC300",
+            color: "#FFC300",
             size: "34"
           },
           {
-            color: "# #FFC300",
+            color: "#FFC300",
             size: "36"
           },
           {
-            color: "# #FFC300",
+            color: "#FFC300",
             size: "38"
           },
           {
-            color: "# #010101",
+            color: "#010101",
             size: "34"
           },
           {
-            color: "# #010101",
+            color: "#010101",
             size: "36"
           },
           {
-            color: "# #010101",
+            color: "#010101",
             size: "38"
                     }
         ]
@@ -1016,7 +1016,7 @@ BRANDS =
             size: "Unico"
           },
           {
-            color: "# #5b5d5f",
+            color: "#5b5d5f",
             size: "Unico"
           }
         ]
@@ -1586,11 +1586,11 @@ BRANDS =
           },
 
           {
-            color: "##FDEDEC",
+            color: "#FDEDEC",
             size: "38"
           },
           {
-            color: "##FDEDEC",
+            color: "#FDEDEC",
             size: "40"
           },
         ]
