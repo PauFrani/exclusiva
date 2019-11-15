@@ -85,7 +85,11 @@ puts "creating users"
 USERS.each do |user|
   User.create!(user)
 end
-
+# <a href="https://ibb.co/Rzmvxv8"><img src="https://i.ibb.co/5ByMNMZ/awada.png" alt="awada" border="0"></a>
+# <a href="https://ibb.co/xzZg6dz"><img src="https://i.ibb.co/8Pkx9tP/aynotdead.png" alt="aynotdead" border="0"></a>
+# <a href="https://ibb.co/mT6pS0S"><img src="https://i.ibb.co/54BZ2k2/kevingstone.png" alt="kevingstone" border="0"></a>
+# <a href="https://ibb.co/Pg8rF1Z"><img src="https://i.ibb.co/VT8LJMW/kosiuko2.png" alt="kosiuko2" border="0"></a>
+# <a href="https://ibb.co/988tXZ3"><img src="https://i.ibb.co/X228BYk/levis.png" alt="levis" border="0"></a>
 
 BRANDS =
 [
@@ -131,7 +135,7 @@ BRANDS =
   },
   {
     name: "Clifftone",
-    logo: "https://i.ibb.co/kg1HGC5/clifftone.png",
+    logo: "https://i.ibb.co/1mHRm2y/clifftone.png",
     status: true,
     showrooms:
     [
@@ -320,7 +324,7 @@ BRANDS =
   },
   {
     name: "Vitamina",
-    logo: "https://i.imgur.com/EJ8pgGJ.png",
+    logo: "https://i.ibb.co/RTNpZxB/vitamina.png",
     status: true,
     showrooms: [
       {
@@ -1062,7 +1066,7 @@ BRANDS =
   },
   {
     name: "Van Como Piña",
-    logo: "https://i.ibb.co/crm2ZBM/vcp.png",
+    logo: "https://i.ibb.co/GMDtyC5/vancomopin-a.png",
     status: true,
     showrooms: [
       {
@@ -1164,7 +1168,7 @@ BRANDS =
   },
   {
     name: "Sarkany",
-    logo: "https://zapalook.com.ar/wp-content/uploads/2013/06/logo-Ricky-Sarkany.jpg",
+    logo: "https://i.ibb.co/106Yd9K/sarkany.png",
     status: true,
     showrooms: [
       {
@@ -1589,7 +1593,7 @@ BRANDS =
   },
   {
     name: "Sweet",
-    logo: "https://i.ibb.co/p08vCkX/sweet.png",
+    logo: "https://i.ibb.co/DGJr4GS/sweet.png",
     status: true,
     showrooms: [
       {
