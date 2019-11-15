@@ -222,6 +222,10 @@
 }
 
 .paragraph {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: left;
   h2 {
     font-size:18px;
   }
@@ -297,24 +301,6 @@
     object-fit:cover;
     object-position:center;
     box-shadow: 0px 0px 4px lightgray;
-  }
-  .paragraph {
-    h2 {
-      font-size:30px;
-    }
-    p {
-      font-size:20px;
-      color:rgba(0, 0, 0, 0.4);
-      margin:0px;
-      padding:10px;
-    }
-
-    h3{
-      font-size:29px;
-      padding:0px;
-      padding-top: 5px;
-
-    }
   }
 }
 // END
