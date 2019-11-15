@@ -131,7 +131,7 @@ BRANDS =
   },
   {
     name: "Clifftone",
-    logo: "https://i.ibb.co/kg1HGC5/clifftone.png",
+    logo: "http://www.clifftone.com/wp-content/uploads/2018/09/logo_recto-clifftone_2018-01-e1536412572786.png",
     status: true,
     showrooms:
     [
@@ -139,7 +139,7 @@ BRANDS =
         name: "Tortuguitas",
         phone_number: "1545454632",
         email: "clifftone@jot.com",
-        address: "Necochea 3903, Buenos Aires, Ciudad Autónoma de Buenos Aires, Argentina"
+        address: "San martin de tours 3500, Ciudad Autónoma de Buenos Aires, Argentina"
       }
     ],
     products:
@@ -1060,111 +1060,111 @@ BRANDS =
       }
     ]
   },
-  {
-    name: "Van Como Piña",
-    logo: "https://i.ibb.co/crm2ZBM/vcp.png",
-    status: true,
-    showrooms: [
-      {
-        name: "Moldes",
-        phone_number: "157899654",
-        email: "vcp@jot.com",
-        address: "Moldes 807, Buenos Aires, Ciudad Autónoma de Buenos Aires, Argentina"
-      }
-    ],
-    products: [
-      {
-        name: "Bikini Waikiki",
-        min_price: 1000,
-        max_price: 2000,
-        category: "accessories",
-        description: "Bikini Waikiki Colaless Tiritas (Conjunto)" ,
-        sku_ext: Faker::Number.number(digits: 15),
-        published: false,
-        photos: [
-          "https://cdn.shopify.com/s/files/1/0045/4970/5826/products/WaikikiTirit3_720x.jpg?v=1540249606",
-          "https://cdn.shopify.com/s/files/1/0045/4970/5826/products/WaikikiTirit4_720x.jpg?v=1540249606",
-          "https://cdn.shopify.com/s/files/1/0045/4970/5826/products/WaikikiTirit1_720x.jpg?v=1540249606",
-        ],
-        variants: [
-          {
-            color: "#596681",
-            size: "36"
-          },
+  # {
+  #   name: "Van Como Piña",
+  #   logo: "http://paseochampagnat.com.ar/wp-content/uploads/2019/06/Van-Como-Pi%C3%B1a.jpg",
+  #   status: true,
+  #   showrooms: [
+  #     {
+  #       name: "Moldes",
+  #       phone_number: "157899654",
+  #       email: "vcp@jot.com",
+  #       address: "Moldes 807, Buenos Aires, Ciudad Autónoma de Buenos Aires, Argentina"
+  #     }
+  #   ],
+  #   products: [
+  #     {
+  #       name: "Bikini Waikiki",
+  #       min_price: 1000,
+  #       max_price: 2000,
+  #       category: "accessories",
+  #       description: "Bikini Waikiki Colaless Tiritas (Conjunto)" ,
+  #       sku_ext: Faker::Number.number(digits: 15),
+  #       published: false,
+  #       photos: [
+  #         "https://cdn.shopify.com/s/files/1/0045/4970/5826/products/WaikikiTirit3_720x.jpg?v=1540249606",
+  #         "https://cdn.shopify.com/s/files/1/0045/4970/5826/products/WaikikiTirit4_720x.jpg?v=1540249606",
+  #         "https://cdn.shopify.com/s/files/1/0045/4970/5826/products/WaikikiTirit1_720x.jpg?v=1540249606",
+  #       ],
+  #       variants: [
+  #         {
+  #           color: "#596681",
+  #           size: "36"
+  #         },
 
-          {
-            color: "#596681",
-            size: "38"
-          },
-          {
-            color: "#596681",
-            size: "40"
-          }
-        ]
-      },
-      {
-        name: "Bikini Sleepy",
-        min_price: 1000,
-        max_price: 2000,
-        category: "accessories",
-        description: "Bikini Sleepy Hollow Colaless Con Voladitos (Conjunto)" ,
-        sku_ext: Faker::Number.number(digits: 15),
-        published: false,
-        photos: [
-          "https://cdn.shopify.com/s/files/1/0045/4970/5826/products/SleepyHollow3_720x.jpg?v=1540249512",
-          "https://cdn.shopify.com/s/files/1/0045/4970/5826/products/SleepyHollow4_720x.jpg?v=1540249512",
-          "https://cdn.shopify.com/s/files/1/0045/4970/5826/products/SleepyHollow1_720x.jpg?v=1540249512",
-        ],
-        variants: [
-          {
-            color: "#FF33A8",
-            size: "36"
-          },
+  #         {
+  #           color: "#596681",
+  #           size: "38"
+  #         },
+  #         {
+  #           color: "#596681",
+  #           size: "40"
+  #         }
+  #       ]
+  #     },
+  #     {
+  #       name: "Bikini Sleepy",
+  #       min_price: 1000,
+  #       max_price: 2000,
+  #       category: "accessories",
+  #       description: "Bikini Sleepy Hollow Colaless Con Voladitos (Conjunto)" ,
+  #       sku_ext: Faker::Number.number(digits: 15),
+  #       published: false,
+  #       photos: [
+  #         "https://cdn.shopify.com/s/files/1/0045/4970/5826/products/SleepyHollow3_720x.jpg?v=1540249512",
+  #         "https://cdn.shopify.com/s/files/1/0045/4970/5826/products/SleepyHollow4_720x.jpg?v=1540249512",
+  #         "https://cdn.shopify.com/s/files/1/0045/4970/5826/products/SleepyHollow1_720x.jpg?v=1540249512",
+  #       ],
+  #       variants: [
+  #         {
+  #           color: "#FF33A8",
+  #           size: "36"
+  #         },
 
-          {
-            color: "#FF33A8",
-            size: "38"
-          },
-          {
-            color: "#FF33A8",
-            size: "40"
-          }
-        ]
-      },
-      {
-        name: "Bikini Europa",
-        min_price: 1000,
-        max_price: 2000,
-        category: "accessories",
-        description: "Bikini Europa Bordeaux (Conjunto)" ,
-        sku_ext: Faker::Number.number(digits: 15),
-        published: false,
-        photos: [
-          "https://cdn.shopify.com/s/files/1/0045/4970/5826/products/Europa_Bordeaux_1_720x.jpg?v=1572033272",
-          "https://cdn.shopify.com/s/files/1/0045/4970/5826/products/Europa_Bordeaux_2_720x.jpg?v=1572033272",
-          "https://cdn.shopify.com/s/files/1/0045/4970/5826/products/Europa_Bordeaux_3_720x.jpg?v=1572033272",
-        ],
-        variants: [
-          {
-            color: "#C70039",
-            size: "36"
-          },
+  #         {
+  #           color: "#FF33A8",
+  #           size: "38"
+  #         },
+  #         {
+  #           color: "#FF33A8",
+  #           size: "40"
+  #         }
+  #       ]
+  #     },
+  #     {
+  #       name: "Bikini Europa",
+  #       min_price: 1000,
+  #       max_price: 2000,
+  #       category: "accessories",
+  #       description: "Bikini Europa Bordeaux (Conjunto)" ,
+  #       sku_ext: Faker::Number.number(digits: 15),
+  #       published: false,
+  #       photos: [
+  #         "https://cdn.shopify.com/s/files/1/0045/4970/5826/products/Europa_Bordeaux_1_720x.jpg?v=1572033272",
+  #         "https://cdn.shopify.com/s/files/1/0045/4970/5826/products/Europa_Bordeaux_2_720x.jpg?v=1572033272",
+  #         "https://cdn.shopify.com/s/files/1/0045/4970/5826/products/Europa_Bordeaux_3_720x.jpg?v=1572033272",
+  #       ],
+  #       variants: [
+  #         {
+  #           color: "#C70039",
+  #           size: "36"
+  #         },
 
-          {
-            color: "#C70039",
-            size: "38"
-          },
-          {
-            color: "#C70039",
-            size: "40"
-          },
-        ]
-      }
-    ]
-  },
+  #         {
+  #           color: "#C70039",
+  #           size: "38"
+  #         },
+  #         {
+  #           color: "#C70039",
+  #           size: "40"
+  #         },
+  #       ]
+  #     }
+  #   ]
+  # },
   {
     name: "Sarkany",
-    logo: "https://zapalook.com.ar/wp-content/uploads/2013/06/logo-Ricky-Sarkany.jpg",
+    logo: "https://www.losgallegos.com.ar/wp-content/uploads/2016/09/sarkany-logo-320.png",
     status: true,
     showrooms: [
       {
@@ -1589,7 +1589,7 @@ BRANDS =
   },
   {
     name: "Sweet",
-    logo: "https://i.ibb.co/p08vCkX/sweet.png",
+    logo: "https://cace-static.s3.us-west-2.amazonaws.com/uploads/socios/1143/logo-sweet-320x130px.png",
     status: true,
     showrooms: [
       {
