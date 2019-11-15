@@ -139,7 +139,7 @@ BRANDS =
         name: "Tortuguitas",
         phone_number: "1545454632",
         email: "clifftone@jot.com",
-        address: "Necochea 3903, Buenos Aires, Ciudad Autónoma de Buenos Aires, Argentina"
+        address: "San martin de tours 3500, Ciudad Autónoma de Buenos Aires, Argentina"
       }
     ],
     products:

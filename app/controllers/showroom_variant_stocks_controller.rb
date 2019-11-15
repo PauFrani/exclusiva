@@ -25,7 +25,7 @@ class ShowroomVariantStocksController < ApplicationController
       quantity = @showroom_variant_stocks.size
       weight = [0.5, 0.3, 0.15, 0.05]
 
-      if quantity > 5
+      if quantity > 20
         results = []
         @brands.each_with_index do |brand, index|
           svs_filtered = @showroom_variant_stocks.select{|svs| svs.brand == brand }
