@@ -85,7 +85,11 @@ puts "creating users"
 USERS.each do |user|
   User.create!(user)
 end
-
+# <a href="https://ibb.co/Rzmvxv8"><img src="https://i.ibb.co/5ByMNMZ/awada.png" alt="awada" border="0"></a>
+# <a href="https://ibb.co/xzZg6dz"><img src="https://i.ibb.co/8Pkx9tP/aynotdead.png" alt="aynotdead" border="0"></a>
+# <a href="https://ibb.co/mT6pS0S"><img src="https://i.ibb.co/54BZ2k2/kevingstone.png" alt="kevingstone" border="0"></a>
+# <a href="https://ibb.co/Pg8rF1Z"><img src="https://i.ibb.co/VT8LJMW/kosiuko2.png" alt="kosiuko2" border="0"></a>
+# <a href="https://ibb.co/988tXZ3"><img src="https://i.ibb.co/X228BYk/levis.png" alt="levis" border="0"></a>
 
 BRANDS =
 [
@@ -131,6 +135,7 @@ BRANDS =
   },
   {
     name: "Clifftone",
+    # logo: "https://i.ibb.co/1mHRm2y/clifftone.png",
     logo: "http://www.clifftone.com/wp-content/uploads/2018/09/logo_recto-clifftone_2018-01-e1536412572786.png",
     status: true,
     showrooms:
@@ -320,7 +325,7 @@ BRANDS =
   },
   {
     name: "Vitamina",
-    logo: "https://i.imgur.com/EJ8pgGJ.png",
+    logo: "https://i.ibb.co/RTNpZxB/vitamina.png",
     status: true,
     showrooms: [
       {
@@ -1060,6 +1065,10 @@ BRANDS =
       }
     ]
   },
+
+    # name: "Sarkany",
+    # logo: "https://i.ibb.co/106Yd9K/sarkany.png",
+
   # {
   #   name: "Van Como Piña",
   #   logo: "http://paseochampagnat.com.ar/wp-content/uploads/2019/06/Van-Como-Pi%C3%B1a.jpg",
@@ -1589,6 +1598,7 @@ BRANDS =
   },
   {
     name: "Sweet",
+    # logo: "https://i.ibb.co/DGJr4GS/sweet.png",
     logo: "https://cace-static.s3.us-west-2.amazonaws.com/uploads/socios/1143/logo-sweet-320x130px.png",
     status: true,
     showrooms: [
