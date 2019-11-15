@@ -187,7 +187,7 @@
   border-bottom: 1px solid lightgray;
   padding:20px 5px 20px 10px;
   .imgen {
-    width: auto;
+    width: 110px;
     height:100%;
     margin-right:0px;
     border-radius:10px;
@@ -223,7 +223,7 @@
 
 .paragraph {
   h2 {
-    font-size:20px;
+    font-size:18px;
   }
   p {
     font-size:16px;
@@ -247,9 +247,9 @@
   background-color: white;
   border: 1px solid #565C6C;
   border-radius:3px;
-  // object-fit: center;
+  object-fit: cover;
   img {
-    weight:100%;
+
     height:100%;
     border-radius: 5px;
     margin:0px;

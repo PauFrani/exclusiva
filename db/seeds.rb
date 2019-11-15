@@ -135,8 +135,8 @@ BRANDS =
   },
   {
     name: "Clifftone",
-    # logo: "https://i.ibb.co/1mHRm2y/clifftone.png",
-    logo: "http://www.clifftone.com/wp-content/uploads/2018/09/logo_recto-clifftone_2018-01-e1536412572786.png",
+    logo: "https://i.ibb.co/1mHRm2y/clifftone.png",
+    #logo: "http://www.clifftone.com/wp-content/uploads/2018/09/logo_recto-clifftone_2018-01-e1536412572786.png",
     status: true,
     showrooms:
     [
@@ -325,7 +325,7 @@ BRANDS =
   },
   {
     name: "Vitamina",
-    logo: "https://i.ibb.co/RTNpZxB/vitamina.png",
+    logo: "https://i.ibb.co/99S6DTg/vitamina.png",
     status: true,
     showrooms: [
       {
@@ -1173,7 +1173,8 @@ BRANDS =
   # },
   {
     name: "Sarkany",
-    logo: "https://www.losgallegos.com.ar/wp-content/uploads/2016/09/sarkany-logo-320.png",
+    logo: "https://i.ibb.co/106Yd9K/sarkany.png",
+    #logo: "https://www.losgallegos.com.ar/wp-content/uploads/2016/09/sarkany-logo-320.png",
     status: true,
     showrooms: [
       {
