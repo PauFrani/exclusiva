@@ -131,7 +131,7 @@ BRANDS =
   },
   {
     name: "Clifftone",
-    logo: "https://i.ibb.co/kg1HGC5/clifftone.png",
+    logo: "http://www.clifftone.com/wp-content/uploads/2018/09/logo_recto-clifftone_2018-01-e1536412572786.png",
     status: true,
     showrooms:
     [
@@ -1060,111 +1060,111 @@ BRANDS =
       }
     ]
   },
-  {
-    name: "Van Como Piña",
-    logo: "https://i.ibb.co/crm2ZBM/vcp.png",
-    status: true,
-    showrooms: [
-      {
-        name: "Moldes",
-        phone_number: "157899654",
-        email: "vcp@jot.com",
-        address: "Moldes 807, Buenos Aires, Ciudad Autónoma de Buenos Aires, Argentina"
-      }
-    ],
-    products: [
-      {
-        name: "Bikini Waikiki",
-        min_price: 1000,
-        max_price: 2000,
-        category: "accessories",
-        description: "Bikini Waikiki Colaless Tiritas (Conjunto)" ,
-        sku_ext: Faker::Number.number(digits: 15),
-        published: false,
-        photos: [
-          "https://cdn.shopify.com/s/files/1/0045/4970/5826/products/WaikikiTirit3_720x.jpg?v=1540249606",
-          "https://cdn.shopify.com/s/files/1/0045/4970/5826/products/WaikikiTirit4_720x.jpg?v=1540249606",
-          "https://cdn.shopify.com/s/files/1/0045/4970/5826/products/WaikikiTirit1_720x.jpg?v=1540249606",
-        ],
-        variants: [
-          {
-            color: "#596681",
-            size: "36"
-          },
+  # {
+  #   name: "Van Como Piña",
+  #   logo: "http://paseochampagnat.com.ar/wp-content/uploads/2019/06/Van-Como-Pi%C3%B1a.jpg",
+  #   status: true,
+  #   showrooms: [
+  #     {
+  #       name: "Moldes",
+  #       phone_number: "157899654",
+  #       email: "vcp@jot.com",
+  #       address: "Moldes 807, Buenos Aires, Ciudad Autónoma de Buenos Aires, Argentina"
+  #     }
+  #   ],
+  #   products: [
+  #     {
+  #       name: "Bikini Waikiki",
+  #       min_price: 1000,
+  #       max_price: 2000,
+  #       category: "accessories",
+  #       description: "Bikini Waikiki Colaless Tiritas (Conjunto)" ,
+  #       sku_ext: Faker::Number.number(digits: 15),
+  #       published: false,
+  #       photos: [
+  #         "https://cdn.shopify.com/s/files/1/0045/4970/5826/products/WaikikiTirit3_720x.jpg?v=1540249606",
+  #         "https://cdn.shopify.com/s/files/1/0045/4970/5826/products/WaikikiTirit4_720x.jpg?v=1540249606",
+  #         "https://cdn.shopify.com/s/files/1/0045/4970/5826/products/WaikikiTirit1_720x.jpg?v=1540249606",
+  #       ],
+  #       variants: [
+  #         {
+  #           color: "#596681",
+  #           size: "36"
+  #         },
 
-          {
-            color: "#596681",
-            size: "38"
-          },
-          {
-            color: "#596681",
-            size: "40"
-          }
-        ]
-      },
-      {
-        name: "Bikini Sleepy",
-        min_price: 1000,
-        max_price: 2000,
-        category: "accessories",
-        description: "Bikini Sleepy Hollow Colaless Con Voladitos (Conjunto)" ,
-        sku_ext: Faker::Number.number(digits: 15),
-        published: false,
-        photos: [
-          "https://cdn.shopify.com/s/files/1/0045/4970/5826/products/SleepyHollow3_720x.jpg?v=1540249512",
-          "https://cdn.shopify.com/s/files/1/0045/4970/5826/products/SleepyHollow4_720x.jpg?v=1540249512",
-          "https://cdn.shopify.com/s/files/1/0045/4970/5826/products/SleepyHollow1_720x.jpg?v=1540249512",
-        ],
-        variants: [
-          {
-            color: "#FF33A8",
-            size: "36"
-          },
+  #         {
+  #           color: "#596681",
+  #           size: "38"
+  #         },
+  #         {
+  #           color: "#596681",
+  #           size: "40"
+  #         }
+  #       ]
+  #     },
+  #     {
+  #       name: "Bikini Sleepy",
+  #       min_price: 1000,
+  #       max_price: 2000,
+  #       category: "accessories",
+  #       description: "Bikini Sleepy Hollow Colaless Con Voladitos (Conjunto)" ,
+  #       sku_ext: Faker::Number.number(digits: 15),
+  #       published: false,
+  #       photos: [
+  #         "https://cdn.shopify.com/s/files/1/0045/4970/5826/products/SleepyHollow3_720x.jpg?v=1540249512",
+  #         "https://cdn.shopify.com/s/files/1/0045/4970/5826/products/SleepyHollow4_720x.jpg?v=1540249512",
+  #         "https://cdn.shopify.com/s/files/1/0045/4970/5826/products/SleepyHollow1_720x.jpg?v=1540249512",
+  #       ],
+  #       variants: [
+  #         {
+  #           color: "#FF33A8",
+  #           size: "36"
+  #         },
 
-          {
-            color: "#FF33A8",
-            size: "38"
-          },
-          {
-            color: "#FF33A8",
-            size: "40"
-          }
-        ]
-      },
-      {
-        name: "Bikini Europa",
-        min_price: 1000,
-        max_price: 2000,
-        category: "accessories",
-        description: "Bikini Europa Bordeaux (Conjunto)" ,
-        sku_ext: Faker::Number.number(digits: 15),
-        published: false,
-        photos: [
-          "https://cdn.shopify.com/s/files/1/0045/4970/5826/products/Europa_Bordeaux_1_720x.jpg?v=1572033272",
-          "https://cdn.shopify.com/s/files/1/0045/4970/5826/products/Europa_Bordeaux_2_720x.jpg?v=1572033272",
-          "https://cdn.shopify.com/s/files/1/0045/4970/5826/products/Europa_Bordeaux_3_720x.jpg?v=1572033272",
-        ],
-        variants: [
-          {
-            color: "#C70039",
-            size: "36"
-          },
+  #         {
+  #           color: "#FF33A8",
+  #           size: "38"
+  #         },
+  #         {
+  #           color: "#FF33A8",
+  #           size: "40"
+  #         }
+  #       ]
+  #     },
+  #     {
+  #       name: "Bikini Europa",
+  #       min_price: 1000,
+  #       max_price: 2000,
+  #       category: "accessories",
+  #       description: "Bikini Europa Bordeaux (Conjunto)" ,
+  #       sku_ext: Faker::Number.number(digits: 15),
+  #       published: false,
+  #       photos: [
+  #         "https://cdn.shopify.com/s/files/1/0045/4970/5826/products/Europa_Bordeaux_1_720x.jpg?v=1572033272",
+  #         "https://cdn.shopify.com/s/files/1/0045/4970/5826/products/Europa_Bordeaux_2_720x.jpg?v=1572033272",
+  #         "https://cdn.shopify.com/s/files/1/0045/4970/5826/products/Europa_Bordeaux_3_720x.jpg?v=1572033272",
+  #       ],
+  #       variants: [
+  #         {
+  #           color: "#C70039",
+  #           size: "36"
+  #         },
 
-          {
-            color: "#C70039",
-            size: "38"
-          },
-          {
-            color: "#C70039",
-            size: "40"
-          },
-        ]
-      }
-    ]
-  },
+  #         {
+  #           color: "#C70039",
+  #           size: "38"
+  #         },
+  #         {
+  #           color: "#C70039",
+  #           size: "40"
+  #         },
+  #       ]
+  #     }
+  #   ]
+  # },
   {
     name: "Sarkany",
-    logo: "https://zapalook.com.ar/wp-content/uploads/2013/06/logo-Ricky-Sarkany.jpg",
+    logo: "https://www.losgallegos.com.ar/wp-content/uploads/2016/09/sarkany-logo-320.png",
     status: true,
     showrooms: [
       {
@@ -1589,7 +1589,7 @@ BRANDS =
   },
   {
     name: "Sweet",
-    logo: "https://i.ibb.co/p08vCkX/sweet.png",
+    logo: "data:image/png;base64,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",
     status: true,
     showrooms: [
       {
