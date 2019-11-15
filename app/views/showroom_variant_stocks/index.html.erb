@@ -20,11 +20,11 @@
               <div style="width: 110px; height:110px;">
                 <%= image_tag showroom_variant_stock.product.photos.first.url_photo,  class:"imgen" %>
               </div>
-              <div class="paragraph d-flex align-content-center flex-wrap ml-2">
+              <div class="paragraph ml-2">
                 <h2><%= showroom_variant_stock.product.name %></h2>
 
                 <p id="address-result"><%= truncate(showroom_variant_stock.showroom.address.street, :length => 50) %></p>
-                <div class="d-flex">
+                <div class="d-flex justify-content-between">
                   <div>
                     <div class="location">
                       <i class="fas fa-map-marker-alt"></i>
