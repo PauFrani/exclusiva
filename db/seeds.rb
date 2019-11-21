@@ -1280,7 +1280,7 @@ BRANDS =
     status: true,
     showrooms: [
       {
-        name: "Vicente Lopez",
+        name: "Rapsodia - Villa Crespo",
         phone_number: "15684496616",
         email: "rapsodia@jot.com",
         address: "Aguirre 729, Buenos Aires, Ciudad Autónoma de Buenos Aires, Argentina"
