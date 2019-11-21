@@ -4,7 +4,8 @@ class ShowroomVariantStocksController < ApplicationController
     #bidding actual
     @bidding = Bidding.find(session[:bidding_id])
     #biddings anteriores
-    @biddings = current_user.biddings.includes(:purchase).where(purchases: {id: nil}).where.not(id: @bidding.id).where("biddings.updated_at < ?", @bidding.created_at - 10.days)
+    @biddings = current_user.biddings.includes(:purchase).where(purchases: {id: nil}).where.not(id: @bidding.id).where("biddings.updated_at > ?", @bidding.created_at - 10.days)
+
     @bid = search_validation?(@bidding, @biddings)
     if @bid
       flash[:notice] = "Usted ya realizó una busqueda por #{@bid.amount} ARS anteriormente. ¡Nuestras ofertas son únicas!"
@@ -57,6 +58,7 @@ class ShowroomVariantStocksController < ApplicationController
 
   def search_validation?(bidding, biddings)
     biddings.where(category: bidding.category).where("amount >= ?", bidding.amount).last
+
   end
 
   def show
