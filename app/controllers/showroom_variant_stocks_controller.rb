@@ -7,7 +7,6 @@ class ShowroomVariantStocksController < ApplicationController
     @biddings = current_user.biddings.includes(:purchase).where(purchases: {id: nil}).where.not(id: @bidding.id).where("biddings.updated_at > ?", @bidding.created_at - 10.days)
 
     @bid = search_validation?(@bidding, @biddings)
-    raise
     if @bid
       flash[:notice] = "Usted ya realizó una busqueda por #{@bid.amount} ARS anteriormente. ¡Nuestras ofertas son únicas!"
       redirect_to root_path
