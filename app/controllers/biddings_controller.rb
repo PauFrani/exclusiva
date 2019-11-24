@@ -49,7 +49,7 @@ class BiddingsController < ApplicationController
 
   def brands
     @bidding = Bidding.find(session[:bidding_id])
-    @brands = Brand.all
+    @brands = Brand.joins(:showrooms).joins(showroom_variant_stocks: {variant: :product}).where(products: { category: @bidding.category }).all.uniq
     @brands.each do |brand|
       @bidding.brand_ranks.build(brand: brand)
     end
