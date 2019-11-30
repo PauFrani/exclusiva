@@ -2,12 +2,17 @@
 const initDisable = () => {
   const elements = document.querySelectorAll(".element-to-enable");
   const buttonDissabled = document.querySelector(".button-disableable");
+  const amount = document.getElementById('bidding_amount');
 
+console(amount.value)
   if (elements) {
     elements.forEach((element) => {
       element.addEventListener("click", (event) => {
+        if (amount.value > 0)
+        {
         buttonDissabled.classList.remove("size-greyscale");
         buttonDissabled.classList.remove("button-disabled");
+        };
       });
 
     });

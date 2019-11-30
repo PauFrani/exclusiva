@@ -11,7 +11,9 @@ class BiddingsController < ApplicationController
     @bidding.user = current_user if user_signed_in?
     if @bidding.save!
       session[:bidding_id] = @bidding.id
-      redirect_to category_biddings_path
+      session[:category] = @bidding.category
+      #redirect_to category_biddings_path
+      redirect_to brands_biddings_path
     else
       render :new
     end
@@ -23,10 +25,10 @@ class BiddingsController < ApplicationController
       flash[:alert] = 'El tiempo de tu oferta finalizó!'
       redirect_to root_path
     else
-      if request.referrer.include? 'category'
-        @bidding.update(biddings_params)
-        redirect_to brands_biddings_path
-      elsif request.referrer.include? 'brands'
+      # if request.referrer.include? 'category'
+      #   @bidding.update(biddings_params)
+      #   redirect_to brands_biddings_path
+      if request.referrer.include? 'brands'
         @bidding.update(biddings_params)
         redirect_to location_biddings_path # location_bidding_path
       elsif request.referrer.include? 'location'
