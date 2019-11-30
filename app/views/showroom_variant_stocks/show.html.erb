@@ -42,7 +42,7 @@
       <!-- PRODUCT DESCRIPTION -->
       <p class="text-justify"><%= @showroom_variant_stock.variant.product.description %></p>
       <hr>
-      <%= link_to "Hacer Oferta", new_showroom_variant_stock_purchase_path(@showroom_variant_stock.variant), class: "button-general disable-button-product" %>
+      <%= link_to "Comprar", new_showroom_variant_stock_purchase_path(@showroom_variant_stock.variant), class: "button-general disable-button-product" %>
       <div class="mt-3">
         <h4>Ubicación:</h4>
         <p class="border-secondary text-justify"><%= @showroom_variant_stock.showroom.address.street %></p>

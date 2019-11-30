@@ -181,13 +181,13 @@
 
 .card-results-individual {
   display:flex;
-  height:150px;
+  height:200px;
   width:100%;
   border:none;
   border-bottom: 1px solid lightgray;
   padding:20px 5px 20px 10px;
   .imgen {
-    width: 110px;
+    width: 160px;
     height:100%;
     margin-right:0px;
     border-radius:10px;
@@ -221,11 +221,13 @@
   }
 }
 
+
 .paragraph {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: left;
+  width: 80%;
   h2 {
     font-size:18px;
   }
@@ -238,6 +240,11 @@
   h3 {
     padding:5px;
   }
+  .max-price {
+    text-decoration: line-through;
+    text-decoration-style: intial;
+    text-decoration-color: start,
+  }
 }
 
 #address-result {
@@ -245,11 +252,12 @@
 }
 
 #logo-results {
-  height:30px;
+  height:25px;
+  // width: 60px;
   margin:0px;
   padding:0px;
   background-color: white;
-  border: 1px solid #565C6C;
+  // border: 1px solid lightgray;
   border-radius:3px;
   object-fit: cover;
   img {
