@@ -1002,7 +1002,7 @@ BRANDS =
       {
         name: "AROS MADISON",
         min_price: 1000,
-        max_price: 2000,
+        max_price: 2400,
         category: "accessories",
         description: "Aros circulares en carey y detalle metálico. MATERIAL: circulos de carey con metal.",
         sku_ext: Faker::Number.number(digits: 15),
@@ -1043,7 +1043,7 @@ BRANDS =
 
         name: "SHOPPING FARGO",
         min_price: 1000,
-        max_price: 2000,
+        max_price: 3000,
         category: "accessories",
         description: "Shopping en lona de 100% algodón, con base, acentos y logo Vitamina en charol. MATERIAL: Lona combinada con charol.",
         sku_ext: Faker::Number.number(digits: 15),
