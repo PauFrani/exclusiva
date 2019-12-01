@@ -4,7 +4,7 @@ const initDisable = () => {
   const buttonDissabled = document.querySelector(".button-disableable");
   const amount = document.getElementById("bidding_amount");
 
-  if (elements) {
+  if (elements){
     elements.forEach((element) => {
       element.addEventListener("click", (event) => {
         if (amount.value){
@@ -14,6 +14,20 @@ const initDisable = () => {
       });
     });
   }
+
+  // if (amount){
+  //   amount.forEach((element) => {
+  //     amount.addEventListener("input", (event) => {
+  //       if (amount.value){
+  //         buttonDissabled.classList.remove("size-greyscale");
+  //         buttonDissabled.classList.remove("button-disabled");
+  //         };
+  //       else{
+  //         elements.classList.remove("active");
+  //       }
+  //     });
+  //   });
+  // }
 }
 
 
