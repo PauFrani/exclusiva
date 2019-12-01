@@ -23,7 +23,7 @@
               <div class="paragraph ml-3">
                 <div class="d-flex bd-highlight mb-32">
                   <h2 class="bd-highlight"><%= showroom_variant_stock.product.name %></h2>
-                  <div id="logo-results" class="ml-auto bd-highlight">
+                  <div id="logo-results"  >
                     <%= image_tag showroom_variant_stock.showroom.brand.logo %>
                   </div>
                 </div>
@@ -38,7 +38,7 @@
                   </div>
                 </div>
                 <div class="d-flex justify-content-end mt-0">
-                  <p class="max-price"><strong>$<%= showroom_variant_stock.product.max_price %></strong></p>
+                  <p class="max-price"><strong>$<%= showroom_variant_stock.product.max_price.round(0) %></strong></p>
                   <p class="pl-3"><strong>$<%= @bidding.amount%></strong></p>
                 </div>
               </div>
