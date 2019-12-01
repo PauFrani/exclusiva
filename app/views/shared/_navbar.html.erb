@@ -9,9 +9,8 @@
     <h1 class="title-text mx-auto" href="#"> <%= link_to "Exclusiva", root_path, class:"text-decoration-none text-#{color} navbar-title exclusiva"  %> </h1>
   <div class="dropleft">
     <% if user_signed_in? %>
-        <i class="fas fa-tshirt text-<%= color %>" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
-    <% end %>
-    <% if user_signed_in? %>
+      <% avatar_url = current_user.facebook_picture_url || "http://placehold.it/30x30" %>
+      <%= image_tag avatar_url, class: "avatar-bordered dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
       <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
         <%= link_to "Dashboard", dashboard_path, class:"dropdown-item"  %>
         <% if current_user.purchases.empty? %>
@@ -20,9 +19,12 @@
         <% end %>
         <%= link_to "Salir", destroy_user_session_path, method: :delete, class:"dropdown-item" %>
       </div>
+    <% if user_signed_in? %>
+        <i class="fas fa-tshirt text-<%= color %>" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
+    <% end %>
     <% else %>
       <div class="d-none d-sm-block">
-        <%= link_to "Ayuda", '#', class:"text-decoration-none text-#{color} body-text"  %>
+        <%#= link_to "Ayuda", '#', class:"text-decoration-none text-#{color} body-text"  %>
         <%= link_to "Iniciar Sesión", new_user_session_path, class:"text-decoration-none text-#{color} body-text"  %>
         <button class="btn body-text my-2 my-sm-0 " type="submit"> <%= link_to "Registrate", new_user_registration_path, class:"btn btn-ghost text-decoration-none text-#{color} #{at_index}"  %></button>
       </div>
