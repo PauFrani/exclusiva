@@ -11,11 +11,10 @@
 <div class="row justify-content-sm-center justify-content-xs-center" >
   <div class="col-xs-12 col-sm-9 col-md-6 col-lg-6 col-xl-6 pr-0">
     <div>
-      <% @results.each do |showroom_variant_stock|%>
+      <% @results.each_with_index do |showroom_variant_stock, index|%>
 
         <%= link_to showroom_variant_stock_path(showroom_variant_stock), target: :_blank , class: 'link-card' do %>
-
-          <div class="card-results-individual">
+          <div class="card-results-individual" data-location="<%= @markers[index] %>">
             <div class="d-flex justify-content-start"  style="width: 100%;">
               <div style="width: 160px; height:160px;">
                 <%= image_tag showroom_variant_stock.product.photos.first.url_photo,  class:"imgen" %>
