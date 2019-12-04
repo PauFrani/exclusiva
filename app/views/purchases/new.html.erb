@@ -37,7 +37,7 @@
           src="https://www.mercadopago.com.ar/integrations/v1/web-tokenize-checkout.js"
           data-elements-color="#0B5FC4"
           data-header-color="#0B5FC4"
-          data-public-key="<%= ENV['MP_PUBLIC_PRODUCTION'] %>"
+          data-public-key="<%= ENV['MP_PRODUCTION_PUBLIC_KEY'] %>"
           data-transaction-amount='<%= @bidding.amount %>'
           data-button-label="Comprar">
           <% if current_user.mp_customer_id %>

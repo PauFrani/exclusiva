@@ -34,7 +34,7 @@ class PurchasesController < ApplicationController
     @payment.save!
 
     require 'mercadopago'
-    $mp = MercadoPago.new(ENV["MP_PRIVATE_PRODUCTION"])
+    $mp = MercadoPago.new(ENV["MP_PRODUCTION_ACCESS_TOKEN"])
 
     token = params[:token]
     payment_method_id = params[:payment_method_id]
@@ -59,15 +59,15 @@ class PurchasesController < ApplicationController
 
     if payment_response["status"] == "201" && payment_response["response"]["status"] == "approved"
 
-      @payment.status = 'Cobrado'
+      # @payment.status = 'Cobrado'
 
       #if !current_user.mp_customer_id
 
       search_customer = $mp.get("/v1/customers/search", { email: current_user.email })
 
       if !search_customer["response"]["results"].empty?
-        current_user.mpcard_id = search_customer["response"]["results"][0]["cards"][0]["id"]
-        current_user.mpcustomer_id = search_customer["response"]["results"][0]["id"]
+        current_user.mp_card_id = search_customer["response"]["results"][0]["cards"][0]["id"]
+        current_user.mp_customer_id = search_customer["response"]["results"][0]["id"]
         current_user.save
 
       else
@@ -84,7 +84,7 @@ class PurchasesController < ApplicationController
         # save card_id to user
         # response[:customer_response] = customer_response
         # response[:card_response] = card_response
-        current_user.mpcard_id = card_response["response"]["id"]
+        current_user.mp_card_id = card_response["response"]["id"]
         current_user.save!
         raise
       end
