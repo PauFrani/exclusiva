@@ -339,7 +339,7 @@ BRANDS =
     [
       {
         name: "Jean Brit Liston",
-        min_price: 4000,
+        min_price: 100,
         max_price: 7000,
         category: "jeans",
         description: "Jean calce recto de tiro alto con tela azul súper desgastada , cuyo valor agregado son sus 2 lineas engomadas en frente de una de las piernas.",
@@ -1513,7 +1513,7 @@ BRANDS =
       },
                   {
         name: "Pañuelo New Animal",
-        min_price: 1000,
+        min_price: 1,
         max_price: 2000,
         category: "accessories",
         description: "Pañuelo suave con estampa animal print. Un clasico, reversionado" ,

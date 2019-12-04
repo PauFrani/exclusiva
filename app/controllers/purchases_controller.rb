@@ -34,7 +34,7 @@ class PurchasesController < ApplicationController
     @payment.save!
 
     require 'mercadopago'
-    $mp = MercadoPago.new(ENV["MP_ACCESS_TOKEN"])
+    $mp = MercadoPago.new(ENV["MP_PRIVATE_PRODUCTION"])
 
     token = params[:token]
     payment_method_id = params[:payment_method_id]
@@ -86,6 +86,7 @@ class PurchasesController < ApplicationController
         # response[:card_response] = card_response
         current_user.mpcard_id = card_response["response"]["id"]
         current_user.save!
+        raise
       end
     end
 
