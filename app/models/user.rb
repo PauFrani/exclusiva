@@ -1,13 +1,24 @@
 class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
+  after_create :send_welcome_email
+
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :validatable
+  :recoverable, :rememberable, :validatable
   has_many :biddings
   has_many :purchases, through: :biddings
   has_one :address, as: :addressable
   devise :omniauthable, omniauth_providers: [:facebook]
   #scope :today_biddings, -> { biddings.where('bidding.created_at > ?', Time.now.midnight)}
+
+
+
+  private
+
+  def send_welcome_email
+    UserMailer.with(user: self).welcome.deliver_now
+  end
+
 
   def self.find_for_facebook_oauth(auth)
     user_params = auth.slice("provider", "uid")
@@ -29,4 +40,5 @@ class User < ApplicationRecord
 
     return user
   end
+
 end
