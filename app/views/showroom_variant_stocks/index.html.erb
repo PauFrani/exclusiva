@@ -14,7 +14,7 @@
       <% @results.each_with_index do |showroom_variant_stock, index|%>
 
         <%= link_to showroom_variant_stock_path(showroom_variant_stock), target: :_blank , class: 'link-card' do %>
-          <div class="card-results-individual" data-location="<%= @markers[index] %>">
+          <div class="card-results-individual" data-lng="<%= @markers[index][:lng] %>" data-lat="<%= @markers[index][:lat] %>">
             <div class="d-flex justify-content-start"  style="width: 100%;">
               <div style="width: 160px; height:160px;">
                 <%= image_tag showroom_variant_stock.product.photos.first.url_photo,  class:"imgen" %>
