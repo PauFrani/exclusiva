@@ -12,7 +12,6 @@ class BiddingsController < ApplicationController
     if @bidding.save!
       session[:bidding_id] = @bidding.id
       session[:category] = @bidding.category
-      #redirect_to category_biddings_path
       redirect_to brands_biddings_path
     else
       render :new
@@ -25,21 +24,17 @@ class BiddingsController < ApplicationController
       flash[:alert] = 'El tiempo de tu oferta finalizó!'
       redirect_to root_path
     else
-      # if request.referrer.include? 'category'
-      #   @bidding.update(biddings_params)
-      #   redirect_to brands_biddings_path
       if request.referrer.include? 'brands'
         @bidding.update(biddings_params)
-        redirect_to location_biddings_path # location_bidding_path
-      elsif request.referrer.include? 'location'
         begin
           @bidding.address = Address.new(address_params)
+          @bidding.update(biddings_params)
         rescue
           flash[:notice] = "¡Las ofertas son únicas, debe crear una nueva oferta!"
           return redirect_to root_path
         end
         @bidding.save
-        redirect_to showroom_variant_stocks_path # pagina de resultados
+        redirect_to showroom_variant_stocks_path # location_bidding_path
       end
     end
   end

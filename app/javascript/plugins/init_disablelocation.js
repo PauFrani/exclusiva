@@ -1,6 +1,6 @@
 const initDisableLocation = () => {
   const campoSearch = document.getElementById("bidding_address_street")
-  const buttonDissabled = document.getElementById("location_submit");
+  const buttonDissabled = document.getElementById("brand_ranks_submit");
 
   if (buttonDissabled) {
     campoSearch.addEventListener("input",function() {
