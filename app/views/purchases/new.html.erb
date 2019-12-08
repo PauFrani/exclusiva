@@ -35,13 +35,15 @@
         <form action="<%= showroom_variant_stock_purchases_path %>" method="post" >
           <script
           src="https://www.mercadopago.com.ar/integrations/v1/web-tokenize-checkout.js"
-          data-public-key="<%= ENV['MP_PUBLIC_KEY'] %>"
+          data-elements-color="#0B5FC4"
+          data-header-color="#0B5FC4"
+          data-public-key="<%= ENV['MP_PRODUCTION_PUBLIC_KEY'] %>"
           data-transaction-amount='<%= @bidding.amount %>'
+          data-button-label="Comprar">
           <% if current_user.mp_customer_id %>
           data-customer-id="<%= current_user.mp_customer_id %>"
           data-card-ids="<%= current_user.mp_card_id %>"
           <% end %>
-          data-button-label="Comprar">
         </script>
       </form>
     </div>
