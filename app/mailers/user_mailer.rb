@@ -5,8 +5,8 @@ class UserMailer < ApplicationMailer
   #
   #   en.user_mailer.welcome.subject
   #
-  def welcome(user)
-    @user = user # Instance variable => available in view
-    mail(to: @user.email, subject: 'Hola Mundo, soy EXCLUSIVA!!!')
+  def welcome
+    @user = params[:user] # Instance variable => available in view
+    mail(to: @user.email, subject: 'Bienvenida a EXCLUSIVA!!!')
   end
 end
