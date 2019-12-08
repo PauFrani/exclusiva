@@ -15,11 +15,8 @@ const addMarkersResponse = (map) => {
   const data = document.querySelectorAll(".card-results-individual");
   data.forEach(clothes => {
     clothes.addEventListener("mouseenter", event => {
-      console.log((event.target.dataset.location));
-      // console.log((event.target.dataset.location["lat"]));
-      const lng = Number(event.target.dataset.location["lng"]);
-      const lat = Number(event.target.dataset.location["lat"]);
-      console.log(lng);
+      const lat = event.target.dataset.lat;
+      const lng = event.target.dataset.lng;
       map.flyTo({
         center: [lng, lat],
         zoom: 15
@@ -55,7 +52,7 @@ const initMapbox = () => {
     const markers = JSON.parse(mapElement.dataset.markers);
     addMarkersToMap(map, markers);
     fitMapToMarkers(map, markers);
-    map.addControl(new MapboxGeocoder({ accessToken: mapboxgl.accessToken }));
+    map.addControl(new MapboxGeocoder({ accessToken: mapboxgl.accessToken, mapboxgl: map }));
     addMarkersResponse(map);
   }
 };
