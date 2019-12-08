@@ -303,8 +303,8 @@ BRANDS =
       },
       {
         name: "Tarjetero Cuero Vacuno",
-        min_price: 1000,
-        max_price: 2000,
+        min_price: 1,
+        max_price: 2,
         category: "accessories",
         description: "Tarjetero en Cuero Vacuno con Textura, 4 ranuras para tarjetas por lado y el logo grabado en el frente. 10cms de Ancho, 7,5 cms de Alto",
         sku_ext: Faker::Number.number(digits: 15),
@@ -1001,8 +1001,8 @@ BRANDS =
       },
       {
         name: "AROS MADISON",
-        min_price: 1000,
-        max_price: 2400,
+        min_price: 1,
+        max_price: 2,
         category: "accessories",
         description: "Aros circulares en carey y detalle metálico. MATERIAL: circulos de carey con metal.",
         sku_ext: Faker::Number.number(digits: 15),
@@ -1023,8 +1023,8 @@ BRANDS =
       },
       {
         name: "SHOPPING HONOLULU",
-        min_price: 1000,
-        max_price: 2000,
+        min_price: 1,
+        max_price: 2,
         category: "accessories",
         description: "Shopping en plastico transparente, con sobre interior en tela estampada con logo. MATERIAL: Plástico transparente en colores combinado con cuero ecológico.",
         sku_ext: Faker::Number.number(digits: 15),
@@ -1042,8 +1042,8 @@ BRANDS =
       {
 
         name: "SHOPPING FARGO",
-        min_price: 1000,
-        max_price: 3000,
+        min_price: 1,
+        max_price: 3,
         category: "accessories",
         description: "Shopping en lona de 100% algodón, con base, acentos y logo Vitamina en charol. MATERIAL: Lona combinada con charol.",
         sku_ext: Faker::Number.number(digits: 15),
