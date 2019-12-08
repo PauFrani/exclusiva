@@ -83,13 +83,9 @@ GEM
     execjs (2.7.0)
     faker (2.8.1)
       i18n (>= 1.6, < 1.8)
-<<<<<<< HEAD
-    ffi (1.11.3)
-=======
     faraday (0.17.1)
       multipart-post (>= 1.2, < 3)
-    ffi (1.11.1)
->>>>>>> master
+    ffi (1.11.3)
     font-awesome-sass (5.6.1)
       sassc (>= 1.11)
     geocoder (1.5.2)
@@ -104,14 +100,11 @@ GEM
     jbuilder (2.9.1)
       activesupport (>= 4.2.0)
     json (2.2.0)
-<<<<<<< HEAD
+    jwt (2.2.1)
     launchy (2.4.3)
       addressable (~> 2.3)
     letter_opener (1.7.0)
       launchy (~> 2.2)
-=======
-    jwt (2.2.1)
->>>>>>> master
     listen (3.0.8)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
