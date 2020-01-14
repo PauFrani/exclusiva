@@ -1599,131 +1599,110 @@ BRANDS =
   },
   {
 
-    name: "Sweet",
-    # logo: "https://i.ibb.co/DGJr4GS/sweet.png",
-    logo: "https://cace-static.s3.us-west-2.amazonaws.com/uploads/socios/1143/logo-sweet-320x130px.png",
+    name: "Tucci",
+    logo: "https://i.ibb.co/KVzVKkx/tucci-2.png",
     status: true,
     showrooms: [
       {
-        name: "Santa Fe",
-        phone_number: "15684496616",
-        email: "sweet@jot.com",
-        address: "Avenida Santa Fe 3253, Buenos Aires, Ciudad Autónoma de Buenos Aires, Argentina"
+        name: "Abasto Shopping",
+        phone_number: "(011)4959-3534",
+        email: "ventaonline@tucciweb.com",
+        address: "Av. Corrientes 3247, Buenos Aires, Ciudad Autónoma de Buenos Aires, Argentina"
       }
     ],
     products: [
             {
-        name: "VESTIDO CALEPIO",
-        min_price: 3000,
-        max_price: 7000,
+        name: "VESTIDO LUCIANA",
+        min_price: 4275,
+        max_price: 5700,
         category: "dress",
         description: "Vestido largo de calce amplio floreado. Escote Halter. Espalda descubierta." ,
         sku_ext: Faker::Number.number(digits: 15),
         published: false,
         photos: [
-          "https://statics.glamit.com.ar/media/catalog/product/cache/87/image/650x957/9df78eab33525d08d6e5fb8d27136e95/s/w/sweet_010990_bl_1.jpg",
-          "https://statics.glamit.com.ar/media/catalog/product/cache/87/image/650x957/9df78eab33525d08d6e5fb8d27136e95/s/w/sweet_010990_bl_2.jpg",
-          "https://statics.glamit.com.ar/media/catalog/product/cache/87/thumbnail/708x1060/9df78eab33525d08d6e5fb8d27136e95/s/w/sweet_010990_bl_3.jpg"
+          "https://statics.glamit.com.ar/media/catalog/product/cache/36/image/9df78eab33525d08d6e5fb8d27136e95/t/u/tucci_ti50bh01_30_1.jpg",
+          "https://statics.glamit.com.ar/media/catalog/product/cache/36/thumbnail/708x1050/9df78eab33525d08d6e5fb8d27136e95/t/u/tucci_ti50bh01_30_2.jpg",
+          "https://statics.glamit.com.ar/media/catalog/product/cache/36/thumbnail/708x1050/9df78eab33525d08d6e5fb8d27136e95/t/u/tucci_ti50bh01_30_3.jpg"
         ],
         variants: [
           {
-            color: "#F7F9F9",
-            size: "36"
-          },
-
-          {
-            color: "#F7F9F9",
+            color: "#d39f00",
             size: "38"
-          },
-          {
-            color: "#F7F9F9",
-            size: "40"
           }
         ]
       },
             {
-        name: "CAMISA RAPUA",
-        min_price: 2000,
-        max_price: 5000,
+        name: "CAMISA CINTHIA",
+        min_price: 3300,
+        max_price: 4400,
         category: "shirts",
-        description: "Camisa combinada con distintas telas. Escote en V. mangas largas." ,
+        description: "Camisa de voile de algodón manga larga con trabillas. Teñido en degradé con botones de nacar, largo irregular y tajos laterales. La modelo utiliza talle XS. Composición: 100 algodón." ,
         sku_ext: Faker::Number.number(digits: 15),
         published: false,
         photos: [
-          "https://statics.glamit.com.ar/media/catalog/product/cache/87/thumbnail/708x1060/9df78eab33525d08d6e5fb8d27136e95/s/w/sweet_052034_cr_1.jpg",
-          "https://statics.glamit.com.ar/media/catalog/product/cache/87/thumbnail/708x1060/9df78eab33525d08d6e5fb8d27136e95/s/w/sweet_052034_cr_2.jpg",
-          "https://statics.glamit.com.ar/media/catalog/product/cache/87/thumbnail/708x1060/9df78eab33525d08d6e5fb8d27136e95/s/w/sweet_052034_cr_3.jpg"
+          "https://statics.glamit.com.ar/media/catalog/product/cache/36/thumbnail/708x1050/9df78eab33525d08d6e5fb8d27136e95/t/u/tucci_wi60h001_83_1.jpg",
+          "https://statics.glamit.com.ar/media/catalog/product/cache/36/thumbnail/708x1050/9df78eab33525d08d6e5fb8d27136e95/t/u/tucci_wi60h001_83_2.jpg",
+          "https://statics.glamit.com.ar/media/catalog/product/cache/36/thumbnail/708x1050/9df78eab33525d08d6e5fb8d27136e95/t/u/tucci_wi60h001_83_3.jpg"
         ],
         variants: [
           {
-            color: "#FDFEFE",
+            color: "#FFFFFF",
             size: "36"
           },
 
           {
-            color: "#FDFEFE",
+            color: "#000000",
             size: "38"
-          },
-          {
-            color: "#FDFEFE",
-            size: "40"
           }
         ]
       },
       {
-        name: "CARGO MULET",
-        min_price: 4000,
-        max_price: 7000,
+        name: "PANTALON MUM SL D BLUE",
+        min_price: 2850,
+        max_price: 3800,
         category: "jeans",
-        description: "Jean cargo de tiro alto con botamanga skinny. Cierre delantero con cremallera. Bolsillos en los laterales a media pierna y cuatro bolsillos en cadera." ,
+        description: "Jean slim tiro alto con desgastes, roturas y terminación desflecada. La modelo utiliza talle 24. Composición: 98percent algodón 2percent elastano." ,
         sku_ext: Faker::Number.number(digits: 15),
         published: false,
         photos: [
-          "https://statics.glamit.com.ar/media/catalog/product/cache/87/image/650x957/9df78eab33525d08d6e5fb8d27136e95/s/w/sweet_061979_az_1.jpg",
-          "https://statics.glamit.com.ar/media/catalog/product/cache/87/thumbnail/708x1060/9df78eab33525d08d6e5fb8d27136e95/s/w/sweet_061979_az_2.jpg",
-          "https://statics.glamit.com.ar/media/catalog/product/cache/87/thumbnail/708x1060/9df78eab33525d08d6e5fb8d27136e95/s/w/sweet_061979_az_3.jpg"
+          "https://statics.glamit.com.ar/media/catalog/product/cache/36/thumbnail/708x1050/9df78eab33525d08d6e5fb8d27136e95/t/u/tucci_bt205s28_62_1.jpg",
+          "https://statics.glamit.com.ar/media/catalog/product/cache/36/thumbnail/708x1050/9df78eab33525d08d6e5fb8d27136e95/t/u/tucci_bt205s28_62_3.jpg",
+          "https://statics.glamit.com.ar/media/catalog/product/cache/36/thumbnail/708x1050/9df78eab33525d08d6e5fb8d27136e95/t/u/tucci_bt205s28_62_4.jpg",
+          "https://statics.glamit.com.ar/media/catalog/product/cache/36/thumbnail/708x1050/9df78eab33525d08d6e5fb8d27136e95/t/u/tucci_bt205s28_62_2.jpg"
         ],
         variants: [
           {
             color: "#D6EAF8",
-            size: "36"
+            size: "28"
           },
 
           {
-            color: "#D6EAF8",
-            size: "38"
+            color: "#00000",
+            size: "30"
           },
           {
             color: "#D6EAF8",
-            size: "40"
+            size: "36"
           }
         ]
       },
       {
-        name: "PAÑUELO RUMPUT",
-        min_price: 1000,
-        max_price: 2000,
+        name: "PERFUME JADE",
+        min_price: 950,
+        max_price: 980,
         category: "accessories",
-        description: "Pañuelo de saten" ,
+        description: "Te presentamos nuestra nueva fragancia: JADE. Su perfume floral frutado contiene notas de flores blancas como la gardenia y el jazmín y de frutas exóticas como el mangostán." ,
         sku_ext: Faker::Number.number(digits: 15),
         published: false,
         photos: [
-          "https://statics.glamit.com.ar/media/catalog/product/cache/87/thumbnail/708x1060/9df78eab33525d08d6e5fb8d27136e95/s/w/sweet_182786_rs_1.jpg",
-          "https://statics.glamit.com.ar/media/catalog/product/cache/87/thumbnail/708x1060/9df78eab33525d08d6e5fb8d27136e95/s/w/sweet_182786_rs_2.jpg"
+          "https://statics.glamit.com.ar/media/catalog/product/cache/36/thumbnail/708x1050/9df78eab33525d08d6e5fb8d27136e95/w/r/wr989701_1.png",
+          "https://statics.glamit.com.ar/media/catalog/product/cache/36/thumbnail/708x1050/9df78eab33525d08d6e5fb8d27136e95/w/r/wr989701_3.png",
+          "https://statics.glamit.com.ar/media/catalog/product/cache/36/thumbnail/708x1050/9df78eab33525d08d6e5fb8d27136e95/w/r/wr989701_2.png"
         ],
         variants: [
           {
             color: "#FDEDEC",
             size: "36"
-          },
-
-          {
-            color: "#FDEDEC",
-            size: "38"
-          },
-          {
-            color: "#FDEDEC",
-            size: "40"
           }
         ]
       }

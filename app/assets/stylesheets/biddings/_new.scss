@@ -1,57 +1,174 @@
+#probando {
+  padding-top:140px;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color:black;
+  text-shadow:5px 1px 8px white;
+}
+
+.textAnimation {
+  margin-top:10px;
+  display: inline-flex;
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: black;
+  position: relative;
+  animation: showup 20s infinite;
+}
+
+// .textAnimation :nth-child(1) {
+//   display: block;
+//   z-index: 2;
+//   color:black;
+// }
+
+// .textAnimation :nth-child(1) :first-child {
+//   padding-right: 2rem;
+//   animation: slideleft 20s infinite;
+// }
+
+// .textAnimation :nth-child(2) {
+//   display: block;
+//   z-index: 1;
+//   overflow: hidden;
+//   color:black;
+// }
+
+// .textAnimation :nth-child(2) :first-child {
+//   animation: slideright 20s infinite;
+// }
+
+@keyframes showup {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes slideleft {
+  0% {
+    transform: translateX(50%);
+  }
+  20% {
+    transform: translateX(50%);
+  }
+  35% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideright {
+  0% {
+    transform: translateX(-100%);
+  }
+  20% {
+    transform: translateX(-100%);
+  }
+  45% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
 // .search-background {
 //   height: 20vh;
 // }
 
 .search-background {
-  height: 50vh;
+  // https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/hbz-grace-max-mara-00-index-1505862738.jpg?
+  // https://i.ibb.co/rMtDV3t/hbz-grace-max-mara-00-index-1505862738-2.jpg
+  // https://image.freepik.com/free-photo/close-up-fashion-portrait-woman_93675-37072.jpg
+  // https://img.freepik.com/free-photo/beautiful-brunette-woman-fashion-dress-sequins-with-dispersion-effect_149155-122.jpg?size=626&ext=jpg
+  // https://image.freepik.com/free-photo/stylish-young-modern-woman-sitting-road-posing_23-2148193972.jpg
+  // https://images.unsplash.com/photo-1517111856508-8a6984d65c75?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1266&q=80
+  background-image: url("");
+  height: 80vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% auto;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type=number] {
+    -moz-appearance:textfield; /* Firefox */
 }
 
 .title-text {
-  color: white;
-  font-size: 45px;
+  color: black;
+  font-size: 25px;
 }
 
 .cta-search {
-  margin-top: -30vh;
+  margin-top: -200px;
 }
 
 .header-text {
-  font-family: $headers-font;
-  font-size: 18px;
+  font-size: 16px;
+  text-align:left;
+  color:black;
 }
 
+.simple_form {
+  align-items:center;
+  input {
+  display: inline-block;
+  }
+}
+.simple_form .input-box {
+  align-items: center;
+}
 .cta-search-wrapper {
-  border-radius: 13px;
-  border: 1px solid rgba(0,0,0,0.1);
-  background-color: white;
-}
-
-.cta-search-input::placeholder {
-  background-color: #F1F2F6;
-  padding: 5px 8px;
   border-radius: 5px;
-  color: #CACACA;
-}
-
-.cta-search-input-parent {
-  background-color: #F1F2F6;
+  border: 1px solid black;
+  background-color: transparent;
 }
 
 .cta-search-input {
-  border: 1px solid rgba(0,0,0,0.15);
-  border-radius: 14px;
-  color: $primary;
+  border: 1px solid black;
+  font-family: 'Roboto';
+  font-weight: lighter;
+  border-radius: 0px;
+  color: black;
+  height: 30px;
+  padding:0px;
   border: none;
-  padding-left: 0px;
-  padding-right: 0px;
+  font-size: 30px;
+  text-align:right;
+  background-color: transparent;
+
 }
+
 
 .cta-search-input:focus {
   box-shadow: none;
+  background-color: transparent;
+  color: black;
+
 }
 
 .button-search {
-  font-size: 16px;
+  font-size: 20px;
 }
 
 #fotos-shop {
@@ -74,11 +191,6 @@
   .search-background {
     height: 30vh;
   }
-  .cta-search-input::placeholder {
-    color: #CACACA;
-    background-color: #F1F2F6;
-    padding: 5px 8px;
-  }
 
   .cta-search-input {
     margin-top: 8px;
@@ -87,20 +199,22 @@
     box-shadow: 1px 2px 3px #dadada;
     line-height: 2;
     border: 1px solid rgba(0,0,0,0.15);
-    border-radius: 14px;
-    color: $primary;
+    border-radius: 5px;
+    color: black;
   }
+
+  .cta-search-input::placeholder {
+    color: #CACACA;
+    background-color: transparent;
+    padding: 5px 8px;
+  }
+
 
   .cta-search-input:focus {
     outline: none;
     box-shadow: none;
   }
-  .cta-search-wrapper {
-    border: none;
-    border-radius: 0;
-    background-color: transparent;
-    padding: inherit;
-  }
+
   .button-search {
     padding: 8px 50px;
   }

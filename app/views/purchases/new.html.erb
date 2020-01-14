@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container pt-3">
   <div class="row justify-content-center">
     <div class="col-xs-12 col-lg-6 cards-sumary-container">
      <div class="d-flex justify-content-center mb-3"><h2>Realizá tu pago!</h2></div>
@@ -35,14 +35,14 @@
         </select>
       </div>
       <!-- AMOUNT TO PAY -->
-      <div class="my-5" >
+      <div class="my-3" >
         <div class= "d-flex justify-content-between border-bottom border-top pt-3" >
           <p> <strong>Total a pagar</strong></p>
           <p><strong> $<%=@bidding.amount%></strong></p>
         </div>
       </div>
       <!-- MERCADOPAGO -->
-      <div class="d-flex justify-content-center my-5">
+      <div class="d-flex justify-content-center my-3">
         <form action="<%= showroom_variant_stock_purchases_path %>" method="post" >
           <script
           src="https://www.mercadopago.com.ar/integrations/v1/web-tokenize-checkout.js"

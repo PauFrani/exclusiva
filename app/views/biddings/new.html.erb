@@ -1,83 +1,76 @@
-
-<div class="search-background" style="background-image: linear-gradient(225deg, rgba(0,0,0,0.4), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1462392246754-28dfa2df8e6b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80'); background-size:cover;">
-</div>
-<div class="text-center cta-search mb-4">
-  <h1 class="title-text">Comprá moda al precio</h1>
-  <h2 class="title-text">que querés</h2>
-</div>
-<div class="container mt-5">
-  <div class="row justify-content-center">
-    <div class="col-11 col-lg-8 col-md-10 cta-search-wrapper py-md-4">
-      <div class="px-5 text-center">
-        <%= simple_form_for(@bidding) do |f| %>
-          <span class="header-text text-dark">Ingresá tu Oferta</span>
-          <div class="d-md-flex align-items-center w-md-100">
-          <%= f.input :amount, input_html: { class: "cta-search-input flex-grow-1"}, wrapper_html: { class: "m-0 h-100 w-100  mr-3"}, label: false, placeholder: "e.g. 3500 $" %>
-          <!-- <div class='d-flex'>
-            <%= f.submit 'Buscar', class:'button-search mx-auto flex-grow-0 mt-3 mt-md-0' %>
-          </div> -->
-          <%= f.hidden_field :category %>
-          <%= f.submit "Continuar", class:"button-search button-disableable button-disabled size-greyscale" %>
-          </div>
-        <% end %>
+<div class="search-background">
+  <div id="probando">
+    <div class="textAnimation">
+      <div>
+        <span>VOS ELEGÍS EL PRECIO AL QUE QUERÉS COMPRAR TU ROPA!</span>
       </div>
     </div>
   </div>
 </div>
 
-<!-- CARDS CATEGORY  -->
-<div class="container mt-5" id="button-transparent">
-  <div class="cards-bidding">
-    <div class="card-bidding-category element-to-enable" data-category="shoes">
-      <div>
-        <%= image_tag "https://static.zattini.com.br/produtos/sandalia-bottero-salto-grosso-laser/70/D96-0612-070/D96-0612-070_zoom1.jpg?ims=544x", class: 'photo'  %>
+<div style="margin-top:-45vh">
+  <div class="container mt-3">
+    <div class="row justify-content-md-around px-4">
+      <div class="col-2 col-md-2 col-lg-2 py-md-2">
+        <div class="button_cont" align="center"><span class="example_e" href="add-website-here" target="_blank" rel="nofollow noopener">Ingresá tu Oferta</span></div>
       </div>
-      <p>Zapatos</p>
+      <div class="col-8 col-md-8 col-lg-4 cta-search-wrapper py-md-2">
+        <%= simple_form_for(@bidding) do |f| %>
+          <div class="d-flex justify-content-between align-content-center">
+            <%= f.input :amount, input_html: {class: "cta-search-input mt-2", rows:5, style: 'height:30px !important;'}, label: false, autofocus: true %>
+            <span class="cta-search-input mx-3">$ </span>
+            <%= f.hidden_field :category %>
+            <%= f.submit "Continuar", class:"button-search button-disableable button-disabled size-greyscale" %>
+          </div>
+        <% end %>
+      </div>
+      <div class="col-2 col-md-2 col-lg-2 py-md-2">
+        <div class="button_cont" align="center"><span class="example_e" href="add-website-here" target="_blank" rel="nofollow noopener">Elegí una categoría</span></div>
+      </div>
     </div>
-    <div class="card-bidding-category element-to-enable" data-category="dress">
-      <div>
-        <%= image_tag "https://zefinka.com/assets/images/resources/5841/564x/sleeveless-dot-print-dress-women-2019-new-summer-casual-loose-dress-plus-size-cute-thin-o-0.jpg", class: 'photo'  %>
+  </div>
+
+
+
+  <!-- CARDS CATEGORY  -->
+  <div class="container mt-3" id="button-transparent">
+    <div class="cards-bidding">
+      <div class="card-bidding-category element-to-enable" data-category="shoes">
+        <div>
+          <%= image_tag "https://static.zattini.com.br/produtos/sandalia-bottero-salto-grosso-laser/70/D96-0612-070/D96-0612-070_zoom1.jpg?ims=544x", class: 'photo'  %>
+        </div>
+        <p>Zapatos</p>
       </div>
-      <p>Vestidos</p>
-    </div>
-    <div class="card-bidding-category element-to-enable" data-category="shirts">
-      <div>
-        <%= image_tag "https://www.camisetasymoda.es/23756-large_default/camisa-manga-corta-heritage-mujer-de-b-c.jpg", class: 'photo'  %>
+      <div class="card-bidding-category element-to-enable" data-category="dress">
+        <div>
+          <%= image_tag "https://zefinka.com/assets/images/resources/5841/564x/sleeveless-dot-print-dress-women-2019-new-summer-casual-loose-dress-plus-size-cute-thin-o-0.jpg", class: 'photo'  %>
+        </div>
+        <p>Vestidos</p>
       </div>
-      <p>Camisas</p>
-    </div>
-    <div class="card-bidding-category element-to-enable" data-category="jeans">
-      <div>
-        <%= image_tag "https://laropa.store/1565-large_default/jeans-mujer-levanta-cola-push-up-elastano-15-30017.jpg", class: 'photo'  %>
+      <div class="card-bidding-category element-to-enable" data-category="shirts">
+        <div>
+          <%= image_tag "https://www.camisetasymoda.es/23756-large_default/camisa-manga-corta-heritage-mujer-de-b-c.jpg", class: 'photo'  %>
+        </div>
+        <p>Camisas</p>
       </div>
-      <p>Jeans</p>
-    </div>
-    <div class="card-bidding-category element-to-enable" data-category="accessories">
-      <div>
-        <%= image_tag "https://media.herworld.com/public/2019/01/image/luxury_accessories.jpg", class: 'photo'  %>
+      <div class="card-bidding-category element-to-enable" data-category="jeans">
+        <div>
+          <%= image_tag "https://laropa.store/1565-large_default/jeans-mujer-levanta-cola-push-up-elastano-15-30017.jpg", class: 'photo'  %>
+        </div>
+        <p>Jeans</p>
       </div>
-      <p>Accesorios</p>
+      <div class="card-bidding-category element-to-enable" data-category="accessories">
+        <div>
+          <%= image_tag "https://media.herworld.com/public/2019/01/image/luxury_accessories.jpg", class: 'photo'  %>
+        </div>
+        <p>Accesorios</p>
+      </div>
     </div>
   </div>
 </div>
 <!-- END CARD CATEGORY -->
-<!-- <div class="text-center mt-3">
-  <%= simple_form_for(@bidding) do |b| %>
-    <%= b.hidden_field :category %>
-    <%= b.submit "Continuar", class:"location_submit button-disableable button-disabled size-greyscale" %>
-  <% end %>
-</div> -->
 
-
-<div class="text-center mt-5 d-none d-md-block">
-  <h3 class="title-text2 text-dark">Quienes confían en nosotros</h3>
+<div class="text-center mt-4 d-none d-md-block">
+  <h5 class="title-text2" style="color:white; background-color:black; padding:10px 0px; font-size: 16px;">TE MOSTRAREMOS OFERTAS UNICAS, EXCLUSIVAS Y MOMENTANEAS</h5>
 </div>
-<div class="images-container">
-  <%= image_tag 'https://i.ibb.co/DpjmngS/alto-palermo.png' %>
-  <%= image_tag 'https://i.ibb.co/PzC0xdG/dot.png' %>
-  <%= image_tag 'https://i.ibb.co/Xb21zg3/abasto.png' %>
-  <%= image_tag 'https://i.ibb.co/QPWbcBC/unicenter.png' %>
-  <%= image_tag 'https://i.ibb.co/LY6Yhfk/elsolar.png' %>
-</div>
-
 

@@ -4,20 +4,7 @@
     <div class="number">
       <span>2</span>
     </div>
-    <h2>Ordena las marcas</h2>
-    <p>Arrastra tus preferidas al inicio para que te las mostremos primero</p>
   </div>
-  <ul id="columns" style="list-style-type:none; padding: 0;">
-      <% @brands.each_with_index do |brand, index| %>
-      <li class="column brand_order" draggable="true" value="<%= brand.id %>">
-        <div class="card-brand-ranking ">
-          <div class="logo">
-            <img class="logo-draggble"src="<%= brand.logo %>" alt="">
-          </div>
-        </div>
-      </li>
-      <% end %>
-  </ul>
 
   <%= simple_form_for @bidding, html: { id: "brand_ranks_form" }  do |form| %>
     <%= form.simple_fields_for :brand_ranks do |ff| %>
@@ -29,18 +16,43 @@
         <div class="col-12 col-md-6">
           <div class="step-by-step">
             <h2>Ingresá tu Ubicación</h2>
-            <p>Te mostraremos las ofertas más cercanas a tu ubicación</p>
+            <div class="text-center mt-4 d-none d-md-block">
+              <h5 class="title-text2" style="color:white; background-color:black; padding:10px 0px; font-size: 16px;">Te mostraremos las ofertas más cercanas a tu ubicación</h5>
+            </div>
           </div>
           <%= form.simple_fields_for Address.new do |ff| %>
-            <div class="my-5"><%= ff.input :street, input_html: { class: "cta-location-input"}, id: "location_street", label: false, placeholder: "e.g. Av. Santa Fe 1500" %>
+            <div><%= ff.input :street, input_html: { class: "cta-location-input"}, id: "location_street", label: false, placeholder: "e.g. Av. Santa Fe 1500" %>
             </div>
           <% end %>
         </div>
       </div>
     </div>
+    <div class="text-center">
+      <h2>Ordena las marcas</h2>
+      <p>Arrastra tus preferidas al inicio para que te las mostremos primero</p>
+    </div>
+    <ul id="columns" style="list-style-type:none; padding: 0;">
+        <% @brands.each_with_index do |brand, index| %>
+        <li class="column brand_order" draggable="true" value="<%= brand.id %>">
+          <div class="card-brand-ranking ">
+            <div class="logo">
+              <img class="logo-draggble"src="<%= brand.logo %>" alt="">
+            </div>
+          </div>
+        </li>
+        <% end %>
+    </ul>
     <div class="row justify-content-center">
       <div class="col-12 col-md-6 d-flex justify-content-center"><%= form.submit "Continuar", id: "brand_ranks_submit", class: "button-ranks button-general size-greyscale button-disabled" %></div>
-      </div>
     </div>
   <% end %>
 </div>
+
+<!-- PRUEBAS -->
+<!-- <div  id="probando">
+  <a href="#">
+    Damn, I'm Shiny
+    <i></i>
+  </a>
+</div>
+ -->

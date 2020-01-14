@@ -7,13 +7,34 @@
   transition: opacity 0.6s ease;
 }
 
+.navbar-logo {
+  font-family:'Rouge Script';
+  color:black;
+  font-size: 45px;
+  margin:0px;
+  a {
+    color:black;
+    :hover {
+      color:#17202A;
+    }
+  }
+}
+
 .not_at_index {
-  border: 1px solid $primary;
+  border: 1px solid black;
 
 }
 
-.navbar-title {
-  font-size: 38px;
+.perchero {
+  height: 35px;
+  width: auto;
+}
+.color-black {
+  color:black;
+  font-weight:lighter;
+  :hover {
+    color:#17202A;
+  }
 }
 
 .navbar {
@@ -24,7 +45,6 @@
 
 
 .space-navbar-banner {
-  margin-top: 70px
 }
 
  .exclusiva {
@@ -33,7 +53,7 @@
   }
 
 .negative-margin {
-  margin-bottom: -80px;
+  margin-bottom: -120px;
 }
 
 

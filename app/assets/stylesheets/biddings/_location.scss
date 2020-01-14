@@ -41,13 +41,13 @@
 
   /// image cards
 .images-container {
-  width: 70%;
+  width: 50%;
   margin: 0 auto;
-  margin-top: 50px;
+  margin-top: 10px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-gap: 5%;
-  opacity:0.5;
+  opacity:0.2;
 
   img {
     width: 100%;
@@ -78,6 +78,6 @@
     box-shadow: none;
   }
   .images-container {
-    width: 90%;
+    width: 70%;
   }
 }
