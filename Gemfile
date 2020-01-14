@@ -22,6 +22,7 @@ gem 'mercadopago-sdk'
 gem 'letter_opener', group: :development
 gem 'omniauth-facebook'
 
+
 group :development do
   gem 'web-console', '>= 3.3.0'
   gem 'binding_of_caller'
